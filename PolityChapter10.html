@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 11: Emergency Provisions</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Lora:wght@500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Lora', 'Inter', serif;
+    color: #1a1a1a;
+    line-height: 1.65;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(185,28,28,0.14), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(185,28,28,0.12), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt;
+    color: #B91C1C;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    border-top: 2px solid #FECACA;
+    padding-top: 3mm;
+    z-index: 5;
+  }
+
+  /* ============ TITLE BANNER ============ */
+  .title-banner {
+    background: linear-gradient(135deg, #B91C1C 0%, #7C2D12 50%, #B45309 100%);
+    color: #fff;
+    padding: 34px 25px 30px 25px;
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(185,28,28,0.45), inset 0 -4px 12px rgba(0,0,0,0.15);
+    border: 3px solid rgba(255,255,255,0.2);
+  }
+  .title-banner::before {
+    content: '🚨';
+    position: absolute;
+    top: 12px; left: 22px;
+    font-size: 24pt;
+    opacity: 0.85;
+  }
+  .title-banner::after {
+    content: '⚖️';
+    position: absolute;
+    bottom: 12px; right: 22px;
+    font-size: 24pt;
+    opacity: 0.85;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29pt;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4), 0 0 30px rgba(253,230,138,0.4);
+    line-height: 1.1;
+  }
+  .title-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    font-weight: 600;
+    opacity: 0.98;
+    letter-spacing: 1px;
+  }
+  .title-banner .tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20pt;
+    font-weight: 700;
+    margin-top: 12px;
+    color: #FDE68A;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* ============ SECTION TITLES ============ */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    font-weight: 900;
+    padding: 12px 22px;
+    border-radius: 14px;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+    letter-spacing: 0.5px;
+    border: 2px solid rgba(255,255,255,0.15);
+    line-height: 1.2;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    border-radius: 14px 0 0 14px;
+  }
+  .section-title::after {
+    content: '✦';
+    position: absolute;
+    right: 14px; top: 50%;
+    transform: translateY(-50%);
+    color: #FDE68A;
+    font-size: 14pt;
+    text-shadow: 0 0 12px #FDE68A;
+  }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-amber  { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .t-brown  { background: linear-gradient(90deg, #7C2D12, #C2410C); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-navy   { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+
+  /* ============ ESSAY BOX ============ */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #FEF2F2 100%);
+    border: 2px solid #FECACA;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 4px 16px rgba(185,28,28,0.10);
+    position: relative;
+    font-family: 'Lora', serif;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 14px; bottom: 14px;
+    width: 4px;
+    background: linear-gradient(180deg, #B91C1C, #7C2D12);
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 0 10px rgba(185,28,28,0.4);
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+  .essay strong { color: #B91C1C; font-weight: 700; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+
+  /* ============ BOXES ============ */
+  .box {
+    padding: 13px 17px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    position: relative;
+  }
+  .box-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 12pt;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+  }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 7px solid #B91C1C; }
+  .box-orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 7px solid #C2410C; }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 7px solid #B45309; }
+  .box-brown  { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 7px solid #7C2D12; }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 7px solid #BE185D; }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 7px solid #6D28D9; }
+  .box-navy   { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-left: 7px solid #1E3A8A; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 7px solid #0369A1; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 7px solid #065F46; }
+
+  /* ============ WHO CARD ============ */
+  .who-card {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+    border: 3px solid #C2410C;
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    box-shadow: 0 6px 20px rgba(194,65,12,0.20);
+    position: relative;
+  }
+  .who-card::before {
+    content: '👤';
+    position: absolute;
+    top: -14px; left: 18px;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 13pt;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .who-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 12.5pt;
+    font-weight: 900;
+    color: #C2410C;
+    margin-bottom: 8px;
+  }
+  .who-card .leader {
+    font-family: 'Dancing Script', cursive;
+    font-size: 16pt;
+    font-weight: 700;
+    color: #7C2D12;
+    display: block;
+    margin: 4px 0;
+  }
+  .who-card p { font-size: 9.8pt; margin: 4px 0; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 10px 0;
+    font-size: 9.5pt;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    font-family: 'Lora', serif;
+  }
+  th {
+    background: linear-gradient(90deg, #B91C1C, #EF4444);
+    color: #fff;
+    padding: 11px 12px;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 10.5pt;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #FEF2F2; }
+  tr:last-child td { border-bottom: none; }
+  td strong { color: #B91C1C; font-weight: 700; font-family: 'Poppins', sans-serif; font-size: 9.5pt; }
+
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .table-orange th { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .table-amber  th { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .table-brown  th { background: linear-gradient(90deg, #7C2D12, #C2410C); }
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-navy   th { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+
+  /* ============ KEY POINT ============ */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 3px dashed #F59E0B;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin: 12px 0;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.25);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -14px; left: 18px;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 13pt;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .keypoint strong { color: #B45309; font-weight: 800; font-family: 'Poppins', sans-serif; }
+
+  /* ============ SIMPLE MEANING ============ */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-left: 8px solid #065F46;
+    border-radius: 14px;
+    padding: 13px 18px 13px 48px;
+    margin: 12px 0;
+    position: relative;
+    color: #064E3B;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    line-height: 1.6;
+    box-shadow: 0 4px 16px rgba(16,185,129,0.18);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 16pt;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .hl-red    { background: linear-gradient(180deg, transparent 50%, #FCA5A5 50%); padding: 0 5px; font-weight: 800; color: #7F1D1D; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-orange { background: linear-gradient(180deg, transparent 50%, #FDBA74 50%); padding: 0 5px; font-weight: 800; color: #7C2D12; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-amber  { background: linear-gradient(180deg, transparent 50%, #FCD34D 50%); padding: 0 5px; font-weight: 800; color: #78350F; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-brown  { background: linear-gradient(180deg, transparent 50%, #FDBA74 50%); padding: 0 5px; font-weight: 800; color: #7C2D12; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-pink   { background: linear-gradient(180deg, transparent 50%, #F9A8D4 50%); padding: 0 5px; font-weight: 800; color: #831843; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-purple { background: linear-gradient(180deg, transparent 50%, #C4B5FD 50%); padding: 0 5px; font-weight: 800; color: #4C1D95; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-navy   { background: linear-gradient(180deg, transparent 50%, #BFDBFE 50%); padding: 0 5px; font-weight: 800; color: #1E3A8A; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 50%, #7DD3FC 50%); padding: 0 5px; font-weight: 800; color: #0C4A6E; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-green  { background: linear-gradient(180deg, transparent 50%, #6EE7B7 50%); padding: 0 5px; font-weight: 800; color: #064E3B; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+
+  /* ============ PM BADGE ============ */
+  .pm-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #C2410C, #B45309);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 6px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(194,65,12,0.35);
+    border: 1.5px solid rgba(255,255,255,0.3);
+  }
+
+  /* ============ H3 ============ */
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 800;
+    color: #B91C1C;
+    margin: 16px 0 8px;
+    padding-left: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 22px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #B91C1C, #7C2D12);
+    box-shadow: 0 0 10px rgba(185,28,28,0.5);
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    text-align: center;
+    margin-top: 16px;
+    padding: 16px;
+    background: linear-gradient(90deg, #B91C1C, #7C2D12, #B45309);
+    color: #fff;
+    border-radius: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 24px rgba(185,28,28,0.35);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+
+  ul, ol { margin-left: 20px; margin-bottom: 6px; }
+  li { margin-bottom: 5px; font-family: 'Lora', serif; }
+  p { margin-bottom: 6px; }
+  strong { color: #B91C1C; font-weight: 700; font-family: 'Poppins', sans-serif; }
+
+  /* ============ ICON CIRCLE ============ */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B91C1C, #7C2D12);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 3px 10px rgba(185,28,28,0.4);
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  /* ============ DROP CAP ============ */
+  .dropcap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    font-weight: 900;
+    color: #B91C1C;
+    float: left;
+    line-height: 0.9;
+    padding-right: 8px;
+    padding-top: 4px;
+  }
+
+  /* ============ NUMBER BADGE ============ */
+  .num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B91C1C, #B45309);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 13pt;
+    margin-right: 8px;
+    box-shadow: 0 3px 10px rgba(185,28,28,0.4);
+    border: 2px solid #fff;
+  }
+
+  /* ============ COLORFUL EMERGENCY CARDS ============ */
+  .emg-card {
+    border-radius: 16px;
+    margin: 12px 0;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    position: relative;
+    border: 2px solid transparent;
+  }
+
+  .emg-amber {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border-color: #F59E0B;
+    box-shadow: 0 8px 24px rgba(245,158,11,0.25);
+  }
+  .emg-navy {
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+    border-color: #3B82F6;
+    box-shadow: 0 8px 24px rgba(59,130,246,0.25);
+  }
+  .emg-red {
+    background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+    border-color: #EF4444;
+    box-shadow: 0 8px 24px rgba(239,68,68,0.30);
+  }
+
+  .emg-header {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    border-bottom: 2px dashed rgba(0,0,0,0.08);
+  }
+
+  .emg-amber .emg-header { background: linear-gradient(90deg, #FDE68A, #FCD34D); }
+  .emg-navy  .emg-header { background: linear-gradient(90deg, #BFDBFE, #93C5FD); }
+  .emg-red   .emg-header { background: linear-gradient(90deg, #FECACA, #FCA5A5); }
+
+  .emg-num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 18pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 3px solid #fff;
+    flex-shrink: 0;
+  }
+
+  .emg-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 16pt;
+    font-weight: 900;
+    color: #1F2937;
+    line-height: 1;
+  }
+
+  .emg-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #4B5563;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+  }
+
+  .emg-icon {
+    margin-left: auto;
+    font-size: 22pt;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
+
+  .emg-body {
+    padding: 12px 18px;
+  }
+
+  .emg-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px dotted rgba(0,0,0,0.1);
+    gap: 10px;
+  }
+  .emg-row:last-child { border-bottom: none; }
+
+  .emg-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .emg-value {
+    font-family: 'Lora', serif;
+    font-size: 10pt;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: right;
+  }
+
+  .emg-note {
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #FEE2E2, #FECACA);
+    border-left: 5px solid #B91C1C;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+    font-size: 9.5pt;
+    color: #7F1D1D;
+    box-shadow: 0 3px 10px rgba(185,28,28,0.15);
+  }
+
+  table tr.row-amber td { background: linear-gradient(90deg, #FEF3C7, #FDE68A) !important; }
+  table tr.row-navy  td { background: linear-gradient(90deg, #DBEAFE, #BFDBFE) !important; }
+  table tr.row-red   td { background: linear-gradient(90deg, #FEE2E2, #FECACA) !important; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 11.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>Emergency Provisions</h1>
+    <h2>Chapter 11 — Part XVIII (Articles 352 to 360)</h2>
+    <div class="tagline">When the Nation Faces Crisis</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-red">🚨 11.1 What are Emergency Provisions?</div>
+
+    <div class="essay">
+      <p class="dropcap">The <strong>Emergency Provisions</strong> are contained in <span class="hl-red">Part XVIII (Articles 352 to 360)</span> of the Constitution. They are inspired by the <strong>Weimar Constitution of Germany</strong>. During an emergency, the federal structure of India becomes <span class="hl-amber">unitary</span> — all power concentrates in the hands of the Central Government.</p>
+      <p>Think of it like this: normally India has a "team" structure (Centre + States). During an emergency, the Centre becomes the "captain" and takes charge of everything.</p>
+    </div>
+
+    <h3>⚡ Three Types of Emergency</h3>
+    <table class="table-red">
+      <tr><th>Type</th><th>Article</th><th>Grounds</th></tr>
+      <tr><td><strong>National Emergency</strong></td><td><span class="hl-red">352</span></td><td>War, External Aggression, Armed Rebellion</td></tr>
+      <tr><td><strong>President's Rule (State Emergency)</strong></td><td><span class="hl-amber">356</span></td><td>Failure of Constitutional Machinery in a State</td></tr>
+      <tr><td><strong>Financial Emergency</strong></td><td><span class="hl-green">360</span></td><td>Threat to Financial Stability of India</td></tr>
+    </table>
+
+    <div class="simple">
+      Three Emergencies: <strong>352 (National), 356 (President's Rule), 360 (Financial)</strong>. Each has different grounds and rules.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Emergency Provisions — Complete Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 11.2 National Emergency ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-orange">🔥 11.2 National Emergency (Article 352)</div>
+
+    <h3>📌 11.2.1 Grounds for Proclamation</h3>
+    <div class="essay">
+      <p>The President can declare a National Emergency if there is:</p>
+      <ul>
+        <li>⚔️ <strong>War</strong></li>
+        <li>🎯 <strong>External Aggression</strong></li>
+        <li>🔫 <strong>Armed Rebellion</strong> — The <span class="hl-orange">44th Amendment</span> replaced "Internal Disturbance" with "Armed Rebellion"</li>
+      </ul>
+    </div>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> The <span class="hl-red">44th Amendment (1978)</span> made the proclamation of National Emergency <strong>more difficult</strong>. This was done to prevent misuse of emergency powers.
+    </div>
+
+    <h3>🏛️ 11.2.2 Parliamentary Approval</h3>
+    <table class="table-orange">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Approval Time</strong></td><td>Within <span class="hl-orange">1 month</span> from the date of proclamation.</td></tr>
+      <tr><td><strong>Approval By</strong></td><td>Both Houses of Parliament.</td></tr>
+      <tr><td><strong>Majority Required</strong></td><td><span class="hl-red">Special Majority</span> — 2/3rd of members present and voting AND majority of total membership.</td></tr>
+      <tr><td><strong>Continuation</strong></td><td>Once approved, it continues for <strong>6 months</strong> at a time.</td></tr>
+      <tr><td><strong>Extension</strong></td><td>Can be extended <strong>indefinitely</strong> (6 months at a time) with fresh parliamentary approval.</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> If the Lok Sabha is <span class="hl-red">dissolved</span> at the time of proclamation, the <strong>Rajya Sabha</strong> must approve it within 1 month. The Lok Sabha must approve it within <strong>30 days</strong> of its first sitting after reconstitution.
+    </div>
+
+    <div class="simple">
+      National Emergency = 1 month approval, 2/3 majority, continues 6 months at a time. If Lok Sabha is dissolved, RS approves first.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Emergency Provisions — Complete Guide</span>
+    <span>Page 2</span>
+  </div>
+</div

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity & Constitution - Chapter 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ================= A4 PAGE SETUP ================= */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 11pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  /* Each .page = one A4 sheet */
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 15mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+  }
+
+  /* Page footer with number */
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #6B7280;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 4mm;
+  }
+
+  /* ================= TITLE HEADER ================= */
+  .title-banner {
+    background: linear-gradient(135deg, #1E3A8A 0%, #6D28D9 50%, #B91C1C 100%);
+    color: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(30,58,138,0.3);
+  }
+  .title-banner h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+    font-weight: 600;
+    opacity: 0.95;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 15pt;
+    margin-top: 12px;
+    opacity: 0.95;
+  }
+
+  /* ================= SECTION HEADINGS ================= */
+  .section {
+    margin-bottom: 18px;
+  }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15pt;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+
+  .t1 { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .t2 { background: linear-gradient(90deg, #7C2D12, #EA580C); }
+  .t3 { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t4 { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t5 { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t6 { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+
+  /* ================= BOXES ================= */
+  .box {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 11.5pt;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .box-blue    { background: #DBEAFE; border-left: 6px solid #1E3A8A; }
+  .box-peach   { background: #FED7AA; border-left: 6px solid #7C2D12; }
+  .box-mint    { background: #D1FAE5; border-left: 6px solid #065F46; }
+  .box-lavender{ background: #EDE9FE; border-left: 6px solid #6D28D9; }
+  .box-blush   { background: #FEE2E2; border-left: 6px solid #B91C1C; }
+  .box-ice     { background: #E0F2FE; border-left: 6px solid #0369A1; }
+  .box-yellow  { background: #FEF3C7; border-left: 6px solid #F59E0B; }
+
+  /* ================= TABLES ================= */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 10pt;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  th {
+    background: #1E3A8A;
+    color: #fff;
+    padding: 9px 11px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 10.5pt;
+  }
+  td {
+    padding: 8px 11px;
+    border-bottom: 1px solid #E5E7EB;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #F9FAFB; }
+
+  .table-brown th { background: #7C2D12; }
+  .table-green th { background: #065F46; }
+  .table-purple th { background: #6D28D9; }
+  .table-red th { background: #B91C1C; }
+  .table-sky th { background: #0369A1; }
+
+  /* ================= TIMELINE ================= */
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+    position: relative;
+    padding: 15px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: linear-gradient(90deg, #7C2D12, #EA580C);
+    z-index: 1;
+  }
+  .timeline-item {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+  }
+  .timeline-dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #7C2D12;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin: 0 auto 8px;
+    border: 4px solid #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  }
+  .timeline-item .label {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #7C2D12;
+    line-height: 1.3;
+  }
+
+  /* ================= KEY POINT ================= */
+  .keypoint {
+    background: #FEF3C7;
+    border: 2px dashed #F59E0B;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  .keypoint strong { color: #B45309; }
+
+  /* ================= CHECKLIST ================= */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: #F0FDF4;
+    border-left: 4px solid #10B981;
+    border-radius: 6px;
+    font-size: 10.5pt;
+  }
+  .checklist li::before {
+    content: '✅ ';
+    margin-right: 6px;
+  }
+
+  /* ================= HIGHLIGHTS ================= */
+  .hl-blue   { background: #BFDBFE; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-peach  { background: #FED7AA; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-green  { background: #A7F3D0; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-purple { background: #DDD6FE; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-red    { background: #FECACA; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-yellow { background: #FDE68A; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+
+  /* ================= MIND MAP ================= */
+  .mindmap {
+    background: #F5F3FF;
+    border: 2px solid #6D28D9;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    margin: 12px 0;
+  }
+  .mindmap-center {
+    background: #6D28D9;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11pt;
+    margin-bottom: 14px;
+  }
+  .mindmap-branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .branch {
+    background: #fff;
+    border: 2px solid #A855F7;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 9pt;
+    flex: 1 1 30%;
+    min-width: 130px;
+    line-height: 1.4;
+  }
+  .branch strong { color: #6D28D9; display: block; margin-bottom: 4px; font-size: 10pt; }
+
+  /* ================= MISC ================= */
+  ul, ol { margin-left: 20px; margin-bottom: 8px; }
+  li { margin-bottom: 4px; }
+  p { margin-bottom: 6px; }
+  strong { color: #111; }
+  h3 { font-family: 'Poppins', sans-serif; }
+
+  /* ================= FOOTER BANNER ================= */
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 14px;
+    background: linear-gradient(90deg, #1E3A8A, #6D28D9);
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10pt;
+  }
+
+  /* ================= SCREEN-ONLY (not printed) ================= */
+  @media print {
+    body {
+      background: #fff;
+      padding: 0;
+    }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 210mm;
+      height: 297mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================================================== -->
+<!-- PAGE 1 — TITLE + TOPIC 1.1                         -->
+<!-- ================================================== -->
+<div class="page">
+
+  <div class="title-banner">
+    <h1>📘 INDIAN POLITY & CONSTITUTION</h1>
+    <h2>Chapter 1: The Constitution — Its Making and Features</h2>
+    <div class="tagline">✨ A Complete Colorful Study Guide | SSC Exam Ready ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t1">🏛️ Topic 1.1: What is a Constitution?</div>
+
+    <div class="box box-blue">
+      <div class="box-title">📖 Definition</div>
+      <p>A <strong>Constitution</strong> is the <span class="hl-blue">supreme law</span> of a country — a set of rules and principles that:</p>
+      <ul>
+        <li>🏗️ <strong>Determines</strong> how the government will be formed</li>
+        <li>⚖️ <strong>Defines</strong> powers and limits of the government</li>
+        <li>🛡️ <strong>Guarantees</strong> rights to citizens</li>
+        <li>🤝 <strong>Creates</strong> a relationship between government and citizens</li>
+      </ul>
+    </div>
+
+    <div class="keypoint">
+      ⚠️ <strong>KEY POINT:</strong> Every law made by the government <strong>must</strong> be in accordance with the Constitution. If it violates the Constitution → <span class="hl-red">declared invalid</span> by the courts.
+    </div>
+
+    <div class="box box-ice" style="margin-top:14px;">
+      <div class="box-title">💡 Quick Recap</div>
+      <ul>
+        <li>Constitution = <strong>Supreme Law</strong></li>
+        <li>Government powers = <strong>Limited</strong></li>
+        <li>Courts = <strong>Guardian of Constitution</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📘 Indian Polity & Constitution — Chapter 1</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- PAGE 2 — TOPIC 1.2 (PART 1)                        -->
+<!-- ================================================== -->
+<div class="page">
+
+  <div class="section">
+    <div class="section-title t2">📜 Topic 1.2: How Was the Indian Constitution Made?</div>
+
+    <h3 style="color:#7C2D12; margin-bottom:10px;">🕰️ Step 1: Demand for a Constituent Assembly</h3>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot">1934</div>
+        <div class="label">M.N. Roy<br>proposes idea</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">1935</div>
+        <div class="label">INC officially<br>demands</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">1939</div>
+        <div class="label">British accept<br>in principle</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">1940</div>
+        <div class="label">August Offer<br>(Lord Linlithgow)</div>
+      </div>
+    </div>
+
+    <div class="box box-peach">
+      <div class="box-title">🏗️ Step 2: Formation of the Constituent Assembly</div>
+      <p><strong>📌 Cabinet Mission Plan (1946)</strong> — This plan finally constituted the Constituent Assembly.</p>
+      <ul>
+        <li>🗳️ <strong>Election:</strong> Members elected by <strong>Provincial Legislative Assemblies</strong></li>
+        <li>📅 <strong>First Meeting:</strong> <span class="hl-peach">9th December 1946</span></li>
+        <li>👴 <strong>Temporary President:</strong> Dr. Sachchidananda Sinha (oldest member)</li>
+        <li>👑 <strong>Permanent President:</strong> Dr. Rajendra Prasad (elected 11th Dec 1946)</li>
+      </ul>
+    </div>
+
+    <h3 style="color:#7C2D12; margin:14px 0 10px;">🏗️ Step 3: Key Committees ⭐ HIGH-YIELD</h3>
+
+    <table class="table-brown">
+      <tr><th>🏛️ Committee</th><th>👤 Chairman</th></tr>
+      <tr><td>✍️ <strong>Drafting Committee</strong></td><td><span class="hl-red">Dr. B.R. Ambedkar</span></td></tr>
+      <tr><td>Union Powers Committee</td><td>Jawaharlal Nehru</td></tr>
+      <tr><td>Union Constitution Committee</td><td>Jawaharlal Nehru</td></tr>
+      <tr><td>Provincial Constitution Committee</td><td>Sardar Vallabhbhai Patel</td></tr>
+      <tr><td>Advisory Committee (Fundamental Rights, Minorities)</td><td>Sardar Vallabhbhai Patel</td></tr>
+      <tr><td>Rules of Procedure Committee</td><td>Dr. Rajendra Prasad</td></tr>
+      <tr><td>Steering Committee</td><td>Dr. Rajendra Prasad</td></tr>
+      <tr><td>Fundamental Rights Sub-Committee</td><td>J.B. Kripalani</td></tr>
+      <tr><td>Minorities Sub-Committee</td><td>H.C. Mukherjee</td></tr>
+      <tr><td>Order of Business Committee</td><td>K.M. Munshi</td></tr>
+    </table>
+  </div>
+
+  <div class="page-footer">
+    <span>📘 Indian Polity & Constitution — Chapter 1</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- PAGE 3 — TOPIC 1.2 (PART 2) + TOPIC 1.3            -->
+<!-- ================================================== -->
+<div class="page">
+
+  <div class="section">
+    <div class="box box-blush">
+      <div class="box-title">📅 Step 4: Adoption & Enforcement</div>
+      <table class="table-red">
+        <tr><th>🎯 Event</th><th>📆 Date</th><th>🎉 Celebration</th></tr>
+        <tr><td><strong>Adopted</strong></td><td><span class="hl-red">26th November 1949</span></td><td>🇮🇳 Constitution Day</td></tr>
+        <tr><td><strong>Enforced</strong></td><td><span class="hl-red">26th January 1950</span></td><td>🇮🇳 Republic Day</td></tr>
+      </table>
+      <p style="margin-top:10px;">💡 <strong>Why 26th January?</strong> On this day in 1930, INC declared <strong>"Purna Swaraj"</strong> (Complete Independence). Chosen to honor that declaration.</p>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px;">
+    <div class="section-title t3">🏗️ Topic 1.3: Key Facts — Making of Constitution</div>
+
+    <div class="box box-mint">
+      <div class="box-title">📊 Statistics at a Glance</div>
+      <table class="table-green">
+        <tr><th>📌 Fact</th><th>📈 Detail</th></tr>
+        <tr><td>⏱️ Time Taken</td><td>2 years, 11 months, 18 days</td></tr>
+        <tr><td>🗓️ Sessions</td><td>11 sessions</td></tr>
+        <tr><td>📝 Days of Drafting</td><td>114 days</td></tr>
+        <tr><td>👥 Original Members</td><td>389 → reduced to <strong>299</strong> after partition</td></tr>
+        <tr><td>👨‍⚖️ Father of Constitution</td><td><span class="hl-green">Dr. B.R. Ambedkar</span></td></tr>
+        <tr><td>✍️ Handwritten by</td><td>Prem Behari Narain Raizada (English) & Vasant Krishan Vaidya (Hindi)</td></tr>
+        <tr><td>🎨 Illustrations by</td><td>Nandalal Bose & team, Shantiniketan</td></tr>
+        <tr><td>📚 Original Copies</td><td>2 handwritten, kept in helium-filled cases in Parliament Library</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📘 Indian Polity & Constitution — Chapter 1</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- PAGE 4 — TOPIC 1.4                                 -->
+<!-- ================================================== -->
+<div class="page">
+
+  <div class="section">
+    <div class="section-title t4">🌍 Topic 1.4: Sources of the Indian Constitution</div>
+
+    <p style="font-family:Caveat; font-size:14pt; color:#6D28D9; text-align:center; margin:8px 0;">
+      💬 "The Indian Constitution is a bag of borrowings."
+    </p>
+
+    <div class="mindmap">
+      <div class="mindmap-center">📜 INDIAN CONSTITUTION (Bag of Borrowings)</div>
+      <div class="mindmap-branches">
+        <div class="branch"><strong>🇬🇧 British</strong>Parliamentary govt, Rule of Law</div>
+        <div class="branch"><strong>🇺🇸 USA</strong>Fundamental Rights, Judicial Review</div>
+        <div class="branch"><strong>🇮🇪 Ireland</strong>DPSP, Rajya Sabha nominations</div>
+        <div class="branch"><strong>🇨🇦 Canada</strong>Strong Centre, Residuary powers</div>
+        <div class="branch"><strong>🇦🇺 Australia</strong>Concurrent List, Joint sitting</div>
+        <div class="branch"><strong>🇩🇪 Weimar</strong>FRs suspension in Emergency</div>
+        <div class="branch"><strong>🇷🇺 USSR</strong>Fundamental Duties, Justice</div>
+        <div class="branch"><strong>🇫🇷 France</strong>Liberty, Equality, Fraternity</div>
+        <div class="branch"><strong>🇿🇦 S. Africa</strong>Amendment procedure</div>
+        <div class="branch"><strong>🇯🇵 Japan</strong>Procedure established by Law</div>
+      </div>
+    </div>
+
+    <table class="table-purple">
+      <tr><th>🌍 Country</th><th>📜 Features Borrowed</th></tr>
+      <tr><td>🇬🇧 <strong>GoI Act, 1935</strong></td><td>Federal Scheme, Governor, Judiciary, Public Service Commissions, Emergency provisions</td></tr>
+      <tr><td>🇬🇧 <strong>British</strong></td><td>Parliamentary govt, Rule of Law, Legislative procedure, Single citizenship, Cabinet system, Writs, Bicameralism</td></tr>
+      <tr><td>🇺🇸 <strong>USA</strong></td><td>Fundamental Rights, Judicial Independence, Judicial Review, Impeachment, VP</td></tr>
+      <tr><td>🇮🇪 <strong>Ireland</strong></td><td>DPSP, Rajya Sabha nominations, President's election method</td></tr>
+      <tr><td>🇨🇦 <strong>Canada</strong></td><td>Strong Centre, Residuary powers, Governors, Advisory jurisdiction</td></tr>
+      <tr><td>🇦🇺 <strong>Australia</strong></td><td>Concurrent List, Trade freedom, Joint sitting</td></tr>
+      <tr><td>🇩🇪 <strong>Weimar (Germany)</strong></td><td>Suspension of FRs during Emergency</td></tr>
+      <tr><td>🇷🇺 <strong>Soviet (USSR)</strong></td><td>Fundamental Duties, Justice ideal</td></tr>
+      <tr><td>🇫🇷 <strong>France</strong></td><td>Republic, Liberty, Equality, Fraternity</td></tr>
+      <tr><td>🇿🇦 <strong>South Africa</strong></td><td>Amendment procedure, Rajya Sabha elections</td></tr>
+      <tr><td>🇯🇵 <strong>Japan</strong></td><td>Procedure established by Law</td></tr>
+    </table>
+  </div>
+
+  <div class="page-footer">
+    <span>📘 Indian Polity & Constitution — Chapter 1</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- PAGE 5 — TOPIC 1.5                                 -->
+<!-- ================================================== -->
+<div class="page">
+
+  <div class="section">
+    <div class="section-title t5">⚖️ Topic 1.5: The Preamble</div>
+
+    <div class="box box-blush" style="text-align:center; font-family:'Poppins'; font-size:10.5pt;">
+      <div class="box-title" style="justify-content:center;">📜 "Soul of the Constitution"</div>
+      <em>"WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a <strong>SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</strong>..."</em>
+    </div>
+
+    <table class="table-red">
+      <tr><th>🏷️ Word</th><th>💬 Meaning</th><th>📌 Note</th></tr>
+      <tr><td>👑 <strong>Sovereign</strong></td><td>Independent state, no external authority</td><td>—</td></tr>
+      <tr><td>🤝 <strong>Socialist</strong></td><td>Welfare of all, not just few</td><td>✅ 42nd Amendment</td></tr>
+      <tr><td>🕊️ <strong>Secular</strong></td><td>No state religion, all treated equally</td><td>✅ 42nd Amendment</td></tr>
+      <tr><td>🗳️ <strong>Democratic</strong></td><td>Elected govt, "one person one vote"</td><td>—</td></tr>
+      <tr><td>🏛️ <strong>Republic</strong></td><td>Elected head (President), not hereditary</td><td>—</td></tr>
+      <tr><td>⚖️ <strong>Justice</strong></td><td>Social, Economic, Political</td><td>—</td></tr>
+      <tr><td>🕊️ <strong>Liberty</strong></td><td>Thought, expression, belief, faith, worship</td><td>—</td></tr>
+      <tr><td>🤝 <strong>Equality</strong></td><td>Status & opportunity</td><td>—</td></tr>
+      <tr><td>❤️ <strong>Fraternity</strong></td><td>Dignity + Unity & Integrity</td><td>✅ "Integrity" 42nd Amendment</td></tr>
+    </table>
+
+    <div class="keypoint">
+      ⚠️ <strong>IMPORTANT:</strong>
+      <ul>
+        <li>❌ <strong>Not enforceable</strong> in a court of law</li>
+        <li>❌ <strong>Not a source of power</strong> to the government</li>
+        <li>✅ <strong>Used to interpret</strong> the Constitution when there is ambiguity</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📘 Indian Polity & Constitution — Chapter 1</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- PAGE 6 — RECAP & PRACTICE                          -->
+<!-- ================================================== -->
+<div class="page">
+
+  <div class="section">
+    <div class="section-title t6">📝 Chapter 1 Recap & Practice</div>
+
+    <h3 style="color:#0369A1; margin-bottom:10px;">⚡ Quick Revision Checklist</h3>
+    <ul class="checklist">
+      <li>Who proposed the Constituent Assembly? → <strong>M.N. Roy (1934)</strong></li>
+      <li>Chairman of Drafting Committee? → <strong>Dr. B.R. Ambedkar</strong></li>
+      <li>When adopted? → <strong>26th November 1949</strong></li>
+      <li>When enforced? → <strong>26th January 1950</strong></li>
+      <li>Fundamental Rights inspired by? → <strong>USA</strong></li>
+      <li>DPSP inspired by? → <strong>Ireland</strong></li>
+      <li>Who wrote the original Constitution? → <strong>Prem Behari Narain Raizada</strong></li>
+    </ul>
+
+    <h3 style="color:#0369A1; margin:15px 0 10px;">🎯 Sample SSC Questions</h3>
+
+    <div class="box box-ice">
+      <p><strong>Q1.</strong> Which part of the Indian Constitution deals with 'The Municipalities'?</p>
+      <p>✅ <strong>Answer:</strong> Part <strong>IX A</strong> (Added by <strong>74th Amendment</strong>)</p>
+      <p style="margin-top:10px;"><strong>Q2.</strong> The 42nd Amendment of the Indian Constitution added?</p>
+      <p>✅ <strong>Answer:</strong> <strong>Fundamental Duties</strong> + changed Preamble to include <strong>Socialist, Secular, and Integrity</strong></p>
+    </div>
+
+    <h3 style="color:#0369A1; margin:15px 0 10px;">📌 Summary Box</h3>
+    <table class="table-sky">
+      <tr><th>🎯 Concept</th><th>🔑 Key Takeaway</th></tr>
+      <tr><td>Constitution</td><td>Supreme Law of India</td></tr>
+      <tr><td>Constituent Assembly</td><td>Formed 1946, First met 9 Dec 1946</td></tr>
+      <tr><td>Drafting Chairman</td><td>Dr. B.R. Ambedkar</td></tr>
+      <tr><td>Adopted</td><td>26 Nov 1949</td></tr>
+      <tr><td>Enforced</td><td>26 Jan 1950</td></tr>
+      <tr><td>Preamble</td><td>Soul — not enforceable</td></tr>
+      <tr><td>Borrowings</td><td>Bag of borrowings from many nations</td></tr>
+    </table>
+
+    <div class="footer" style="margin-top:18px;">
+      📘 Next Up: Fundamental Rights & Fundamental Duties (Chapter 2) <br>
+      🎓 Made with ❤️ for SSC Aspirants | Study Smart, Score High!
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📘 Indian Polity & Constitution — Chapter 1</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+</body>
+</html>

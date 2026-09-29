@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Affairs Hub — Daily News & Quizzes</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📘</text></svg>">
+<meta name="description" content="Daily current affairs, state-wise news, PDF downloads and quizzes for SSC, UPSC, Banking.">
+<link rel="stylesheet" href="style.css">
+<style id="dynamicPrintStyle"></style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo" onclick="go('#/')">
+      <div class="logo-badge">📰</div>
+      <span class="text">Current Affairs Hub</span>
+    </div>
+    <div class="nav-links">
+        <a href="#/" data-route="/">Home</a>
+        <a href="#/articles" data-route="/articles">Articles</a>
+        <a href="#/notes" data-route="/notes">📖 Study Notes</a>
+        <a href="#/states" data-route="/states">🗺️ States</a>
+        <a href="#/search" data-route="/search">🔍 Search</a>
+        <a href="#/quiz" data-route="/quiz">Daily Quiz</a>
+        <a href="#/auto" data-route="/auto">⚡ Auto News</a>
+        <a href="#/auto-quiz" data-route="/auto-quiz">🧠 Auto Quiz</a>
+        <a href="#/downloads" data-route="/downloads">📄 Downloads</a>
+        <a href="#/feedback" data-route="/feedback">💬 Feedback</a>
+        <a href="#/about" data-route="/about">About</a>
+     </div>
+    <button class="icon-btn" id="widthBtn" title="Toggle width">↔️</button>
+    <button class="icon-btn" id="themeBtn" title="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<main class="wrap" id="app"></main>
+
+<footer>
+  <p>📘 <b>Current Affairs Hub</b> — Daily news, state-wise updates & quizzes for SSC, UPSC, Banking & State exams.</p>
+  <p style="margin-top:6px; opacity:.85; font-size:12.5px;">Built with ❤️ · Content updated daily</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="notes.js"></script>
+<script src="quizzes.js"></script>
+<script src="chapter_quizzes.js"></script>
+<script src="history_notes.js"></script>
+<script src="history_quizzes.js"></script>
+<script src="history_chapter_quizzes.js"></script>
+<script src="extra_notes.js"></script>
+<script src="extra_quizzes.js"></script>
+<script src="extra_chapter_quizzes.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

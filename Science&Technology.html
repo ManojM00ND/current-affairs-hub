@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Science & Technology — Premium Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700;900&family=Cinzel:wght@600;700;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 10mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Calibri', 'Lato', Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1a1a1a; background: #D9D9D9; padding: 14px 0; }
+  .page { width: 210mm; min-height: 297mm; background: linear-gradient(180deg, #fffdf9 0%, #fffaf3 100%); margin: 0 auto 14px auto; padding: 12mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.18); page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  .page::before { content: ''; position: absolute; top: 5mm; left: 5mm; right: 5mm; bottom: 5mm; border: 1.5px solid #E5D5C0; border-radius: 8px; pointer-events: none; }
+
+  .hero { background: linear-gradient(135deg, #0C4A6E 0%, #0369A1 25%, #6D28D9 65%, #7F1D1D 100%); padding: 20px 24px 18px 24px; border-radius: 12px; position: relative; overflow: hidden; margin-bottom: 12px; box-shadow: 0 8px 24px rgba(12,74,110,0.35); border: 2px solid rgba(255,255,255,0.15); }
+  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(245,158,11,0.35), transparent 70%); border-radius: 50%; }
+  .hero::after { content: '🔬'; position: absolute; top: 10px; right: 20px; font-size: 24pt; opacity: 0.55; }
+  .hero h1 { font-family: 'Cinzel', serif; font-size: 26pt; font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: 1.2px; text-shadow: 0 3px 10px rgba(0,0,0,0.35); margin-bottom: 4px; position: relative; z-index: 2; }
+  .hero .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 13.5pt; font-style: italic; color: #FEF3C7; font-weight: 500; position: relative; z-index: 2; }
+  .hero .hero-line { width: 100px; height: 3px; background: linear-gradient(90deg, #FCD34D, transparent); margin-top: 10px; border-radius: 2px; position: relative; z-index: 2; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; padding: 7px 10px; background: #fff; border: 1px solid #E5D5C0; border-radius: 8px; justify-content: center; font-size: 8pt; }
+  .legend-item { display: flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 11px; font-weight: 700; color: #fff; font-family: 'Lato', sans-serif; }
+  .legend-blue   { background: linear-gradient(135deg, #1E40AF, #1E3A8A); }
+  .legend-red    { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .legend-green  { background: linear-gradient(135deg, #059669, #047857); }
+  .legend-amber  { background: linear-gradient(135deg, #D97706, #B45309); }
+  .legend-teal   { background: linear-gradient(135deg, #0F766E, #115E59); }
+  .legend-purple { background: linear-gradient(135deg, #6D28D9, #5B21B6); }
+
+  .section-header { font-family: 'Cinzel', serif; font-size: 14pt; font-weight: 900; color: #0C4A6E; padding: 8px 14px; background: linear-gradient(90deg, #E0F2FE 0%, #F0F9FF 100%); border-left: 5px solid #0EA5E9; border-radius: 0 8px 8px 0; margin: 12px 0 8px 0; letter-spacing: 0.5px; }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: 13.5pt; font-weight: 900; color: #0C4A6E; margin-top: 10px; margin-bottom: 6px; line-height: 1.15; display: flex; align-items: center; gap: 8px; }
+  h2 .num { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; background: linear-gradient(135deg, #0369A1, #0C4A6E); color: #fff; border-radius: 50%; font-family: 'Cinzel', serif; font-weight: 900; font-size: 12pt; box-shadow: 0 3px 8px rgba(12,74,110,0.4); flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4); }
+  h3 { font-family: 'Playfair Display', serif; font-size: 11pt; font-weight: 700; color: #0C4A6E; margin-top: 8px; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  h3::before { content: '◆'; color: #0EA5E9; font-size: 8.5pt; }
+  .page-header { font-family: 'Cinzel', serif; font-size: 11.5pt; font-weight: 700; color: #0369A1; letter-spacing: 0.4px; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1.5px solid #BAE6FD; position: relative; }
+  .page-header::after { content: '✦'; position: absolute; right: 0; top: 0; color: #0EA5E9; font-size: 12pt; }
+
+  .columns { column-count: 2; column-gap: 6mm; column-rule: 1px solid #BAE6FD; text-align: justify; hyphens: auto; }
+  .columns p { margin-bottom: 6px; }
+
+  .key { background: linear-gradient(180deg, transparent 55%, #BAE6FD 55%); padding: 0 3px; font-weight: 700; color: #0C4A6E; }
+  .critical { background: linear-gradient(135deg, #B91C1C, #7F1D1D); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+  .success { background: linear-gradient(135deg, #059669, #047857); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+  .purple { background: linear-gradient(135deg, #6D28D9, #4C1D95); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+
+  ul, ol { margin-left: 15px; margin-bottom: 5px; }
+  li { margin-bottom: 2px; line-height: 1.35; }
+  li::marker { color: #0369A1; font-weight: 900; }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 6px 0 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 14px rgba(12,74,110,0.16); border: 1px solid #BAE6FD; }
+  table th { background: linear-gradient(135deg, #0369A1 0%, #0C4A6E 100%); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 7px 10px; text-align: left; font-size: 9.5pt; letter-spacing: 0.3px; }
+  table td { padding: 5px 10px; border-bottom: 1px solid #BAE6FD; vertical-align: top; line-height: 1.35; }
+  table tr:nth-child(even) td { background: #F0F9FF; }
+  table tr:last-child td { border-bottom: none; }
+  table td strong { color: #0C4A6E; font-weight: 700; }
+
+  .exam-focus { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border-left: 4px solid #D97706; padding: 8px 12px 8px 16px; margin: 8px 0; border-radius: 0 8px 8px 0; font-size: 9.5pt; position: relative; box-shadow: 0 2px 8px rgba(217,119,6,0.16); page-break-inside: avoid; }
+  .exam-focus::before { content: '⚡ Exam Focus'; position: absolute; top: -9px; left: 12px; background: linear-gradient(135deg, #D97706, #B45309); color: #fff; padding: 2px 9px; font-family: 'Cinzel', serif; font-size: 8pt; font-weight: 700; border-radius: 10px; box-shadow: 0 2px 6px rgba(180,83,9,0.35); }
+  .exam-focus strong { color: #78350F; }
+
+  .quick-rev { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); border: 1.5px dashed #0F766E; border-radius: 10px; padding: 11px 14px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; position: relative; }
+  .quick-rev::before { content: '📌 Quick Revision'; position: absolute; top: -10px; left: 14px; background: linear-gradient(135deg, #0F766E, #115E59); color: #fff; padding: 3px 12px; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; border-radius: 12px; box-shadow: 0 3px 8px rgba(15,118,110,0.35); }
+  .quick-rev ul { margin-top: 5px; margin-left: 14px; }
+  .quick-rev li { margin-bottom: 2px; color: #134E4A; }
+  .quick-rev li strong { color: #0F766E; }
+
+  .infobox { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); padding: 9px 13px 9px 17px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 0 8px 8px 0; line-height: 1.4; border-left: 4px solid #1E40AF; box-shadow: 0 3px 10px rgba(30,64,175,0.12); position: relative; }
+  .infobox::before { content: '★'; position: absolute; top: -7px; left: 7px; background: #EFF6FF; color: #1E40AF; font-size: 10pt; padding: 0 4px; border-radius: 50%; }
+  .infobox strong { color: #1E3A8A; font-family: 'Cinzel', serif; font-weight: 700; }
+
+  .page-footer { position: absolute; bottom: 6mm; left: 12mm; right: 12mm; display: flex; justify-content: space-between; align-items: center; font-size: 8.5pt; color: #0369A1; font-family: 'Cormorant Garamond', serif; font-style: italic; border-top: 1px solid #BAE6FD; padding-top: 4px; }
+  .page-footer::before { content: '❖ ❖ ❖'; position: absolute; left: 50%; transform: translateX(-50%); color: #0EA5E9; font-size: 7.5pt; background: #fffdf9; padding: 0 9px; top: -7px; letter-spacing: 2.5px; }
+
+  .figcaption { font-family: 'Cormorant Garamond', serif; font-size: 9.5pt; color: #0369A1; font-style: italic; margin: 4px 0 8px 0; text-align: center; padding: 4px 0; border-top: 1px solid #BAE6FD; border-bottom: 1px solid #BAE6FD; font-weight: 600; }
+  .source { font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; color: #0369A1; margin-top: 8px; font-style: italic; text-align: right; }
+  .fill-note { background: #F0F9FF; border: 1px dashed #BAE6FD; border-radius: 6px; padding: 8px 12px; margin: 8px 0 4px 0; font-size: 9pt; color: #0C4A6E; font-family: 'Cormorant Garamond', serif; font-style: italic; text-align: center; }
+
+  /* Cell Diagram */
+  .cell-diagram { background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%); border: 2px solid #0EA5E9; border-radius: 12px; padding: 14px 10px 10px 10px; margin: 12px 0; position: relative; box-shadow: 0 5px 16px rgba(14,165,233,0.20); page-break-inside: avoid; }
+  .cell-diagram::before { content: '🔬 Cell Organelles'; position: absolute; top: -12px; left: 16px; background: linear-gradient(135deg, #0EA5E9, #0369A1); color: #fff; padding: 3px 12px; border-radius: 12px; font-family: 'Cinzel', serif; font-size: 9.5pt; font-weight: 700; box-shadow: 0 3px 8px rgba(14,165,233,0.4); }
+  .cell-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
+  .cell-item { padding: 8px 10px; border-radius: 8px; color: #fff; font-family: 'Lato', sans-serif; font-size: 9pt; font-weight: 700; box-shadow: 0 3px 8px rgba(0,0,0,0.15); text-align: center; border: 1.5px solid rgba(255,255,255,0.3); }
+  .c-nucleus { background: linear-gradient(135deg, #6D28D9, #4C1D95); }
+  .c-mito    { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .c-ribo    { background: linear-gradient(135deg, #D97706, #B45309); }
+  .c-golgi   { background: linear-gradient(135deg, #0369A1, #0C4A6E); }
+  .c-lyso    { background: linear-gradient(135deg, #78350F, #451A03); }
+
+  @media print { body { background: #fff; padding: 0; } .page { margin: 0; box-shadow: none; width: 100%; min-height: 297mm; } .page::before { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — BIOLOGY: CELL ============ -->
+<div class="page">
+  <div class="hero">
+    <h1>Science &amp; Technology</h1>
+    <div class="hero-sub">Biology · Physics · Chemistry · Computer Awareness</div>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item legend-blue">📘 Facts</span>
+    <span class="legend-item legend-red">🔴 Key Terms</span>
+    <span class="legend-item legend-amber">⚡ Exam</span>
+    <span class="legend-item legend-teal">📌 Revision</span>
+    <span class="legend-item legend-green">✓ Success</span>
+    <span class="legend-item legend-purple">🔬 Definitions</span>
+  </div>
+
+  <div class="section-header">SECTION 1 — Biology</div>
+
+  <h2><span class="num">1</span>What is Biology?</h2>
+  <p>Biology is the study of living organisms — their structure, function, growth, evolution, and distribution.</p>
+  <div class="infobox">
+    <strong>Father of Biology:</strong> Aristotle · <strong>Father of Modern Biology:</strong> Carolus Linnaeus (for taxonomy)
+  </div>
+
+  <h2><span class="num">2</span>The Cell — Complete Data</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Discovery</strong></td><td>Robert Hooke (1665)</td></tr>
+    <tr><td><strong>Cell Theory</strong></td><td>Schleiden and Schwann (1839)</td></tr>
+    <tr><td><strong>Cell Theory Modified</strong></td><td>Rudolf Virchow (1855) — "Omnis cellula-e cellula"</td></tr>
+    <tr><td><strong>Basic Unit</strong></td><td>Cell is the basic unit of life</td></tr>
+    <tr><td><strong>Smallest Cell</strong></td><td>Mycoplasma (PPLO)</td></tr>
+    <tr><td><strong>Largest Cell</strong></td><td>Ostrich Egg</td></tr>
+    <tr><td><strong>Longest Cell</strong></td><td>Nerve Cell</td></tr>
+    <tr><td><strong>Prokaryotic Cell</strong></td><td>No nucleus (Bacteria)</td></tr>
+    <tr><td><strong>Eukaryotic Cell</strong></td><td>Has nucleus (Plants, Animals)</td></tr>
+  </table>
+
+  <div class="cell-diagram">
+    <div class="cell-grid">
+      <div class="cell-item c-nucleus">Nucleus<br><small>Brain of the Cell</small></div>
+      <div class="cell-item c-mito">Mitochondria<br><small>Powerhouse of the Cell</small></div>
+      <div class="cell-item c-ribo">Ribosome<br><small>Protein Factory</small></div>
+      <div class="cell-item c-golgi">Golgi Apparatus<br><small>Post Office of the Cell</small></div>
+      <div class="cell-item c-lyso">Lysosome<br><small>Suicide Bag of the Cell</small></div>
+    </div>
+  </div>
+
+  <h2><span class="num">3</span>Cell Organelles — Complete Data</h2>
+
+  <table>
+    <tr><th>Organelle</th><th>Function</th><th>Known As</th></tr>
+    <tr><td><strong>Nucleus</strong></td><td>Control center</td><td><span class="purple">Brain of the cell</span></td></tr>
+    <tr><td><strong>Mitochondria</strong></td><td>Energy production (ATP)</td><td><span class="critical">Powerhouse of the cell</span></td></tr>
+    <tr><td><strong>Ribosome</strong></td><td>Protein synthesis</td><td><span class="success">Protein factory</span></td></tr>
+    <tr><td><strong>Golgi Apparatus</strong></td><td>Packaging &amp; transport</td><td><span class="purple">Post office of the cell</span></td></tr>
+    <tr><td><strong>Endoplasmic Reticulum</strong></td><td>Transport</td><td>—</td></tr>
+    <tr><td><strong>Lysosome</strong></td><td>Digestion</td><td><span class="critical">Suicide bag of the cell</span></td></tr>
+    <tr><td><strong>Plastid</strong></td><td>Photosynthesis (plants only)</td><td>—</td></tr>
+    <tr><td><strong>Vacuole</strong></td><td>Storage</td><td>—</td></tr>
+    <tr><td><strong>Cell Wall</strong></td><td>Protection (plants only)</td><td>—</td></tr>
+    <tr><td><strong>Cell Membrane</strong></td><td>Selective permeability</td><td>—</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> Know which organelles are only in <strong>plant cells</strong> — <strong>Plastid</strong> and <strong>Cell Wall</strong>. Also remember <strong>Mitochondria = Powerhouse</strong>, <strong>Lysosome = Suicide Bag</strong>, <strong>Golgi = Post Office</strong>.
+  </div>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — HUMAN BODY SYSTEMS ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · Human Body Systems</div>
+
+  <h2><span class="num">4</span>Digestive System</h2>
+  <table>
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td><strong>Mouth</strong></td><td>Chewing, saliva</td></tr>
+    <tr><td><strong>Esophagus</strong></td><td>Food pipe</td></tr>
+    <tr><td><strong>Stomach</strong></td><td>Digestion, HCl secretion</td></tr>
+    <tr><td><strong>Small Intestine</strong></td><td>Absorption of nutrients</td></tr>
+    <tr><td><strong>Large Intestine</strong></td><td>Water absorption</td></tr>
+    <tr><td><strong>Liver</strong></td><td>Bile secretion</td></tr>
+    <tr><td><strong>Pancreas</strong></td><td>Digestive enzymes, Insulin</td></tr>
+  </table>
+
+  <h2><span class="num">5</span>Respiratory System</h2>
+  <table>
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td><strong>Nose</strong></td><td>Air entry</td></tr>
+    <tr><td><strong>Trachea</strong></td><td>Windpipe</td></tr>
+    <tr><td><strong>Bronchi</strong></td><td>Branches of trachea</td></tr>
+    <tr><td><strong>Lungs</strong></td><td>Gas exchange</td></tr>
+    <tr><td><strong>Diaphragm</strong></td><td>Breathing muscle</td></tr>
+  </table>
+
+  <h2><span class="num">6</span>Circulatory System</h2>
+  <table>
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td><strong>Heart</strong></td><td>Pumps blood</td></tr>
+    <tr><td><strong>Arteries</strong></td><td>Carry oxygenated blood away from heart</td></tr>
+    <tr><td><strong>Veins</strong></td><td>Carry deoxygenated blood to heart</td></tr>
+    <tr><td><strong>Capillaries</strong></td><td>Exchange of gases</td></tr>
+  </table>
+
+  <h2><span class="num">7</span>Nervous System</h2>
+  <table>
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td><strong>Brain</strong></td><td>Control center</td></tr>
+    <tr><td><strong>Spinal Cord</strong></td><td>Reflex actions</td></tr>
+    <tr><td><strong>Neurons</strong></td><td>Nerve cells</td></tr>
+  </table>
+
+  <h2><span class="num">8</span>Excretory System</h2>
+  <table>
+    <tr><th>Organ</th><th>Function</th></tr>
+    <tr><td><strong>Kidneys</strong></td><td>Filter blood, produce urine</td></tr>
+    <tr><td><strong>Ureters</strong></td><td>Carry urine to bladder</td></tr>
+    <tr><td><strong>Bladder</strong></td><td>Store urine</td></tr>
+    <tr><td><strong>Urethra</strong></td><td>Expel urine</td></tr>
+  </table>
+
+  <div class="fill-note">✦ Human body has 11 major organ systems — 5 most asked in SSC are above ✦</div>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — VITAMINS + DISEASES ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · Vitamins + Diseases</div>
+
+  <h2><span class="num">9</span>Vitamins and Their Deficiency Diseases</h2>
+
+  <table>
+    <tr><th>Vitamin</th><th>Chemical Name</th><th>Deficiency Disease</th><th>Source</th></tr>
+    <tr><td><strong>A</strong></td><td>Retinol</td><td><span class="critical">Night Blindness</span></td><td>Carrot, Papaya</td></tr>
+    <tr><td><strong>B1</strong></td><td>Thiamine</td><td><span class="critical">Beriberi</span></td><td>Whole grains</td></tr>
+    <tr><td><strong>B2</strong></td><td>Riboflavin</td><td>Ariboflavinosis</td><td>Milk, Eggs</td></tr>
+    <tr><td><strong>B3</strong></td><td>Niacin</td><td>Pellagra</td><td>Meat, Fish</td></tr>
+    <tr><td><strong>B5</strong></td><td>Pantothenic Acid</td><td>Paresthesia</td><td>Meat, Vegetables</td></tr>
+    <tr><td><strong>B6</strong></td><td>Pyridoxine</td><td>Anemia</td><td>Meat, Vegetables</td></tr>
+    <tr><td><strong>B7</strong></td><td>Biotin</td><td>Dermatitis</td><td>Eggs, Nuts</td></tr>
+    <tr><td><strong>B9</strong></td><td>Folic Acid</td><td>Anemia</td><td>Green vegetables</td></tr>
+    <tr><td><strong>B12</strong></td><td>Cobalamin</td><td>Pernicious Anemia</td><td>Meat, Dairy</td></tr>
+    <tr><td><strong>C</strong></td><td>Ascorbic Acid</td><td><span class="critical">Scurvy</span></td><td>Citrus fruits</td></tr>
+    <tr><td><strong>D</strong></td><td>Calciferol</td><td><span class="critical">Rickets</span></td><td>Sunlight, Fish</td></tr>
+    <tr><td><strong>E</strong></td><td>Tocopherol</td><td>Hemolysis</td><td>Nuts, Seeds</td></tr>
+    <tr><td><strong>K</strong></td><td>Phylloquinone</td><td><span class="critical">Bleeding</span></td><td>Green vegetables</td></tr>
+  </table>
+
+  <h2><span class="num">10</span>Diseases — Complete Data</h2>
+
+  <h3>Bacterial Diseases</h3>
+  <table>
+    <tr><th>Disease</th><th>Pathogen</th></tr>
+    <tr><td><strong>Tuberculosis</strong></td><td>Mycobacterium tuberculosis</td></tr>
+    <tr><td><strong>Cholera</strong></td><td>Vibrio cholerae</td></tr>
+    <tr><td><strong>Typhoid</strong></td><td>Salmonella typhi</td></tr>
+    <tr><td><strong>Tetanus</strong></td><td>Clostridium tetani</td></tr>
+    <tr><td><strong>Leprosy</strong></td><td>Mycobacterium leprae</td></tr>
+    <tr><td><strong>Pneumonia</strong></td><td>Streptococcus pneumoniae</td></tr>
+  </table>
+
+  <h3>Viral Diseases</h3>
+  <table>
+    <tr><th>Disease</th><th>Pathogen</th></tr>
+    <tr><td><strong>AIDS</strong></td><td>HIV</td></tr>
+    <tr><td><strong>Polio</strong></td><td>Poliovirus</td></tr>
+    <tr><td><strong>Rabies</strong></td><td>Rabies virus</td></tr>
+    <tr><td><strong>Dengue</strong></td><td>Dengue virus</td></tr>
+    <tr><td><strong>Chickenpox</strong></td><td>Varicella zoster</td></tr>
+    <tr><td><strong>Measles</strong></td><td>Measles virus</td></tr>
+    <tr><td><strong>COVID-19</strong></td><td>SARS-CoV-2</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — MORE DISEASES + BLOOD ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · Diseases (Continued) + Blood</div>
+
+  <h2><span class="num">11</span>Protozoan Diseases</h2>
+  <table>
+    <tr><th>Disease</th><th>Pathogen</th></tr>
+    <tr><td><strong>Malaria</strong></td><td>Plasmodium</td></tr>
+    <tr><td><strong>Kala-azar</strong></td><td>Leishmania</td></tr>
+    <tr><td><strong>Amoebiasis</strong></td><td>Entamoeba histolytica</td></tr>
+    <tr><td><strong>Sleeping Sickness</strong></td><td>Trypanosoma</td></tr>
+  </table>
+
+  <h2><span class="num">12</span>Fungal Diseases</h2>
+  <table>
+    <tr><th>Disease</th><th>Pathogen</th></tr>
+    <tr><td><strong>Ringworm</strong></td><td>Trichophyton</td></tr>
+    <tr><td><strong>Athlete's Foot</strong></td><td>Trichophyton</td></tr>
+  </table>
+
+  <h2><span class="num">13</span>Blood — Complete Data</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Components</strong></td><td>Plasma, RBC, WBC, Platelets</td></tr>
+    <tr><td><strong>RBC</strong></td><td>Red Blood Cells · Carry oxygen · Life: 120 days</td></tr>
+    <tr><td><strong>WBC</strong></td><td>White Blood Cells · Fight infection</td></tr>
+    <tr><td><strong>Platelets</strong></td><td>Help in blood clotting</td></tr>
+    <tr><td><strong>Plasma</strong></td><td>Liquid part (55%)</td></tr>
+    <tr><td><strong>Blood Groups</strong></td><td>A, B, AB, O</td></tr>
+    <tr><td><strong>Universal Donor</strong></td><td><span class="critical">O negative</span></td></tr>
+    <tr><td><strong>Universal Recipient</strong></td><td><span class="critical">AB positive</span></td></tr>
+    <tr><td><strong>pH of Blood</strong></td><td>7.4 (slightly alkaline)</td></tr>
+    <tr><td><strong>Total Blood Volume</strong></td><td>5–6 liters (adult)</td></tr>
+  </table>
+
+  <h2><span class="num">14</span>Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> Powerhouse of the cell? <em>Mitochondria</em></p>
+    <p><strong>Q2.</strong> Post office of the cell? <em>Golgi Apparatus</em></p>
+    <p><strong>Q3.</strong> Suicide bag of the cell? <em>Lysosome</em></p>
+    <p><strong>Q4.</strong> Vitamin deficiency causing Night Blindness? <em>Vitamin A</em></p>
+    <p><strong>Q5.</strong> Vitamin deficiency causing Scurvy? <em>Vitamin C</em></p>
+    <p><strong>Q6.</strong> Vitamin deficiency causing Rickets? <em>Vitamin D</em></p>
+    <p><strong>Q7.</strong> Vitamin deficiency causing Beriberi? <em>Vitamin B1</em></p>
+    <p><strong>Q8.</strong> Disease caused by Protozoa? <em>Malaria, Kala-azar</em></p>
+    <p><strong>Q9.</strong> Disease caused by Virus? <em>AIDS, Polio, Rabies</em></p>
+    <p><strong>Q10.</strong> Disease caused by Bacteria? <em>Tuberculosis, Cholera, Typhoid</em></p>
+    <p><strong>Q11.</strong> pH of blood? <em>7.4</em></p>
+    <p><strong>Q12.</strong> Universal donor? <em>O negative</em></p>
+    <p><strong>Q13.</strong> Universal recipient? <em>AB positive</em></p>
+    <p><strong>Q14.</strong> Life of RBC? <em>120 days</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — PHYSICS: SI UNITS + NEWTON'S LAWS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 2 — Physics</div>
+
+  <h2><span class="num">15</span>What is Physics?</h2>
+  <p>Physics is the study of matter, energy, and their interactions.</p>
+
+  <h2><span class="num">16</span>SI Units — Complete Data</h2>
+
+  <table>
+    <tr><th>Quantity</th><th>SI Unit</th><th>Symbol</th></tr>
+    <tr><td><strong>Length</strong></td><td>Meter</td><td>m</td></tr>
+    <tr><td><strong>Mass</strong></td><td>Kilogram</td><td>kg</td></tr>
+    <tr><td><strong>Time</strong></td><td>Second</td><td>s</td></tr>
+    <tr><td><strong>Temperature</strong></td><td>Kelvin</td><td>K</td></tr>
+    <tr><td><strong>Electric Current</strong></td><td>Ampere</td><td>A</td></tr>
+    <tr><td><strong>Amount of Substance</strong></td><td>Mole</td><td>mol</td></tr>
+    <tr><td><strong>Luminous Intensity</strong></td><td>Candela</td><td>cd</td></tr>
+    <tr><td><strong>Force</strong></td><td>Newton</td><td>N</td></tr>
+    <tr><td><strong>Energy</strong></td><td>Joule</td><td>J</td></tr>
+    <tr><td><strong>Power</strong></td><td>Watt</td><td>W</td></tr>
+    <tr><td><strong>Pressure</strong></td><td>Pascal</td><td>Pa</td></tr>
+    <tr><td><strong>Frequency</strong></td><td>Hertz</td><td>Hz</td></tr>
+    <tr><td><strong>Charge</strong></td><td>Coulomb</td><td>C</td></tr>
+    <tr><td><strong>Potential Difference</strong></td><td>Volt</td><td>V</td></tr>
+    <tr><td><strong>Resistance</strong></td><td>Ohm</td><td>Ω</td></tr>
+    <tr><td><strong>Magnetic Field</strong></td><td>Tesla</td><td>T</td></tr>
+    <tr><td><strong>Luminous Flux</strong></td><td>Lumen</td><td>lm</td></tr>
+  </table>
+
+  <h2><span class="num">17</span>Newton's Laws of Motion</h2>
+
+  <table>
+    <tr><th>Law</th><th>Statement</th></tr>
+    <tr><td><strong>First Law</strong></td><td>An object at rest stays at rest, and an object in motion stays in motion unless acted upon by an external force. <span class="critical">(Law of Inertia)</span></td></tr>
+    <tr><td><strong>Second Law</strong></td><td><span class="critical">Force = Mass × Acceleration (F = ma)</span></td></tr>
+    <tr><td><strong>Third Law</strong></td><td>For every action, there is an equal and opposite reaction.</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — LIGHT + SOUND + ELECTRICITY ============ -->
+<div class="page">
+  <div class="page-header">Section 2 · Light + Sound + Electricity</div>
+
+  <h2><span class="num">18</span>Light — Complete Data</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Speed of Light</strong></td><td><span class="critical">3 × 10⁸ m/s</span></td></tr>
+    <tr><td><strong>Reflection</strong></td><td>Bouncing back of light</td></tr>
+    <tr><td><strong>Refraction</strong></td><td>Bending of light</td></tr>
+    <tr><td><strong>Dispersion</strong></td><td>Splitting of light into colors</td></tr>
+    <tr><td><strong>Scattering</strong></td><td>Spreading of light</td></tr>
+    <tr><td><strong>Laws of Reflection</strong></td><td>Angle of incidence = Angle of reflection</td></tr>
+    <tr><td><strong>Laws of Refraction</strong></td><td>Snell's Law</td></tr>
+    <tr><td><strong>Mirror</strong></td><td>Reflects light</td></tr>
+    <tr><td><strong>Lens</strong></td><td>Refracts light</td></tr>
+    <tr><td><strong>Concave Mirror</strong></td><td>Converging mirror</td></tr>
+    <tr><td><strong>Convex Mirror</strong></td><td>Diverging mirror</td></tr>
+    <tr><td><strong>Concave Lens</strong></td><td>Diverging lens</td></tr>
+    <tr><td><strong>Convex Lens</strong></td><td>Converging lens</td></tr>
+  </table>
+
+  <h2><span class="num">19</span>Sound — Complete Data</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Speed of Sound</strong></td><td><span class="critical">343 m/s (in air)</span></td></tr>
+    <tr><td><strong>Medium</strong></td><td>Sound needs a medium to travel</td></tr>
+    <tr><td><strong>Vacuum</strong></td><td><span class="critical">Sound cannot travel in vacuum</span></td></tr>
+    <tr><td><strong>Speed in Solid</strong></td><td>Fastest</td></tr>
+    <tr><td><strong>Speed in Gas</strong></td><td>Slowest</td></tr>
+    <tr><td><strong>Frequency</strong></td><td>Number of vibrations per second</td></tr>
+    <tr><td><strong>Audible Range</strong></td><td><span class="critical">20 Hz to 20,000 Hz</span></td></tr>
+    <tr><td><strong>Infrasonic</strong></td><td>Below 20 Hz</td></tr>
+    <tr><td><strong>Ultrasonic</strong></td><td>Above 20,000 Hz</td></tr>
+    <tr><td><strong>Echo</strong></td><td>Reflection of sound</td></tr>
+  </table>
+
+  <h2><span class="num">20</span>Electricity — Complete Data</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Ohm's Law</strong></td><td><span class="critical">V = IR</span></td></tr>
+    <tr><td><strong>Voltage</strong></td><td>Volt (V)</td></tr>
+    <tr><td><strong>Current</strong></td><td>Ampere (A)</td></tr>
+    <tr><td><strong>Resistance</strong></td><td>Ohm (Ω)</td></tr>
+    <tr><td><strong>Power</strong></td><td>Watt (W)</td></tr>
+    <tr><td><strong>Series Connection</strong></td><td>R = R1 + R2 + R3</td></tr>
+    <tr><td><strong>Parallel Connection</strong></td><td>1/R = 1/R1 + 1/R2 + 1/R3</td></tr>
+    <tr><td><strong>Conductor</strong></td><td>Allows electricity to pass</td></tr>
+    <tr><td><strong>Insulator</strong></td><td>Does not allow electricity to pass</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 7 — PHYSICS PYQ + CHEMISTRY ============ -->
+<div class="page">
+  <div class="page-header">Section 2 PYQ + Section 3 · Chemistry</div>
+
+  <h2><span class="num">21</span>Physics — Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> SI unit of Force? <em>Newton</em></p>
+    <p><strong>Q2.</strong> SI unit of Energy? <em>Joule</em></p>
+    <p><strong>Q3.</strong> SI unit of Power? <em>Watt</em></p>
+    <p><strong>Q4.</strong> SI unit of Pressure? <em>Pascal</em></p>
+    <p><strong>Q5.</strong> SI unit of Frequency? <em>Hertz</em></p>
+    <p><strong>Q6.</strong> Speed of light? <em>3 × 10⁸ m/s</em></p>
+    <p><strong>Q7.</strong> Speed of sound in air? <em>343 m/s</em></p>
+    <p><strong>Q8.</strong> Can sound travel in vacuum? <em>No</em></p>
+    <p><strong>Q9.</strong> Audible range? <em>20 Hz to 20,000 Hz</em></p>
+    <p><strong>Q10.</strong> Ohm's Law? <em>V = IR</em></p>
+    <p><strong>Q11.</strong> Newton's First Law? <em>Law of Inertia</em></p>
+    <p><strong>Q12.</strong> Newton's Second Law? <em>F = ma</em></p>
+    <p><strong>Q13.</strong> Newton's Third Law? <em>Action and Reaction equal &amp; opposite</em></p>
+  </div>
+
+  <div class="section-header">SECTION 3 — Chemistry</div>
+
+  <h2><span class="num">22</span>What is Chemistry?</h2>
+  <p>Chemistry is the study of matter, its composition, structure, properties, and changes.</p>
+
+  <h2><span class="num">23</span>Atomic Structure</h2>
+  <table>
+    <tr><th>Particle</th><th>Charge</th><th>Location</th></tr>
+    <tr><td><strong>Proton</strong></td><td>Positive</td><td>Nucleus</td></tr>
+    <tr><td><strong>Neutron</strong></td><td>Neutral</td><td>Nucleus</td></tr>
+    <tr><td><strong>Electron</strong></td><td>Negative</td><td>Orbits</td></tr>
+  </table>
+
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td><strong>Atomic Number</strong></td><td>Number of protons</td></tr>
+    <tr><td><strong>Mass Number</strong></td><td>Protons + Neutrons</td></tr>
+    <tr><td><strong>Isotopes</strong></td><td>Same atomic number, different mass number</td></tr>
+    <tr><td><strong>Isobars</strong></td><td>Same mass number, different atomic number</td></tr>
+  </table>
+
+  <h2><span class="num">24</span>Periodic Table</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Creator</strong></td><td>Dmitri Mendeleev (1869)</td></tr>
+    <tr><td><strong>Modern Periodic Table</strong></td><td>Henry Moseley</td></tr>
+    <tr><td><strong>Groups</strong></td><td>18 vertical columns</td></tr>
+    <tr><td><strong>Periods</strong></td><td>7 horizontal rows</td></tr>
+    <tr><td><strong>Alkali Metals</strong></td><td>Group 1</td></tr>
+    <tr><td><strong>Alkaline Earth Metals</strong></td><td>Group 2</td></tr>
+    <tr><td><strong>Halogens</strong></td><td>Group 17</td></tr>
+    <tr><td><strong>Noble Gases</strong></td><td>Group 18</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 7</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 8 — CHEMICAL COMPOUNDS + ACIDS ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Compounds + Acids + Gases</div>
+
+  <h2><span class="num">25</span>Common Chemical Compounds</h2>
+
+  <table>
+    <tr><th>Common Name</th><th>Chemical Name</th><th>Formula</th></tr>
+    <tr><td><strong>Baking Soda</strong></td><td>Sodium Bicarbonate</td><td><span class="critical">NaHCO₃</span></td></tr>
+    <tr><td><strong>Washing Soda</strong></td><td>Sodium Carbonate</td><td><span class="critical">Na₂CO₃</span></td></tr>
+    <tr><td><strong>Plaster of Paris</strong></td><td>Calcium Sulfate Hemihydrate</td><td><span class="critical">CaSO₄·½H₂O</span></td></tr>
+    <tr><td><strong>Quick Lime</strong></td><td>Calcium Oxide</td><td><span class="critical">CaO</span></td></tr>
+    <tr><td><strong>Slaked Lime</strong></td><td>Calcium Hydroxide</td><td>Ca(OH)₂</td></tr>
+    <tr><td><strong>Bleaching Powder</strong></td><td>Calcium Hypochlorite</td><td>Ca(OCl)₂</td></tr>
+    <tr><td><strong>Common Salt</strong></td><td>Sodium Chloride</td><td><span class="critical">NaCl</span></td></tr>
+    <tr><td><strong>Chalk</strong></td><td>Calcium Carbonate</td><td>CaCO₃</td></tr>
+    <tr><td><strong>Vinegar</strong></td><td>Acetic Acid</td><td><span class="critical">CH₃COOH</span></td></tr>
+    <tr><td><strong>Alcohol</strong></td><td>Ethanol</td><td>C₂H₅OH</td></tr>
+    <tr><td><strong>Sugar</strong></td><td>Sucrose</td><td>C₁₂H₂₂O₁₁</td></tr>
+    <tr><td><strong>Aspirin</strong></td><td>Acetylsalicylic Acid</td><td>C₉H₈O₄</td></tr>
+    <tr><td><strong>Caustic Soda</strong></td><td>Sodium Hydroxide</td><td>NaOH</td></tr>
+    <tr><td><strong>Laughing Gas</strong></td><td>Nitrous Oxide</td><td><span class="critical">N₂O</span></td></tr>
+    <tr><td><strong>Dry Ice</strong></td><td>Solid Carbon Dioxide</td><td><span class="critical">CO₂</span></td></tr>
+    <tr><td><strong>Muriatic Acid</strong></td><td>Hydrochloric Acid</td><td>HCl</td></tr>
+    <tr><td><strong>Oil of Vitriol</strong></td><td>Sulfuric Acid</td><td>H₂SO₄</td></tr>
+    <tr><td><strong>Aqua Fortis</strong></td><td>Nitric Acid</td><td>HNO₃</td></tr>
+  </table>
+
+  <h2><span class="num">26</span>Acids and Bases</h2>
+
+  <table>
+    <tr><th>Acid</th><th>Formula</th><th>Base</th><th>Formula</th></tr>
+    <tr><td><strong>Hydrochloric Acid</strong></td><td>HCl</td><td>Sodium Hydroxide</td><td>NaOH</td></tr>
+    <tr><td><strong>Sulfuric Acid</strong></td><td>H₂SO₄</td><td>Potassium Hydroxide</td><td>KOH</td></tr>
+    <tr><td><strong>Nitric Acid</strong></td><td>HNO₃</td><td>Calcium Hydroxide</td><td>Ca(OH)₂</td></tr>
+    <tr><td><strong>Acetic Acid</strong></td><td>CH₃COOH</td><td>Ammonium Hydroxide</td><td>NH₄OH</td></tr>
+    <tr><td><strong>Citric Acid</strong></td><td>C₆H₈O₇</td><td>Magnesium Hydroxide</td><td>Mg(OH)₂</td></tr>
+  </table>
+
+  <div class="infobox">
+    <strong>pH Scale:</strong> 0–6 Acidic · 7 Neutral · 8–14 Basic · <strong>Acids:</strong> Sour taste, turn blue litmus red · <strong>Bases:</strong> Bitter taste, turn red litmus blue
+  </div>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 8</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 9 — GASES + CHEMISTRY PYQ ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Gases + PYQ</div>
+
+  <h2><span class="num">27</span>Gases — Complete Data</h2>
+
+  <table>
+    <tr><th>Gas</th><th>Formula</th><th>Uses</th></tr>
+    <tr><td><strong>Oxygen</strong></td><td>O₂</td><td>Breathing</td></tr>
+    <tr><td><strong>Nitrogen</strong></td><td>N₂</td><td>Fertilizers</td></tr>
+    <tr><td><strong>Carbon Dioxide</strong></td><td>CO₂</td><td>Photosynthesis</td></tr>
+    <tr><td><strong>Hydrogen</strong></td><td>H₂</td><td>Fuel</td></tr>
+    <tr><td><strong>Helium</strong></td><td>He</td><td><span class="critical">Balloons</span></td></tr>
+    <tr><td><strong>Neon</strong></td><td>Ne</td><td><span class="critical">Lights</span></td></tr>
+    <tr><td><strong>Argon</strong></td><td>Ar</td><td><span class="critical">Welding</span></td></tr>
+    <tr><td><strong>Methane</strong></td><td>CH₄</td><td>Fuel</td></tr>
+    <tr><td><strong>LPG</strong></td><td>C₃H₈ + C₄H₁₀</td><td>Cooking</td></tr>
+    <tr><td><strong>CNG</strong></td><td>CH₄</td><td>Vehicles</td></tr>
+  </table>
+
+  <h2><span class="num">28</span>Chemistry — Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> Formula of Baking Soda? <em>NaHCO₃</em></p>
+    <p><strong>Q2.</strong> Formula of Washing Soda? <em>Na₂CO₃</em></p>
+    <p><strong>Q3.</strong> Formula of Plaster of Paris? <em>CaSO₄·½H₂O</em></p>
+    <p><strong>Q4.</strong> Formula of Quick Lime? <em>CaO</em></p>
+    <p><strong>Q5.</strong> Formula of Common Salt? <em>NaCl</em></p>
+    <p><strong>Q6.</strong> Formula of Vinegar? <em>CH₃COOH</em></p>
+    <p><strong>Q7.</strong> Formula of Laughing Gas? <em>N₂O</em></p>
+    <p><strong>Q8.</strong> Formula of Dry Ice? <em>CO₂</em></p>
+    <p><strong>Q9.</strong> pH of acidic substances? <em>Below 7</em></p>
+    <p><strong>Q10.</strong> pH of basic substances? <em>Above 7</em></p>
+    <p><strong>Q11.</strong> pH of neutral substances? <em>7</em></p>
+    <p><strong>Q12.</strong> Gas used in balloons? <em>Helium</em></p>
+    <p><strong>Q13.</strong> Gas used in lights? <em>Neon</em></p>
+    <p><strong>Q14.</strong> Gas used in welding? <em>Argon</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 9</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 10 — COMPUTER AWARENESS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 4 — Computer Awareness</div>
+
+  <h2><span class="num">29</span>What is a Computer?</h2>
+  <p>A computer is an electronic device that processes data and gives information.</p>
+
+  <h2><span class="num">30</span>Full Forms — Complete Data</h2>
+
+  <table>
+    <tr><th>Abbreviation</th><th>Full Form</th></tr>
+    <tr><td><strong>CPU</strong></td><td>Central Processing Unit</td></tr>
+    <tr><td><strong>RAM</strong></td><td>Random Access Memory</td></tr>
+    <tr><td><strong>ROM</strong></td><td>Read Only Memory</td></tr>
+    <tr><td><strong>GUI</strong></td><td>Graphical User Interface</td></tr>
+    <tr><td><strong>OS</strong></td><td>Operating System</td></tr>
+    <tr><td><strong>USB</strong></td><td>Universal Serial Bus</td></tr>
+    <tr><td><strong>HTTP</strong></td><td>HyperText Transfer Protocol</td></tr>
+    <tr><td><strong>HTTPS</strong></td><td>HyperText Transfer Protocol Secure</td></tr>
+    <tr><td><strong>URL</strong></td><td>Uniform Resource Locator</td></tr>
+    <tr><td><strong>LAN</strong></td><td>Local Area Network</td></tr>
+    <tr><td><strong>WAN</strong></td><td>Wide Area Network</td></tr>
+    <tr><td><strong>MAN</strong></td><td>Metropolitan Area Network</td></tr>
+    <tr><td><strong>ASCII</strong></td><td>American Standard Code for Information Interchange</td></tr>
+    <tr><td><strong>NIC</strong></td><td>National Informatics Centre</td></tr>
+    <tr><td><strong>ISP</strong></td><td>Internet Service Provider</td></tr>
+    <tr><td><strong>IP</strong></td><td>Internet Protocol</td></tr>
+    <tr><td><strong>TCP</strong></td><td>Transmission Control Protocol</td></tr>
+    <tr><td><strong>WWW</strong></td><td>World Wide Web</td></tr>
+    <tr><td><strong>HTML</strong></td><td>HyperText Markup Language</td></tr>
+    <tr><td><strong>CSS</strong></td><td>Cascading Style Sheets</td></tr>
+    <tr><td><strong>AI</strong></td><td>Artificial Intelligence</td></tr>
+    <tr><td><strong>IoT</strong></td><td>Internet of Things</td></tr>
+  </table>
+
+  <h2><span class="num">31</span>Keyboard Shortcuts</h2>
+
+  <table>
+    <tr><th>Shortcut</th><th>Function</th></tr>
+    <tr><td><strong>Ctrl + C</strong></td><td>Copy</td></tr>
+    <tr><td><strong>Ctrl + V</strong></td><td>Paste</td></tr>
+    <tr><td><strong>Ctrl + X</strong></td><td>Cut</td></tr>
+    <tr><td><strong>Ctrl + Z</strong></td><td>Undo</td></tr>
+    <tr><td><strong>Ctrl + Y</strong></td><td>Redo</td></tr>
+    <tr><td><strong>Ctrl + A</strong></td><td>Select All</td></tr>
+    <tr><td><strong>Ctrl + S</strong></td><td>Save</td></tr>
+    <tr><td><strong>Ctrl + P</strong></td><td>Print</td></tr>
+    <tr><td><strong>Ctrl + F</strong></td><td>Find</td></tr>
+    <tr><td><strong>Ctrl + N</strong></td><td>New</td></tr>
+    <tr><td><strong>Ctrl + O</strong></td><td>Open</td></tr>
+    <tr><td><strong>Ctrl + W</strong></td><td>Close</td></tr>
+    <tr><td><strong>Ctrl + M</strong></td><td>New Slide (PowerPoint)</td></tr>
+    <tr><td><strong>Ctrl + D</strong></td><td>Font Dialog (Word)</td></tr>
+    <tr><td><strong>Alt + F4</strong></td><td>Close Window</td></tr>
+    <tr><td><strong>F5</strong></td><td>Refresh</td></tr>
+    <tr><td><strong>F1</strong></td><td>Help</td></tr>
+    <tr><td><strong>F2</strong></td><td>Rename</td></tr>
+    <tr><td><strong>F12</strong></td><td>Save As</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 11 — FILE EXTENSIONS + PYQ ============ -->
+<div class="page">
+  <div class="page-header">Section 4 · File Extensions + PYQ</div>
+
+  <h2><span class="num">32</span>File Extensions — Complete Data</h2>
+
+  <table>
+    <tr><th>Extension</th><th>Type</th></tr>
+    <tr><td><strong>.docx</strong></td><td>Microsoft Word Document</td></tr>
+    <tr><td><strong>.xlsx</strong></td><td>Microsoft Excel Spreadsheet</td></tr>
+    <tr><td><strong>.pptx</strong></td><td>Microsoft PowerPoint Presentation</td></tr>
+    <tr><td><strong>.pdf</strong></td><td>Portable Document Format</td></tr>
+    <tr><td><strong>.txt</strong></td><td>Text File</td></tr>
+    <tr><td><strong>.jpg / .jpeg</strong></td><td>Image File</td></tr>
+    <tr><td><strong>.png</strong></td><td>Image File</td></tr>
+    <tr><td><strong>.gif</strong></td><td>Web Graphics</td></tr>
+    <tr><td><strong>.mp3</strong></td><td>Audio File</td></tr>
+    <tr><td><strong>.mp4</strong></td><td>Video File</td></tr>
+    <tr><td><strong>.exe</strong></td><td>Executable File</td></tr>
+    <tr><td><strong>.html</strong></td><td>Web Page</td></tr>
+    <tr><td><strong>.zip</strong></td><td>Compressed File</td></tr>
+  </table>
+
+  <h2><span class="num">33</span>Computer — Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> Full form of CPU? <em>Central Processing Unit</em></p>
+    <p><strong>Q2.</strong> Full form of RAM? <em>Random Access Memory</em></p>
+    <p><strong>Q3.</strong> Full form of ROM? <em>Read Only Memory</em></p>
+    <p><strong>Q4.</strong> Full form of OS? <em>Operating System</em></p>
+    <p><strong>Q5.</strong> Full form of LAN? <em>Local Area Network</em></p>
+    <p><strong>Q6.</strong> Full form of WAN? <em>Wide Area Network</em></p>
+    <p><strong>Q7.</strong> Full form of WWW? <em>World Wide Web</em></p>
+    <p><strong>Q8.</strong> Full form of ASCII? <em>American Standard Code for Information Interchange</em></p>
+    <p><strong>Q9.</strong> Shortcut for Copy? <em>Ctrl + C</em></p>
+    <p><strong>Q10.</strong> Shortcut for Paste? <em>Ctrl + V</em></p>
+    <p><strong>Q11.</strong> Shortcut for Cut? <em>Ctrl + X</em></p>
+    <p><strong>Q12.</strong> Shortcut for Undo? <em>Ctrl + Z</em></p>
+    <p><strong>Q13.</strong> Shortcut for Redo? <em>Ctrl + Y</em></p>
+    <p><strong>Q14.</strong> Shortcut for New Slide in PowerPoint? <em>Ctrl + M</em></p>
+    <p><strong>Q15.</strong> Shortcut for Font Dialog in Word? <em>Ctrl + D</em></p>
+    <p><strong>Q16.</strong> Extension of Word document? <em>.docx</em></p>
+    <p><strong>Q17.</strong> Extension of Excel spreadsheet? <em>.xlsx</em></p>
+    <p><strong>Q18.</strong> Extension of PowerPoint presentation? <em>.pptx</em></p>
+    <p><strong>Q19.</strong> Extension of web graphic? <em>.gif</em></p>
+    <p><strong>Q20.</strong> Which unit processes data? <em>CPU</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 11</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 12 — MASTER SUMMARY ============ -->
+<div class="page">
+  <div class="page-header">Master Summary — All Science Facts</div>
+
+  <h2><span class="num">34</span>Master Summary — All Facts Combined</h2>
+
+  <div class="quick-rev">
+    <ul>
+      <li><strong>Cell Organelles:</strong> Mitochondria = Powerhouse · Golgi = Post Office · Lysosome = Suicide Bag · Ribosome = Protein Factory · Nucleus = Brain</li>
+      <li><strong>Vitamins:</strong> A → Night Blindness · B1 → Beriberi · C → Scurvy · D → Rickets · K → Bleeding</li>
+      <li><strong>Diseases:</strong> Malaria = Protozoa (Plasmodium) · AIDS = Virus (HIV) · TB = Bacteria (Mycobacterium)</li>
+      <li><strong>Blood:</strong> Universal Donor = O negative · Universal Recipient = AB positive · pH = 7.4 · RBC life = 120 days</li>
+      <li><strong>SI Units:</strong> Force = Newton · Energy = Joule · Power = Watt · Pressure = Pascal · Frequency = Hertz</li>
+      <li><strong>Speed:</strong> Light = 3 × 10⁸ m/s · Sound = 343 m/s (air)</li>
+      <li><strong>Audible Range:</strong> 20 Hz – 20,000 Hz · <strong>Ohm's Law:</strong> V = IR</li>
+      <li><strong>Newton's Laws:</strong> 1st = Inertia · 2nd = F = ma · 3rd = Action &amp; Reaction</li>
+      <li><strong>Chemistry Formulas:</strong> Baking Soda NaHCO₃ · Washing Soda Na₂CO₃ · Plaster CaSO₄·½H₂O · Quick Lime CaO · Salt NaCl · Vinegar CH₃COOH · Laughing Gas N₂O · Dry Ice CO₂</li>
+      <li><strong>pH:</strong> Acid &lt; 7 · Base &gt; 7 · Neutral = 7</li>
+      <li><strong>Gases:</strong> Balloons = Helium · Lights = Neon · Welding = Argon</li>
+      <li><strong>Computer:</strong> CPU = Central Processing Unit · RAM = Random Access Memory · ROM = Read Only Memory · OS = Operating System</li>
+      <li><strong>Networks:</strong> LAN = Local · WAN = Wide · MAN = Metropolitan · WWW = World Wide Web</li>
+      <li><strong>Shortcuts:</strong> Copy = Ctrl+C · Paste = Ctrl+V · Cut = Ctrl+X · Undo = Ctrl+Z · Redo = Ctrl+Y · New Slide = Ctrl+M · Font Dialog = Ctrl+D</li>
+      <li><strong>Extensions:</strong> Word = .docx · Excel = .xlsx · PowerPoint = .pptx · Web Graphic = .gif</li>
+    </ul>
+  </div>
+
+  <p class="source">Source: Science &amp; Technology — Complete Notes (SSC CHSL Syllabus)</p>
+
+  <div class="page-footer">
+    <span>Science &amp; Technology — Complete Guide</span>
+    <span>Page 12</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 8: The State Government (Font Design)</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Kalam:wght@400;700&family=Lora:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Lora', 'Inter', serif;
+    color: #1a1a1a;
+    line-height: 1.65;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(190,24,93,0.14), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,45,18,0.12), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt;
+    color: #BE185D;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    border-top: 2px solid #FBCFE8;
+    padding-top: 3mm;
+    z-index: 5;
+  }
+
+  /* ============ TITLE BANNER ============ */
+  .title-banner {
+    background: linear-gradient(135deg, #BE185D 0%, #7C2D12 50%, #B45309 100%);
+    color: #fff;
+    padding: 34px 25px 30px 25px;
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(190,24,93,0.45), inset 0 -4px 12px rgba(0,0,0,0.15);
+    border: 3px solid rgba(255,255,255,0.2);
+  }
+  .title-banner::before {
+    content: '🏛️';
+    position: absolute;
+    top: 12px; left: 22px;
+    font-size: 24pt;
+    opacity: 0.85;
+  }
+  .title-banner::after {
+    content: '🗳️';
+    position: absolute;
+    bottom: 12px; right: 22px;
+    font-size: 24pt;
+    opacity: 0.85;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 30pt;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4), 0 0 30px rgba(253,230,138,0.4);
+    line-height: 1.1;
+  }
+  .title-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    font-weight: 600;
+    font-style: italic;
+    opacity: 0.98;
+    letter-spacing: 1px;
+  }
+  .title-banner .tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20pt;
+    font-weight: 700;
+    margin-top: 12px;
+    color: #FDE68A;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* ============ SECTION TITLES ============ */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15pt;
+    font-weight: 900;
+    padding: 12px 22px;
+    border-radius: 14px;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22), inset 0 -3px 8px rgba(0,0,0,0.12);
+    letter-spacing: 0.5px;
+    border: 2px solid rgba(255,255,255,0.15);
+    line-height: 1.2;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    border-radius: 14px 0 0 14px;
+  }
+  .section-title::after {
+    content: '✦';
+    position: absolute;
+    right: 14px; top: 50%;
+    transform: translateY(-50%);
+    color: #FDE68A;
+    font-size: 14pt;
+    text-shadow: 0 0 12px #FDE68A;
+  }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .t-brown  { background: linear-gradient(90deg, #7C2D12, #C2410C); }
+  .t-amber  { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+
+  /* ============ ESSAY BOX ============ */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #FDF2F8 100%);
+    border: 2px solid #FBCFE8;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 4px 16px rgba(190,24,93,0.10);
+    position: relative;
+    font-family: 'Lora', serif;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 14px; bottom: 14px;
+    width: 4px;
+    background: linear-gradient(180deg, #BE185D, #7C2D12);
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 0 10px rgba(190,24,93,0.4);
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+  .essay strong { color: #BE185D; font-weight: 700; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+
+  /* ============ BOXES ============ */
+  .box {
+    padding: 13px 17px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    position: relative;
+  }
+  .box-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 12pt;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+    font-style: italic;
+  }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 7px solid #BE185D; }
+  .box-brown  { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 7px solid #7C2D12; }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 7px solid #B45309; }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 7px solid #6D28D9; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 7px solid #0369A1; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 7px solid #065F46; }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 7px solid #0F766E; }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 7px solid #3730A3; }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 7px solid #B91C1C; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 10px 0;
+    font-size: 9.5pt;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    font-family: 'Lora', serif;
+  }
+  th {
+    background: linear-gradient(90deg, #BE185D, #EC4899);
+    color: #fff;
+    padding: 11px 12px;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 10.5pt;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #FDF2F8; }
+  tr:last-child td { border-bottom: none; }
+  td strong { color: #BE185D; font-weight: 700; font-family: 'Poppins', sans-serif; font-size: 9.5pt; }
+
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .table-brown  th { background: linear-gradient(90deg, #7C2D12, #C2410C); }
+  .table-amber  th { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-teal   th { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+
+  /* ============ KEY POINT ============ */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 3px dashed #F59E0B;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin: 12px 0;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.25);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -14px; left: 18px;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 13pt;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .keypoint strong { color: #B45309; font-weight: 800; font-family: 'Poppins', sans-serif; }
+
+  /* ============ SIMPLE MEANING ============ */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-left: 8px solid #065F46;
+    border-radius: 14px;
+    padding: 13px 18px 13px 48px;
+    margin: 12px 0;
+    position: relative;
+    font-style: italic;
+    color: #064E3B;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12pt;
+    line-height: 1.6;
+    box-shadow: 0 4px 16px rgba(16,185,129,0.18);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 16pt;
+    font-style: normal;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .hl-pink   { background: linear-gradient(180deg, transparent 50%, #F9A8D4 50%); padding: 0 5px; font-weight: 800; color: #831843; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-brown  { background: linear-gradient(180deg, transparent 50%, #FDBA74 50%); padding: 0 5px; font-weight: 800; color: #7C2D12; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-amber  { background: linear-gradient(180deg, transparent 50%, #FCD34D 50%); padding: 0 5px; font-weight: 800; color: #78350F; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-purple { background: linear-gradient(180deg, transparent 50%, #C4B5FD 50%); padding: 0 5px; font-weight: 800; color: #4C1D95; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 50%, #7DD3FC 50%); padding: 0 5px; font-weight: 800; color: #0C4A6E; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-green  { background: linear-gradient(180deg, transparent 50%, #6EE7B7 50%); padding: 0 5px; font-weight: 800; color: #064E3B; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-teal   { background: linear-gradient(180deg, transparent 50%, #5EEAD4 50%); padding: 0 5px; font-weight: 800; color: #134E4A; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-indigo { background: linear-gradient(180deg, transparent 50%, #A5B4FC 50%); padding: 0 5px; font-weight: 800; color: #312E81; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-red    { background: linear-gradient(180deg, transparent 50%, #FCA5A5 50%); padding: 0 5px; font-weight: 800; color: #7F1D1D; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+
+  /* ============ RIBBON ============ */
+  .ribbon {
+    display: inline-block;
+    background: linear-gradient(90deg, #BE185D, #7C2D12);
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-left: 8px;
+    box-shadow: 0 3px 10px rgba(190,24,93,0.4);
+    letter-spacing: 0.5px;
+    font-family: 'Dancing Script', cursive;
+    vertical-align: middle;
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+
+  /* ============ H3 ============ */
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13pt;
+    font-weight: 800;
+    color: #BE185D;
+    margin: 16px 0 8px;
+    padding-left: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 22px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #BE185D, #7C2D12);
+    box-shadow: 0 0 10px rgba(190,24,93,0.5);
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    text-align: center;
+    margin-top: 16px;
+    padding: 16px;
+    background: linear-gradient(90deg, #BE185D, #7C2D12, #B45309);
+    color: #fff;
+    border-radius: 14px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 12pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 24px rgba(190,24,93,0.35);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+
+  ul, ol { margin-left: 20px; margin-bottom: 6px; }
+  li { margin-bottom: 5px; font-family: 'Lora', serif; }
+  p { margin-bottom: 6px; }
+  strong { color: #BE185D; font-weight: 700; font-family: 'Poppins', sans-serif; }
+
+  /* ============ ICON CIRCLE ============ */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #BE185D, #7C2D12);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 3px 10px rgba(190,24,93,0.4);
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  /* ============ DROP CAP ============ */
+  .dropcap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    font-weight: 900;
+    color: #BE185D;
+    float: left;
+    line-height: 0.9;
+    padding-right: 8px;
+    padding-top: 4px;
+  }
+
+  /* ============ QUOTE ============ */
+  .quote {
+    font-family: 'Caveat', cursive;
+    font-size: 15pt;
+    color: #831843;
+    text-align: center;
+    margin: 12px 0;
+    padding: 10px 20px;
+    position: relative;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .quote::before {
+    content: '❝';
+    font-family: 'Playfair Display', serif;
+    font-size: 40pt;
+    color: #F9A8D4;
+    position: absolute;
+    left: 0; top: -10px;
+    line-height: 1;
+  }
+  .quote::after {
+    content: '❞';
+    font-family: 'Playfair Display', serif;
+    font-size: 40pt;
+    color: #F9A8D4;
+    position: absolute;
+    right: 0; bottom: -30px;
+    line-height: 1;
+  }
+
+  /* ============ NUMBER BADGE ============ */
+  .num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #BE185D, #B45309);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 13pt;
+    margin-right: 8px;
+    box-shadow: 0 3px 10px rgba(190,24,93,0.4);
+    border: 2px solid #fff;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 8.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>The State Government</h1>
+    <h2>Chapter 8 — Articles 153 to 167 (Part VI)</h2>
+    <div class="tagline">Governor • Chief Minister • Legislature</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-pink">📖 8.1 Overview of the State Executive</div>
+
+    <div class="essay">
+      <p class="dropcap">Just like the Union has a President, Vice-President, and Prime Minister, each <span class="hl-pink">State</span> has its own set of leaders. Think of the State Government like a <span class="hl-brown">"mini version"</span> of the Central Government — but it runs only one state.</p>
+      <p>The State Executive consists of <strong>four key members</strong>:</p>
+    </div>
+
+    <div class="box box-pink">
+      <div class="box-title">🏛️ The Four Members of the State Executive</div>
+      <ul>
+        <li><span class="num-badge">1</span> <span class="hl-pink">The Governor</span> — Constitutional head of the State</li>
+        <li><span class="num-badge">2</span> <span class="hl-brown">The Chief Minister</span> — Real executive head</li>
+        <li><span class="num-badge">3</span> <span class="hl-amber">The State Council of Ministers</span> — To aid and advise the Governor</li>
+        <li><span class="num-badge">4</span> <span class="hl-purple">The Advocate General</span> — Chief legal advisor to the State</li>
+      </ul>
+    </div>
+
+    <div class="keypoint">
+      <strong>IMPORTANT:</strong> <span class="hl-amber">Articles 153 to 167</span> of <strong>Part VI</strong> deal with the State Executive.
+    </div>
+
+    <div class="simple">
+      State Executive = The team that runs a state. <strong>Governor</strong> is the formal head, <strong>CM</strong> is the real head.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The State Government — Font Design Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 8.2 Governor ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-brown">👑 8.2 The Governor (Articles 153 – 162)</div>
+
+    <h3>🎓 Appointment and Qualifications</h3>
+    <table class="table-brown">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Article</strong></td><td><span class="hl-brown">153</span></td></tr>
+      <tr><td><strong>Appointment</strong></td><td>By the President</td></tr>
+      <tr><td><strong>Qualifications</strong></td><td>Citizen of India, completed 35 years of age</td></tr>
+      <tr><td><strong>Term</strong></td><td>5 years (but holds office during the <span class="hl-amber">pleasure of the President</span>)</td></tr>
+      <tr><td><strong>Resignation</strong></td><td>Addressed to the President</td></tr>
+      <tr><td><strong>Re-appointment</strong></td><td>Eligible for re-appointment</td></tr>
+      <tr><td><strong>Emoluments</strong></td><td>Charged on the Consolidated Fund of the State</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> The Governor is the <span class="hl-pink">nominal executive</span> (Constitutional head). The <span class="hl-brown">real power</span> lies with the Chief Minister and the Council of Ministers.
+    </div>
+
+    <h3>⚡ Powers of the Governor</h3>
+    <table class="table-amber">
+      <tr><th>Power Type</th><th>💬 Details</th></tr>
+      <tr><td><strong>Executive Powers</strong></td><td>Appoints the Chief Minister and other ministers. Appoints the Advocate General, State Public Service Commission members.</td></tr>
+      <tr><td><strong>Legislative Powers</strong></td><td>Summons and prorogues the State Legislature. Nominates <span class="hl-amber">1/6th members</span> to the Legislative Council (if exists). Gives assent to bills. Promulgates Ordinances (Article 213).</td></tr>
+      <tr><td><strong>Financial Powers</strong></td><td>Money Bills can be introduced only with Governor's recommendation. Annual Financial Statement (State Budget) is presented in his name.</td></tr>
+      <tr><td><strong>Judicial Powers</strong></td><td>Appoints judges of the High Court. Can pardon, reprieve, respite, remit, or commute sentences (Article 161). <span class="hl-red">Cannot pardon death sentence</span> (only President can).</td></tr>
+      <tr><td><strong>Emergency Powers</strong></td><td>Can recommend President's Rule (Article 356) to the President.</td></tr>
+    </table>
+
+    <div class="simple">
+      Governor = The formal head of a state. Appointed by President. Runs the state on paper, but real power is with CM.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The State Government — Font Design Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — Veto + Governor vs President ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-amber">🚫 8.2.3 Veto Powers of the Governor</div>
+
+    <table class="table-amber">
+      <tr><th>Veto Type</th><th>💬 Simple Meaning</th></tr>
+      <tr><td><strong>Absolute Veto</strong></td><td>Withholds assent to a bill. Bill ends.</td></tr>
+      <tr><td><strong>Suspensive Veto</strong></td><td>Returns a bill to the State Legislature for reconsideration. If passed again, Governor must give assent.</td></tr>
+      <tr><td><strong>Pocket Veto</strong></td><td>Keeps the bill pending indefinitely. No time limit.</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> The Governor <span class="hl-red">cannot return a Money Bill</span> for reconsideration. He must either give assent or withhold it (but cannot return it).
+    </div>
+
+    <div class="simple">
+      Veto = Governor saying "no" to a bill. But for <strong>Money Bills</strong>, he can't send it back.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-purple">⚖️ 8.2.4 Governor vs. President — Key Differences</div>
+
+    <table class="table-purple">
+      <tr><th>📌 Feature</th><th>👑 President</th><th>🏛️ Governor</th></tr>
+      <tr><td><strong>Article</strong></td><td>52</td><td>153</td></tr>
+      <tr><td><strong>Election</strong></td><td>Indirectly elected</td><td>Appointed by President</td></tr>
+      <tr><td><strong>Term</strong></td><td>5 years</td><td>5 years (during pleasure of President)</td></tr>
+      <tr><td><strong>Pardoning Power</strong></td><td><span class="hl-green">Can pardon death sentence</span></td><td><span class="hl-red">Cannot pardon death sentence</span></td></tr>
+      <tr><td><strong>Emergency</strong></td><td>Can declare National, State, Financial Emergency</td><td>Can only recommend President's Rule</td></tr>
+      <tr><td><strong>Military</strong></td><td>Supreme Commander of Armed Forces</td><td>No military role</td></tr>
+      <tr><td><strong>Ordinance</strong></td><td>Article 123</td><td>Article 213</td></tr>
+    </table>
+
+    <div class="simple">
+      President = elected, runs the whole country, can pardon death sentence. Governor = appointed, runs one state, <strong>cannot pardon death sentence</strong>.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The State Government — Font Design Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — Chief Minister ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">🏛️ 8.3 The Chief Minister (Articles 163 – 164)</div>
+
+    <h3>🎓 Appointment and Qualifications</h3>
+    <table class="table-sky">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Article</strong></td><td>163, 164</td></tr>
+      <tr><td><strong>Appointment</strong></td><td>By the Governor (invites leader of majority party in Legislative Assembly)</td></tr>
+      <tr><td><strong>Qualifications</strong></td><td>Citizen of India, 25 years of age (for Assembly), must be a member of State Legislature</td></tr>
+      <tr><td><strong>Term</strong></td><td>5 years (as long as he/she enjoys confidence of the Assembly)</td></tr>
+      <tr><td><strong>Oath</strong></td><td>Administered by the Governor</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong

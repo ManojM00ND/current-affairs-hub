@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Current Affairs — Premium Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700;900&family=Cinzel:wght@600;700;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 10mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Calibri', 'Lato', Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1a1a1a; background: #D9D9D9; padding: 14px 0; }
+  .page { width: 210mm; min-height: 297mm; background: linear-gradient(180deg, #fffdf9 0%, #fffaf3 100%); margin: 0 auto 14px auto; padding: 12mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.18); page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  .page::before { content: ''; position: absolute; top: 5mm; left: 5mm; right: 5mm; bottom: 5mm; border: 1.5px solid #E5D5C0; border-radius: 8px; pointer-events: none; }
+
+  .hero { background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 25%, #B45309 65%, #D97706 100%); padding: 20px 24px 18px 24px; border-radius: 12px; position: relative; overflow: hidden; margin-bottom: 12px; box-shadow: 0 8px 24px rgba(153,27,27,0.32); border: 2px solid rgba(255,255,255,0.15); }
+  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(245,158,11,0.35), transparent 70%); border-radius: 50%; }
+  .hero::after { content: '📰'; position: absolute; top: 10px; right: 20px; font-size: 24pt; opacity: 0.55; }
+  .hero h1 { font-family: 'Cinzel', serif; font-size: 26pt; font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: 1.2px; text-shadow: 0 3px 10px rgba(0,0,0,0.35); margin-bottom: 4px; position: relative; z-index: 2; }
+  .hero .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 13.5pt; font-style: italic; color: #FEF3C7; font-weight: 500; position: relative; z-index: 2; }
+  .hero .hero-line { width: 100px; height: 3px; background: linear-gradient(90deg, #FCD34D, transparent); margin-top: 10px; border-radius: 2px; position: relative; z-index: 2; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; padding: 7px 10px; background: #fff; border: 1px solid #E5D5C0; border-radius: 8px; justify-content: center; font-size: 8pt; }
+  .legend-item { display: flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 11px; font-weight: 700; color: #fff; font-family: 'Lato', sans-serif; }
+  .legend-blue   { background: linear-gradient(135deg, #1E40AF, #1E3A8A); }
+  .legend-red    { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .legend-amber  { background: linear-gradient(135deg, #D97706, #B45309); }
+  .legend-green  { background: linear-gradient(135deg, #059669, #047857); }
+  .legend-teal   { background: linear-gradient(135deg, #0F766E, #115E59); }
+  .legend-purple { background: linear-gradient(135deg, #6D28D9, #5B21B6); }
+
+  .section-header { font-family: 'Cinzel', serif; font-size: 14pt; font-weight: 900; color: #7F1D1D; padding: 8px 14px; background: linear-gradient(90deg, #FEF3C7 0%, #FFFBEB 100%); border-left: 5px solid #D97706; border-radius: 0 8px 8px 0; margin: 12px 0 8px 0; letter-spacing: 0.5px; }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: 13.5pt; font-weight: 900; color: #991B1B; margin-top: 10px; margin-bottom: 6px; line-height: 1.15; display: flex; align-items: center; gap: 8px; }
+  h2 .num { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; background: linear-gradient(135deg, #991B1B, #7F1D1D); color: #fff; border-radius: 50%; font-family: 'Cinzel', serif; font-weight: 900; font-size: 12pt; box-shadow: 0 3px 8px rgba(153,27,27,0.4); flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4); }
+  h3 { font-family: 'Playfair Display', serif; font-size: 11pt; font-weight: 700; color: #7F1D1D; margin-top: 8px; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  h3::before { content: '◆'; color: #D97706; font-size: 8.5pt; }
+  .page-header { font-family: 'Cinzel', serif; font-size: 11.5pt; font-weight: 700; color: #991B1B; letter-spacing: 0.4px; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1.5px solid #FDE68A; position: relative; }
+  .page-header::after { content: '✦'; position: absolute; right: 0; top: 0; color: #D97706; font-size: 12pt; }
+
+  .columns { column-count: 2; column-gap: 6mm; column-rule: 1px solid #FDE68A; text-align: justify; hyphens: auto; }
+  .columns p { margin-bottom: 6px; }
+
+  .key { background: linear-gradient(180deg, transparent 55%, #BFDBFE 55%); padding: 0 3px; font-weight: 700; color: #1E3A8A; }
+  .critical { background: linear-gradient(135deg, #B91C1C, #7F1D1D); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+  .success { background: linear-gradient(135deg, #059669, #047857); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+  .purple { background: linear-gradient(135deg, #6D28D9, #4C1D95); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+
+  ul, ol { margin-left: 15px; margin-bottom: 5px; }
+  li { margin-bottom: 2px; line-height: 1.35; }
+  li::marker { color: #991B1B; font-weight: 900; }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 6px 0 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 14px rgba(153,27,27,0.16); border: 1px solid #FDE68A; }
+  table th { background: linear-gradient(135deg, #991B1B 0%, #7F1D1D 50%, #450A0A 100%); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 7px 10px; text-align: left; font-size: 9.5pt; letter-spacing: 0.3px; }
+  table td { padding: 5px 10px; border-bottom: 1px solid #FDE68A; vertical-align: top; line-height: 1.35; }
+  table tr:nth-child(even) td { background: #FFFBEB; }
+  table tr:last-child td { border-bottom: none; }
+  table td strong { color: #7F1D1D; font-weight: 700; }
+
+  .exam-focus { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border-left: 4px solid #D97706; padding: 8px 12px 8px 16px; margin: 8px 0; border-radius: 0 8px 8px 0; font-size: 9.5pt; position: relative; box-shadow: 0 2px 8px rgba(217,119,6,0.16); page-break-inside: avoid; }
+  .exam-focus::before { content: '⚡ Exam Focus'; position: absolute; top: -9px; left: 12px; background: linear-gradient(135deg, #D97706, #B45309); color: #fff; padding: 2px 9px; font-family: 'Cinzel', serif; font-size: 8pt; font-weight: 700; border-radius: 10px; box-shadow: 0 2px 6px rgba(180,83,9,0.35); }
+  .exam-focus strong { color: #78350F; }
+
+  .quick-rev { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); border: 1.5px dashed #0F766E; border-radius: 10px; padding: 11px 14px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; position: relative; }
+  .quick-rev::before { content: '📌 Quick Revision'; position: absolute; top: -10px; left: 14px; background: linear-gradient(135deg, #0F766E, #115E59); color: #fff; padding: 3px 12px; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; border-radius: 12px; box-shadow: 0 3px 8px rgba(15,118,110,0.35); }
+  .quick-rev ul { margin-top: 5px; margin-left: 14px; }
+  .quick-rev li { margin-bottom: 2px; color: #134E4A; }
+  .quick-rev li strong { color: #0F766E; }
+
+  .infobox { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); padding: 9px 13px 9px 17px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 0 8px 8px 0; line-height: 1.4; border-left: 4px solid #1E40AF; box-shadow: 0 3px 10px rgba(30,64,175,0.12); position: relative; }
+  .infobox::before { content: '★'; position: absolute; top: -7px; left: 7px; background: #EFF6FF; color: #1E40AF; font-size: 10pt; padding: 0 4px; border-radius: 50%; }
+  .infobox strong { color: #1E3A8A; font-family: 'Cinzel', serif; font-weight: 700; }
+
+  .month-badge { display: inline-block; background: linear-gradient(135deg, #991B1B, #B45309); color: #fff; font-family: 'Cinzel', serif; font-size: 11pt; font-weight: 900; padding: 4px 16px; border-radius: 20px; letter-spacing: 0.5px; box-shadow: 0 3px 10px rgba(153,27,27,0.4); margin-bottom: 8px; }
+
+  .page-footer { position: absolute; bottom: 6mm; left: 12mm; right: 12mm; display: flex; justify-content: space-between; align-items: center; font-size: 8.5pt; color: #92400E; font-family: 'Cormorant Garamond', serif; font-style: italic; border-top: 1px solid #FDE68A; padding-top: 4px; }
+  .page-footer::before { content: '❖ ❖ ❖'; position: absolute; left: 50%; transform: translateX(-50%); color: #D97706; font-size: 7.5pt; background: #fffdf9; padding: 0 9px; top: -7px; letter-spacing: 2.5px; }
+
+  .figcaption { font-family: 'Cormorant Garamond', serif; font-size: 9.5pt; color: #92400E; font-style: italic; margin: 4px 0 8px 0; text-align: center; padding: 4px 0; border-top: 1px solid #FDE68A; border-bottom: 1px solid #FDE68A; font-weight: 600; }
+  .source { font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; color: #92400E; margin-top: 8px; font-style: italic; text-align: right; }
+  .fill-note { background: #FFFBEB; border: 1px dashed #FDE68A; border-radius: 6px; padding: 8px 12px; margin: 8px 0 4px 0; font-size: 9pt; color: #78350F; font-family: 'Cormorant Garamond', serif; font-style: italic; text-align: center; }
+
+  @media print { body { background: #fff; padding: 0; } .page { margin: 0; box-shadow: none; width: 100%; min-height: 297mm; } .page::before { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — APPOINTMENTS (PART 1) ============ -->
+<div class="page">
+  <div class="hero">
+    <h1>Current Affairs — Complete Notes</h1>
+    <div class="hero-sub">Appointments · Awards · Sports · Days · Books · Month-wise 2025-26</div>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item legend-blue">📘 Facts</span>
+    <span class="legend-item legend-red">🔴 Key Info</span>
+    <span class="legend-item legend-amber">⚡ Exam</span>
+    <span class="legend-item legend-teal">📌 Revision</span>
+    <span class="legend-item legend-green">✓ Success</span>
+    <span class="legend-item legend-purple">📅 Months</span>
+  </div>
+
+  <div class="section-header">SECTION 1 — Important Appointments &amp; Personalities</div>
+
+  <h2><span class="num">1</span>Constitutional &amp; Government Posts</h2>
+
+  <table>
+    <tr><th>Person</th><th>Position</th><th>Year</th></tr>
+    <tr><td><strong>Rajiv Kumar</strong></td><td>Chief Election Commissioner</td><td>2025</td></tr>
+    <tr><td><strong>K. Sanjay Murthy</strong></td><td>Comptroller and Auditor General (CAG)</td><td>2025</td></tr>
+    <tr><td><strong>Sanjay Malhotra</strong></td><td>Governor, Reserve Bank of India (RBI)</td><td>2025</td></tr>
+    <tr><td><strong>Prakash Shrivastava</strong></td><td>Chairperson, National Green Tribunal (NGT)</td><td>2023</td></tr>
+    <tr><td><strong>V. Ramasubramanian</strong></td><td>Chairperson, NHRC</td><td>2025</td></tr>
+    <tr><td><strong>Praveen Kumar Srivastava</strong></td><td>Central Vigilance Commissioner</td><td>2025</td></tr>
+    <tr><td><strong>Heeralal Samariya</strong></td><td>Chief Information Commissioner</td><td>2025</td></tr>
+    <tr><td><strong>Suman Bery</strong></td><td>Vice-Chairperson, NITI Aayog</td><td>2025</td></tr>
+    <tr><td><strong>B.V.R. Subrahmanyam</strong></td><td>CEO, NITI Aayog</td><td>2025</td></tr>
+    <tr><td><strong>Dr. Dinesh Prasad Saklani</strong></td><td>Director, NCERT</td><td>2023</td></tr>
+  </table>
+
+  <h2><span class="num">2</span>Defence &amp; Security Appointments</h2>
+
+  <table>
+    <tr><th>Person</th><th>Position</th><th>Year</th></tr>
+    <tr><td><strong>General Bipin Rawat</strong></td><td>First Chief of Defence Staff (CDS)</td><td>Jan 2020</td></tr>
+    <tr><td><strong>Rajat Datta</strong></td><td>Director General, Armed Forces Medical Services</td><td>Jan 2021</td></tr>
+    <tr><td><strong>Shivangi</strong></td><td>First Female Pilot of Indian Navy</td><td>Dec 2019</td></tr>
+    <tr><td><strong>Ajit Doval</strong></td><td>NSA — Lokmanya Tilak National Award 2026</td><td>2026</td></tr>
+  </table>
+
+  <h2><span class="num">3</span>International Appointments</h2>
+
+  <table>
+    <tr><th>Person</th><th>Position</th><th>Year</th></tr>
+    <tr><td><strong>Lindy Cameron</strong></td><td>British High Commissioner to India</td><td>April 2024</td></tr>
+    <tr><td><strong>Tharman Shanmugaratnam</strong></td><td>President of Singapore</td><td>2023</td></tr>
+    <tr><td><strong>Muhammad Yunus</strong></td><td>Nobel Peace Prize Winner (Grameen Bank)</td><td>2006</td></tr>
+    <tr><td><strong>José Antonio Kast</strong></td><td>President of Chile</td><td>Dec 2025</td></tr>
+    <tr><td><strong>Abha Nair Patel</strong></td><td>First woman judge, Zambia Supreme Court</td><td>2026</td></tr>
+  </table>
+
+  <h2><span class="num">4</span>Sports Appointments</h2>
+
+  <table>
+    <tr><th>Person</th><th>Position</th><th>Year</th></tr>
+    <tr><td><strong>Gyanendro Ningombam</strong></td><td>President, Hockey India</td><td>Nov 2020</td></tr>
+    <tr><td><strong>Sardar Singh</strong></td><td>Former Captain, Indian Hockey Team</td><td>—</td></tr>
+    <tr><td><strong>PR Sreejesh</strong></td><td>Goalkeeper, Indian Hockey Team</td><td>—</td></tr>
+    <tr><td><strong>Savita Punia</strong></td><td>Goalkeeper, Indian Women's Hockey</td><td>—</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> <strong>General Bipin Rawat</strong> = India's first CDS (Jan 2020) · <strong>Lindy Cameron</strong> = first female British HC to India · <strong>Shivangi</strong> = first female Indian Navy pilot · <strong>Arya Rajendran</strong> = youngest mayor in India.
+  </div>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — APPOINTMENTS (PART 2) ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · Appointments (Continued)</div>
+
+  <h2><span class="num">5</span>Other Important Appointments</h2>
+
+  <table>
+    <tr><th>Person</th><th>Position</th><th>Year</th></tr>
+    <tr><td><strong>Arya Rajendran</strong></td><td>Youngest Mayor in India (Thiruvananthapuram)</td><td>2021</td></tr>
+    <tr><td><strong>Narendra Chandra Debbarma</strong></td><td>Padma Shri (Posthumous)</td><td>2023</td></tr>
+    <tr><td><strong>Subramanian Raman</strong></td><td>Dronacharya Award (Table Tennis)</td><td>2021</td></tr>
+    <tr><td><strong>Rambir Singh Khokar</strong></td><td>Dronacharya Award (Kabaddi)</td><td>2019</td></tr>
+  </table>
+
+  <h2><span class="num">6</span>Appointments from Month-wise Current Affairs (2025-26)</h2>
+
+  <table>
+    <tr><th>Person</th><th>Position</th><th>Month</th></tr>
+    <tr><td><strong>N Chandrasekaran</strong></td><td>Tata Sons Chairman — extended until 2032</td><td>Sep 2026</td></tr>
+    <tr><td><strong>Om Birla</strong></td><td>Lok Sabha Speaker — 2nd consecutive term</td><td>Jun 2026</td></tr>
+    <tr><td><strong>Nitish Kumar</strong></td><td>Chief Minister of Bihar (10th time) — longest-serving CM</td><td>Mar 2026</td></tr>
+    <tr><td><strong>Kaveh Madani</strong></td><td>Won Stockholm Water Prize 2026</td><td>Mar 2026</td></tr>
+    <tr><td><strong>Gulzar &amp; Jagadguru Rambhadracharya</strong></td><td>68th Jnanpith Award</td><td>Apr 2026</td></tr>
+    <tr><td><strong>Anant Nag</strong></td><td>Dadasaheb Phalke Award 2024</td><td>Sep 2026</td></tr>
+    <tr><td><strong>Wang Jibing</strong></td><td>Lu Xun Literary Award (China)</td><td>Jul 2026</td></tr>
+    <tr><td><strong>Ilaiyaraaja</strong></td><td>Padma Vibhushan</td><td>Feb 2026</td></tr>
+  </table>
+
+  <div class="quick-rev">
+    <ul>
+      <li><strong>Constitutional Posts:</strong> CEC Rajiv Kumar · CAG K. Sanjay Murthy · RBI Gov Sanjay Malhotra · NHRC V. Ramasubramanian</li>
+      <li><strong>NITI Aayog:</strong> Suman Bery (VC) · B.V.R. Subrahmanyam (CEO)</li>
+      <li><strong>Defence:</strong> Gen Bipin Rawat (1st CDS) · Rajat Datta (DG AFMS) · Shivangi (1st Female Pilot)</li>
+      <li><strong>International:</strong> Lindy Cameron (British HC) · Tharman Shanmugaratnam (Singapore) · Abha Nair Patel (Zambia SC)</li>
+      <li><strong>Sports:</strong> Gyanendro Ningombam (Hockey India) · Subramanian Raman (Dronacharya TT) · Rambir Singh Khokar (Dronacharya Kabaddi)</li>
+      <li><strong>2026:</strong> N Chandrasekaran (Tata Sons till 2032) · Om Birla (Speaker 2nd) · Nitish Kumar (Bihar CM 10th) · Anant Nag (Dada Saheb Phalke 2024)</li>
+    </ul>
+  </div>
+
+  <div class="fill-note">✦ Every appointment here is from your files — nothing invented ✦</div>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — AWARDS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 2 — Awards &amp; Honours</div>
+
+  <h2><span class="num">7</span>Awards &amp; Honours — Complete Data</h2>
+
+  <table>
+    <tr><th>Award</th><th>Winner</th><th>Year</th></tr>
+    <tr><td><strong>Bharat Ratna</strong></td><td>Sachin Tendulkar</td><td>2014</td></tr>
+    <tr><td><strong>Bharat Ratna</strong></td><td>Ustad Bismillah Khan</td><td>2001</td></tr>
+    <tr><td><strong>Dadasaheb Phalke Award</strong></td><td>Amitabh Bachchan</td><td>2019</td></tr>
+    <tr><td><strong>Dadasaheb Phalke Award</strong></td><td>Rajinikanth</td><td>2019</td></tr>
+    <tr><td><strong>Padma Vibhushan</strong></td><td>Mulayam Singh Yadav (Posthumous)</td><td>2023</td></tr>
+    <tr><td><strong>Padma Shri</strong></td><td>Devarapalli Prakash Rao</td><td>2019</td></tr>
+    <tr><td><strong>Padma Shri</strong></td><td>Muthukannammal</td><td>2022</td></tr>
+    <tr><td><strong>Padma Shri</strong></td><td>Nalini-Kamalini Asthana</td><td>2022</td></tr>
+    <tr><td><strong>Jnanpith Award</strong></td><td>Akkitham Achuthan Namboothiri</td><td>2019</td></tr>
+    <tr><td><strong>Sahitya Akademi Award</strong></td><td>Shashi Tharoor (An Era of Darkness)</td><td>2019</td></tr>
+    <tr><td><strong>Tansen Samman</strong></td><td>Satish Vyas</td><td>2020</td></tr>
+    <tr><td><strong>Grammy Award</strong></td><td>Ricky Kej (Winds of Samsara)</td><td>2015</td></tr>
+    <tr><td><strong>International Children's Peace Prize</strong></td><td>Sadat Rahman</td><td>2020</td></tr>
+    <tr><td><strong>Blue Planet Prize</strong></td><td>Hans Joachim Schellnhuber</td><td>2017</td></tr>
+    <tr><td><strong>Rajiv Gandhi Khel Ratna</strong></td><td>Sardar Singh (Hockey)</td><td>2017</td></tr>
+    <tr><td><strong>Major Dhyan Chand Khel Ratna</strong></td><td>Avani Lekhara (Para Shooting)</td><td>2021</td></tr>
+    <tr><td><strong>Arjuna Award</strong></td><td>Bhavina Patel (Para Table Tennis)</td><td>2021</td></tr>
+    <tr><td><strong>Dronacharya Award</strong></td><td>Subramanian Raman (Table Tennis)</td><td>2021</td></tr>
+    <tr><td><strong>Dronacharya Award</strong></td><td>Rambir Singh Khokar (Kabaddi)</td><td>2019</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> <strong>Sachin Tendulkar</strong> = Bharat Ratna 2014 · <strong>Amitabh Bachchan</strong> = Dadasaheb Phalke 2019 · <strong>Shashi Tharoor</strong> = Sahitya Akademi for "An Era of Darkness" · <strong>Ricky Kej</strong> = Grammy for "Winds of Samsara".
+  </div>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — SPORTS EVENTS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 3 — Sports Events</div>
+
+  <h2><span class="num">8</span>Important Sports Events (2020–2024)</h2>
+
+  <table>
+    <tr><th>Event</th><th>Winner / Host</th><th>Year</th></tr>
+    <tr><td><strong>US Open Men's Singles</strong></td><td>Carlos Alcaraz</td><td>2022</td></tr>
+    <tr><td><strong>FIFA Women's World Cup</strong></td><td>Australia and New Zealand (Hosts)</td><td>2023</td></tr>
+    <tr><td><strong>Asia Cup</strong></td><td>Pakistan and Sri Lanka (Hosts)</td><td>2023</td></tr>
+    <tr><td><strong>Asian Games</strong></td><td>Hangzhou, China</td><td>2023</td></tr>
+    <tr><td><strong>Commonwealth Games</strong></td><td>Birmingham, England</td><td>2022</td></tr>
+    <tr><td><strong>Winter Olympics</strong></td><td>Beijing, China</td><td>2022</td></tr>
+    <tr><td><strong>Winter Olympics</strong></td><td>Milan-Cortina d'Ampezzo, Italy</td><td>2026</td></tr>
+    <tr><td><strong>Tokyo Olympics</strong></td><td>Tokyo, Japan</td><td>2021</td></tr>
+    <tr><td><strong>Paris Olympics</strong></td><td>Paris, France</td><td>2024</td></tr>
+    <tr><td><strong>IPL 2023</strong></td><td>Chennai Super Kings</td><td>2023</td></tr>
+    <tr><td><strong>Orange Cap (IPL 2023)</strong></td><td>Shubman Gill</td><td>2023</td></tr>
+    <tr><td><strong>First Impact Player (IPL)</strong></td><td>Tushar Deshpande</td><td>2023</td></tr>
+    <tr><td><strong>Ranji Trophy 2021-22</strong></td><td>Madhya Pradesh</td><td>2022</td></tr>
+    <tr><td><strong>Durand Cup 2019</strong></td><td>Gokulam Kerala</td><td>2019</td></tr>
+    <tr><td><strong>FIH Goalkeeper of the Year</strong></td><td>PR Sreejesh</td><td>2021-22</td></tr>
+    <tr><td><strong>FIH Goalkeeper of the Year</strong></td><td>Savita Punia</td><td>2021-22</td></tr>
+    <tr><td><strong>World Rapid Chess Championship</strong></td><td>Koneru Humpy</td><td>2019</td></tr>
+  </table>
+
+  <h2><span class="num">9</span>Indian Sports Personalities</h2>
+
+  <table>
+    <tr><th>Person</th><th>Sport</th><th>Achievement</th></tr>
+    <tr><td><strong>Neeraj Chopra</strong></td><td>Javelin Throw</td><td>Olympic Gold 2021</td></tr>
+    <tr><td><strong>PV Sindhu</strong></td><td>Badminton</td><td>Olympic Bronze 2021</td></tr>
+    <tr><td><strong>Bhavani Devi</strong></td><td>Fencing</td><td>First Indian Fencer at Olympics</td></tr>
+    <tr><td><strong>Avani Lekhara</strong></td><td>Para Shooting</td><td>Paralympic Gold 2021</td></tr>
+    <tr><td><strong>Sumit Antil</strong></td><td>Para Javelin</td><td>Paralympic Gold 2021</td></tr>
+    <tr><td><strong>Mithali Raj</strong></td><td>Cricket</td><td>Former Captain, Women's Team</td></tr>
+    <tr><td><strong>Sunil Chhetri</strong></td><td>Football</td><td>100+ International Goals</td></tr>
+    <tr><td><strong>Bhaichung Bhutia</strong></td><td>Football</td><td>Former Captain</td></tr>
+    <tr><td><strong>Sardar Singh</strong></td><td>Hockey</td><td>Former Captain</td></tr>
+    <tr><td><strong>PR Sreejesh</strong></td><td>Hockey</td><td>Goalkeeper</td></tr>
+    <tr><td><strong>Manika Batra</strong></td><td>Table Tennis</td><td>Commonwealth Games Gold</td></tr>
+    <tr><td><strong>Bhavina Patel</strong></td><td>Para Table Tennis</td><td>Arjuna Award 2021</td></tr>
+    <tr><td><strong>Lovlina Borgohain</strong></td><td>Boxing</td><td>Olympic Bronze 2021</td></tr>
+    <tr><td><strong>Aditi Ashok</strong></td><td>Golf</td><td>LET Winner</td></tr>
+    <tr><td><strong>Koneru Humpy</strong></td><td>Chess</td><td>World Rapid Champion 2019</td></tr>
+    <tr><td><strong>Savita Punia</strong></td><td>Hockey</td><td>FIH Goalkeeper of the Year 2021-22</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — IMPORTANT DAYS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 4 — Important Days &amp; Events</div>
+
+  <h2><span class="num">10</span>Important Days — Complete Data</h2>
+
+  <table>
+    <tr><th>Day</th><th>Date</th></tr>
+    <tr><td><strong>National Consumer Rights Day</strong></td><td>24th December</td></tr>
+    <tr><td><strong>Constitution Day</strong></td><td>26th November</td></tr>
+    <tr><td><strong>International Yoga Day</strong></td><td>21st June</td></tr>
+    <tr><td><strong>National Nutrition Month</strong></td><td>September</td></tr>
+    <tr><td><strong>World Wildlife Day</strong></td><td>3rd March</td></tr>
+    <tr><td><strong>International Women's Day</strong></td><td>8th March</td></tr>
+    <tr><td><strong>World Environment Day</strong></td><td>5th June</td></tr>
+    <tr><td><strong>Independence Day</strong></td><td>15th August</td></tr>
+    <tr><td><strong>Republic Day</strong></td><td>26th January</td></tr>
+    <tr><td><strong>Gandhi Jayanti</strong></td><td>2nd October</td></tr>
+    <tr><td><strong>National Science Day</strong></td><td>28th February</td></tr>
+    <tr><td><strong>World Health Day</strong></td><td>7th April</td></tr>
+    <tr><td><strong>International Labour Day</strong></td><td>1st May</td></tr>
+    <tr><td><strong>World Population Day</strong></td><td>11th July</td></tr>
+    <tr><td><strong>Independence Day (USA)</strong></td><td>4th July</td></tr>
+    <tr><td><strong>Christmas</strong></td><td>25th December</td></tr>
+  </table>
+
+  <h2><span class="num">11</span>Important Events (2020–2024)</h2>
+
+  <table>
+    <tr><th>Event</th><th>Detail</th></tr>
+    <tr><td><strong>G20 Summit 2023</strong></td><td>New Delhi, India</td></tr>
+    <tr><td><strong>G20 Theme 2023</strong></td><td>Vasudhaiva Kutumbakam (One Earth, One Family, One Future)</td></tr>
+    <tr><td><strong>43rd ASEAN Summit</strong></td><td>Jakarta, Indonesia (2023)</td></tr>
+    <tr><td><strong>Chandrayaan-3</strong></td><td>Confirmed Sulphur on Moon (2023)</td></tr>
+    <tr><td><strong>Luna-25</strong></td><td>Russia's failed lunar mission (2023)</td></tr>
+    <tr><td><strong>National Hydrogen Mission</strong></td><td>Launched 15th August 2021</td></tr>
+    <tr><td><strong>AI For All</strong></td><td>Intel &amp; CBSE Initiative</td></tr>
+    <tr><td><strong>Digital India Week 2022</strong></td><td>Theme: Catalyzing New India's Techade</td></tr>
+    <tr><td><strong>Jal Jeevan Mission</strong></td><td>Launched 2019</td></tr>
+    <tr><td><strong>Atal Pension Yojana</strong></td><td>Launched 2015</td></tr>
+    <tr><td><strong>PM-KISAN</strong></td><td>Launched February 2019</td></tr>
+    <tr><td><strong>Ayushman Bharat - PMJAY Sehat</strong></td><td>Jammu and Kashmir (Dec 2020)</td></tr>
+    <tr><td><strong>Kisan Fasal Rahat Yojana</strong></td><td>Jharkhand (Dec 2020)</td></tr>
+    <tr><td><strong>Pedalandariki Illu</strong></td><td>Andhra Pradesh (Dec 2020)</td></tr>
+    <tr><td><strong>Saubhagya Scheme</strong></td><td>Electricity connections (2017)</td></tr>
+    <tr><td><strong>Bharat Net Project Phase 2</strong></td><td>November 2017</td></tr>
+    <tr><td><strong>National Biopharma Mission (i3)</strong></td><td>USD 250 million</td></tr>
+    <tr><td><strong>National Nutrition Mission</strong></td><td>Rs 9046.17 crore</td></tr>
+    <tr><td><strong>Swachh Vayu Survekshan 2023</strong></td><td>Indore topped</td></tr>
+    <tr><td><strong>Swachh Survekshan Awards 2022</strong></td><td>Indore cleanest city (6th time)</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — BOOKS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 5 — Books &amp; Authors</div>
+
+  <h2><span class="num">12</span>Important Books &amp; Authors</h2>
+
+  <table>
+    <tr><th>Book</th><th>Author</th></tr>
+    <tr><td><strong>The 7 Sins of Being a Mother</strong></td><td>Tahira Kashyap Khurrana</td></tr>
+    <tr><td><strong>Unbreakable: An Autobiography</strong></td><td>M.C. Mary Kom</td></tr>
+    <tr><td><strong>Changing India</strong></td><td>Dr. Manmohan Singh</td></tr>
+    <tr><td><strong>Atmakatha</strong></td><td>Anna Chandy</td></tr>
+    <tr><td><strong>Wings of Fire</strong></td><td>A.P.J. Abdul Kalam</td></tr>
+    <tr><td><strong>The Blue Umbrella</strong></td><td>Ruskin Bond</td></tr>
+    <tr><td><strong>G20 @ 2023: The Roadmap to Indian Presidency</strong></td><td>V. Srinivas</td></tr>
+    <tr><td><strong>The Road Ahead</strong></td><td>Bill Gates</td></tr>
+    <tr><td><strong>Faster than Lightning</strong></td><td>Usain Bolt</td></tr>
+    <tr><td><strong>281 and Beyond</strong></td><td>VVS Laxman</td></tr>
+    <tr><td><strong>Sultry Days</strong></td><td>Shobhaa De</td></tr>
+    <tr><td><strong>An Era of Darkness</strong></td><td>Shashi Tharoor</td></tr>
+    <tr><td><strong>Buddha Gaya: The Hermitage of Sakya Muni</strong></td><td>Rajendralala Mitra</td></tr>
+    <tr><td><strong>Brihat Katha Kosh</strong></td><td>Harisena</td></tr>
+    <tr><td><strong>The Village</strong></td><td>Mulk Raj Anand</td></tr>
+    <tr><td><strong>Untouchable</strong></td><td>Mulk Raj Anand</td></tr>
+    <tr><td><strong>Coolie</strong></td><td>Mulk Raj Anand</td></tr>
+    <tr><td><strong>Kafan</strong></td><td>Premchand</td></tr>
+    <tr><td><strong>Godaan</strong></td><td>Premchand</td></tr>
+    <tr><td><strong>Kamayani</strong></td><td>Jaishankar Prasad</td></tr>
+    <tr><td><strong>Rajatarangini</strong></td><td>Kalhana</td></tr>
+    <tr><td><strong>Buddhacharita</strong></td><td>Ashvaghosha</td></tr>
+    <tr><td><strong>Arthashastra</strong></td><td>Chanakya (Kautilya)</td></tr>
+    <tr><td><strong>Indica</strong></td><td>Megasthenes</td></tr>
+    <tr><td><strong>Harshacharita</strong></td><td>Banabhatta</td></tr>
+    <tr><td><strong>Ramcharitmanas</strong></td><td>Tulsidas</td></tr>
+    <tr><td><strong>Amuktamalyada</strong></td><td>Krishnadevaraya</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 7 — DEC 2025 + JAN 2026 ============ -->
+<div class="page">
+  <div class="section-header">SECTION 6 — Month-wise Current Affairs (Dec 2025 – Sep 2026)</div>
+
+  <div class="month-badge">📅 DECEMBER 2025</div>
+
+  <h3>National News</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>PM Modi Receives Ethiopia's Highest Honour</strong></td><td>First world leader to receive Ethiopia's highest national honour</td></tr>
+    <tr><td><strong>INAS 335 Commissioned</strong></td><td>Indian Navy's second MH-60R Helicopter Squadron at INS Hansa, Goa</td></tr>
+    <tr><td><strong>SHANTI Bill, 2025 Approved</strong></td><td>Cabinet approved to allow regulated private sector participation in nuclear power generation</td></tr>
+    <tr><td><strong>Miyana Railway Station Award</strong></td><td>Won National Energy Conservation Award 2025</td></tr>
+    <tr><td><strong>India-Jordan Heritage Twinning</strong></td><td>Agreed to twin Ellora Caves with Petra</td></tr>
+  </table>
+
+  <h3>Defence &amp; Science</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>HAMMER Weapon Agreement</strong></td><td>India signed pact with France's Safran to jointly manufacture HAMMER through 50-50 JV with BEL</td></tr>
+    <tr><td><strong>DRDO Pinaka Test</strong></td><td>Maiden flight test of Pinaka Long Range Guided Rocket at Chandipur, Odisha</td></tr>
+    <tr><td><strong>DAC Clears ₹79,000 Crore Proposals</strong></td><td>For Army, IAF, and Navy</td></tr>
+  </table>
+
+  <h3>Awards &amp; Economy</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>Filmfare OTT Awards</strong></td><td>"Black Warrant" won Best Series</td></tr>
+    <tr><td><strong>Chile's New President</strong></td><td>José Antonio Kast elected</td></tr>
+    <tr><td><strong>India's 2025 Economic Reforms</strong></td><td>Focus on Ease of Living, Ease of Doing Business, Inclusive Growth</td></tr>
+    <tr><td><strong>Labour Reforms</strong></td><td>29 labour laws consolidated into 4 Labour Codes</td></tr>
+    <tr><td><strong>Viksit Bharat Rozgar Mission Act, 2025</strong></td><td>Replaces MGNREGA</td></tr>
+    <tr><td><strong>GST Reforms</strong></td><td>Two-slab structure (5% and 18%)</td></tr>
+  </table>
+
+  <div class="month-badge">📅 JANUARY 2026</div>
+
+  <h3>National News</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>77th Republic Day Parade 2026</strong></td><td>At Kartavya Path, New Delhi</td></tr>
+    <tr><td><strong>Chief Guests</strong></td><td>Ursula von der Leyen and António Costa — first time both EU leaders attended together</td></tr>
+    <tr><td><strong>Theme</strong></td><td>"Swatantrata ka Mantra: Vande Mataram" (150th anniversary of Vande Mataram)</td></tr>
+    <tr><td><strong>National Voters' Day 2026</strong></td><td>Theme: "My India, My Vote: Citizen at the Heart of Indian Democracy"</td></tr>
+  </table>
+
+  <h3>Economy</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>Economic Survey 2025-26</strong></td><td>Projected 7.4% real GDP growth for FY26</td></tr>
+    <tr><td><strong>Retail Inflation</strong></td><td>Dropped to 1.7% in 2025-26</td></tr>
+    <tr><td><strong>Fiscal Deficit</strong></td><td>Aimed to contain below 4.5% of GDP</td></tr>
+    <tr><td><strong>GDP Growth FY27</strong></td><td>Projected 6.8% to 7.2%</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 7</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 8 — FEB + MAR 2026 ============ -->
+<div class="page">
+  <div class="month-badge">📅 FEBRUARY 2026</div>
+
+  <h3>National News</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>Union Budget 2026-27</strong></td><td>Presented February 1, 2026</td></tr>
+    <tr><td><strong>Total Expenditure</strong></td><td>₹53.5 lakh crore</td></tr>
+    <tr><td><strong>New Income Tax Act, 2025</strong></td><td>Effective from April 2026</td></tr>
+    <tr><td><strong>H125 Helicopter Assembly Line</strong></td><td>Inaugurated by PM Modi and French President Macron at Vemagal, Karnataka</td></tr>
+    <tr><td><strong>Rail Parcel App</strong></td><td>Launched by South Central Railway</td></tr>
+    <tr><td><strong>National Cow Culture Museum</strong></td><td>To be established in Mathura</td></tr>
+    <tr><td><strong>PM RAHAT Scheme</strong></td><td>₹1.5 lakh cashless treatment for road accident victims</td></tr>
+    <tr><td><strong>Brahmaputra Twin Tunnel</strong></td><td>India's first underwater rail-cum-road tunnel approved in Assam</td></tr>
+  </table>
+
+  <h3>International &amp; Defence</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>G7 2026 Summit</strong></td><td>Évian, France (June 15-17, 2026)</td></tr>
+    <tr><td><strong>Earthshot Prize 2026</strong></td><td>Mumbai announced as host city (November 2026)</td></tr>
+    <tr><td><strong>AI Impact Summit 2026</strong></td><td>Held Feb 16-21 at Bharat Mandapam, New Delhi</td></tr>
+    <tr><td><strong>QR Code Payments in Malaysia</strong></td><td>Agreement signed, regulated by NPCI</td></tr>
+    <tr><td><strong>Padma Awards 2025</strong></td><td>113 Padma Awards. Ilaiyaraaja received Padma Vibhushan</td></tr>
+  </table>
+
+  <div class="month-badge">📅 MARCH 2026</div>
+
+  <h3>National &amp; International</h3>
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>Nitish Kumar</strong></td><td>Appointed CM for the 10th time, longest-serving CM of Bihar</td></tr>
+    <tr><td><strong>Saksham Skill Survey</strong></td><td>Inaugurated in Mumbai for "skill census" of Maharashtra's youth</td></tr>
+    <tr><td><strong>Project Hanumaan</strong></td><td>Launched in Andhra Pradesh to address human-animal conflict</td></tr>
+    <tr><td><strong>Prambanan Temple Restoration</strong></td><td>India-Indonesia partnership</td></tr>
+    <tr><td><strong>RISA: Timeless Tribal</strong></td><td>Launched by Ministry of Tribal Affairs</td></tr>
+    <tr><td><strong>WTO 14th Ministerial Conference</strong></td><td>March 26-27, 2026 in Yaoundé, Cameroon</td></tr>
+    <tr><td><strong>Iran's Fattah Missile</strong></td><td>Hypersonic missile, Mach 5+, Range: 1400 km</td></tr>
+    <tr><td><strong>Operation Sankalp</strong></td><td>India deployed naval ships for humanitarian assistance</td></tr>
+    <tr><td><strong>Oldest Rock Art</strong></td><td>Discovered in Sulawesi, Indonesia — 67,800 years old</td></tr>
+    <tr><td><strong>Oldest Horse DNA</strong></td><td>Discovered in Germany — 300,000 years old</td></tr>
+    <tr><td><strong>Stockholm Water Prize 2026</strong></td><td>Kaveh Madani from Iran won</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 8</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 9 — APR + MAY 2026 ============ -->
+<div class="page">
+  <div class="month-badge">📅 APRIL 2026</div>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>PMGSY Extension</strong></td><td>Extended until 2028. Allocation: ₹83,977 crore</td></tr>
+    <tr><td><strong>PM Viksit Bharat Rozgar Yojana</strong></td><td>Approved with outlay of ₹99,446 crore. Target: 1.92 crore new employees</td></tr>
+    <tr><td><strong>Atal Pension Yojana</strong></td><td>Crossed 9 crore total enrolments</td></tr>
+    <tr><td><strong>NeSDA 2025 Portal</strong></td><td>Launched by DARPG for e-governance assessment</td></tr>
+    <tr><td><strong>India-China Trade</strong></td><td>China surpassed USA as India's largest trading partner for FY 2025-26</td></tr>
+    <tr><td><strong>Strait of Hormuz</strong></td><td>Global maritime security initiative proposed. 40-country meeting held</td></tr>
+    <tr><td><strong>India-Germany Defence</strong></td><td>Rajnath Singh called for enhanced defence industrial partnerships in Berlin</td></tr>
+    <tr><td><strong>68th Jnanpith Award</strong></td><td>Awarded to Gulzar and Jagadguru Rambhadracharya</td></tr>
+  </table>
+
+  <div class="month-badge">📅 MAY 2026</div>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>President's Police Colour</strong></td><td>President Droupadi Murmu conferred upon Sikkim Police in Gangtok (May 28, 2026)</td></tr>
+    <tr><td><strong>Surya Kiran Aerobatic Team</strong></td><td>Completed 30 years at Air Force Station, Bidar. Established 1996. Motto: "Sadaiva Sarvottam"</td></tr>
+    <tr><td><strong>CEPA Upgrade Talks</strong></td><td>India and South Korea concluded 12th round</td></tr>
+    <tr><td><strong>National Sports Governance Act, 2025</strong></td><td>Discussed at National Sports Federation Conclave</td></tr>
+    <tr><td><strong>SRS Report 2024</strong></td><td>India's TFR declined to 1.9 — below replacement level of 2.1 for first time. Highest: Bihar (2.9). Lowest: Delhi (1.2)</td></tr>
+    <tr><td><strong>Elderly Population</strong></td><td>Kerala: 15.1%, Tamil Nadu: 14.2%</td></tr>
+    <tr><td><strong>Child Mortality</strong></td><td>Highest U5MR: MP and UP (41). Lowest: Kerala (9)</td></tr>
+    <tr><td><strong>Institutional Deliveries</strong></td><td>71.7% of births occur in government hospitals</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 9</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 10 — JUNE + JULY 2026 ============ -->
+<div class="page">
+  <div class="month-badge">📅 JUNE 2026</div>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>Deep Ocean Mission</strong></td><td>Being driven by Ministry of Earth Sciences</td></tr>
+    <tr><td><strong>Chief of Army Staff</strong></td><td>Assumed office in June 2026</td></tr>
+    <tr><td><strong>Lok Sabha Speaker</strong></td><td>Om Birla elected for consecutive second term</td></tr>
+    <tr><td><strong>MSP for Paddy</strong></td><td>Approved by Union Cabinet for 2026-27</td></tr>
+    <tr><td><strong>Baroda Sun Premier</strong></td><td>Launched by Bank of Baroda for high-net-worth individuals</td></tr>
+    <tr><td><strong>Retail Inflation</strong></td><td>Eased to multi-month low in May 2026</td></tr>
+    <tr><td><strong>RIMPAC 2026</strong></td><td>Naval drill hosted by United States</td></tr>
+    <tr><td><strong>Global Peace Summit 2026</strong></td><td>Hosted for Eastern European conflicts</td></tr>
+    <tr><td><strong>Malabar 2026</strong></td><td>Multilateral maritime exercise: India, USA, Japan, Australia</td></tr>
+    <tr><td><strong>Erasmus Prize 2026</strong></td><td>Awarded for promoting cultural and democratic values</td></tr>
+    <tr><td><strong>Kavli Prize in Astrophysics</strong></td><td>Awarded for cosmic gravitational waves detection</td></tr>
+  </table>
+
+  <div class="month-badge">📅 JULY 2026</div>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>National Broadcasting Day</strong></td><td>Observed July 23. First radio broadcast: 23 July 1927. AIR established: 8 June 1936. Renamed Akashvani: 1957</td></tr>
+    <tr><td><strong>Ajit Doval Award</strong></td><td>NSA Ajit Doval selected for Lokmanya Tilak National Award 2026. Ceremony: 1 August 2026, Pune</td></tr>
+    <tr><td><strong>Indian Railways Electrification</strong></td><td>Achieved 99.6% electrification — second-most electrified large railway network in world, behind Switzerland</td></tr>
+    <tr><td><strong>Lovlina Borgohain</strong></td><td>Assured India's first Commonwealth Games 2026 medal in women's 75 kg boxing</td></tr>
+    <tr><td><strong>Killai Climate-Resilient Village</strong></td><td>Tamil Nadu's first fully operational Climate-Resilient Village in Cuddalore district</td></tr>
+    <tr><td><strong>Museum of Word</strong></td><td>Inaugurated by Amit Shah in Kolkata to preserve linguistic heritage</td></tr>
+    <tr><td><strong>Amul Curd Plant</strong></td><td>World's largest curd plant to be established in West Bengal (₹700 crore)</td></tr>
+    <tr><td><strong>281 Butterfly Species</strong></td><td>Recorded at Hollongapar Gibbon Wildlife Sanctuary, Assam</td></tr>
+    <tr><td><strong>Lu Xun Literary Award</strong></td><td>Won by Chinese delivery rider Wang Jibing for "Low Flight"</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 11 — AUG + SEP 2026 ============ -->
+<div class="page">
+  <div class="month-badge">📅 AUGUST 2026</div>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>RBI Repo Rate</strong></td><td>Kept unchanged in August 2026 policy</td></tr>
+    <tr><td><strong>UPI 10 Years</strong></td><td>Completed 10 years in August 2026</td></tr>
+    <tr><td><strong>PosTransfer</strong></td><td>Launched to enable remittances directly to UPI-enabled Indian accounts</td></tr>
+    <tr><td><strong>SMBC Stake</strong></td><td>Japan's SMBC became largest shareholder in Indian bank with 24.9% stake</td></tr>
+    <tr><td><strong>India's First NBFC Silver Loan</strong></td><td>Company became India's first NBFC to set up exclusive Silver Loan branches</td></tr>
+    <tr><td><strong>SBI AI Cheque Processing</strong></td><td>Plans to raise AI-based cheque processing threshold from ₹10,000</td></tr>
+    <tr><td><strong>Bank in a Box</strong></td><td>Launched with focus on digital payments, cloud infrastructure</td></tr>
+    <tr><td><strong>IIT Delhi Supercomputing</strong></td><td>'Param Pragya' supercomputing facility inaugurated at Sonipat campus</td></tr>
+    <tr><td><strong>National Sports Federation Conclave 2026</strong></td><td>Chaired by Sports Minister Mansukh Mandaviya</td></tr>
+    <tr><td><strong>EOD Exercise 2026</strong></td><td>India and US navies began exercise in Kochi</td></tr>
+    <tr><td><strong>World Athletics U20</strong></td><td>Basant Kumar Meghwal won first silver medal for India in High Jump</td></tr>
+    <tr><td><strong>Zambia Supreme Court</strong></td><td>Indian-origin Abha Nair Patel became first woman judge</td></tr>
+  </table>
+
+  <div class="month-badge">📅 SEPTEMBER 2026 (Early)</div>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td><strong>International Literacy Day 2026</strong></td><td>Theme: "Literacy for People, the Planet and Prosperity". 60th anniversary</td></tr>
+    <tr><td><strong>Swachh Vayu Survekshan 2026</strong></td><td>Lucknow topped among million-plus cities. Indore 2nd, Jabalpur 3rd</td></tr>
+    <tr><td><strong>Veer Guardian 2026</strong></td><td>India-Japan Air Force Exercise at Jodhpur (Sept 9-22)</td></tr>
+    <tr><td><strong>Delhi-Patna Bullet Train</strong></td><td>Proposed ~1,170 km. Speed: 350 km/hour</td></tr>
+    <tr><td><strong>N Chandrasekaran</strong></td><td>Tata Sons board extended tenure as chairman until 2032</td></tr>
+    <tr><td><strong>Semicon India 2026</strong></td><td>PM Modi inaugurated 5th edition in Delhi. Theme: 'From Silicon to Systems'. 600+ companies from 52 countries</td></tr>
+    <tr><td><strong>Dadasaheb Phalke Award 2024</strong></td><td>Veteran actor Anant Nag announced as recipient</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 11</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 12 — MASTER SUMMARY ============ -->
+<div class="page">
+  <div class="page-header">Master Summary — Key Facts</div>
+
+  <h2><span class="num">13</span>Month-wise Key Facts</h2>
+
+  <table>
+    <tr><th>Month</th><th>Most Important Fact</th></tr>
+    <tr><td><strong>December 2025</strong></td><td>PM Modi receives Ethiopia's highest honour; SHANTI Bill 2025</td></tr>
+    <tr><td><strong>January 2026</strong></td><td>77th Republic Day (EU leaders as Chief Guests); Economic Survey (7.4% GDP)</td></tr>
+    <tr><td><strong>February 2026</strong></td><td>Union Budget 2026-27 (₹53.5 lakh crore); AI Impact Summit</td></tr>
+    <tr><td><strong>March 2026</strong></td><td>WTO MC14 in Cameroon; Nitish Kumar 10th time CM</td></tr>
+    <tr><td><strong>April 2026</strong></td><td>PMGSY extension (₹83,977 crore); PM Viksit Bharat Rozgar Yojana</td></tr>
+    <tr><td><strong>May 2026</strong></td><td>Sikkim Police receives President's Police Colour; SRS Report (TFR 1.9)</td></tr>
+    <tr><td><strong>June 2026</strong></td><td>Om Birla Speaker (2nd term); Deep Ocean Mission</td></tr>
+    <tr><td><strong>July 2026</strong></td><td>National Broadcasting Day; Indian Railways 99.6% electrified</td></tr>
+    <tr><td><strong>August 2026</strong></td><td>UPI completes 10 years; RBI repo rate unchanged</td></tr>
+    <tr><td><strong>September 2026</strong></td><td>Swachh Vayu Survekshan 2026 (Lucknow tops); Semicon India 2026</td></tr>
+  </table>
+
+  <h2><span class="num">14</span>Master Summary — All Appointments</h2>
+
+  <div class="quick-rev">
+    <ul>
+      <li><strong>Constitutional Posts:</strong> Rajiv Kumar (CEC) · K. Sanjay Murthy (CAG) · Sanjay Malhotra (RBI Gov) · V. Ramasubramanian (NHRC) · Prakash Shrivastava (NGT)</li>
+      <li><strong>Other Bodies:</strong> Praveen Kumar Srivastava (CVC) · Heeralal Samariya (CIC) · Suman Bery (NITI VC) · B.V.R. Subrahmanyam (NITI CEO) · Dr. Dinesh Prasad Saklani (NCERT)</li>
+      <li><strong>Defence:</strong> Gen Bipin Rawat (1st CDS) · Rajat Datta (DG AFMS) · Shivangi (1st Female Navy Pilot)</li>
+      <li><strong>International:</strong> Lindy Cameron (British HC) · Tharman Shanmugaratnam (Singapore President) · José Antonio Kast (Chile President) · Abha Nair Patel (Zambia SC)</li>
+      <li><strong>Sports:</strong> Gyanendro Ningombam (Hockey India) · Subramanian Raman (Dronacharya TT) · Rambir Singh Khokar (Dronacharya Kabaddi)</li>
+      <li><strong>2026:</strong> N Chandrasekaran (Tata Sons till 2032) · Om Birla (Lok Sabha Speaker 2nd) · Nitish Kumar (Bihar CM 10th) · Anant Nag (Dada Saheb Phalke 2024) · Ilaiyaraaja (Padma Vibhushan)</li>
+      <li><strong>Municipal:</strong> Arya Rajendran (Youngest Mayor, 2021)</li>
+      <li><strong>Padma Shri:</strong> Narendra Chandra Debbarma (Posthumous) · Devarapalli Prakash Rao · Muthukannammal · Nalini-Kamalini Asthana</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">15</span>Master Summary — Awards &amp; Sports</h2>
+
+  <div class="quick-rev">
+    <ul>
+      <li><strong>Awards:</strong> Sachin Tendulkar (Bharat Ratna 2014) · Amitabh Bachchan (Dada Saheb Phalke 2019) · Shashi Tharoor (Sahitya Akademi) · Ricky Kej (Grammy) · Sadat Rahman (Children's Peace Prize)</li>
+      <li><strong>Sports:</strong> Neeraj Chopra (Olympic Gold) · PV Sindhu (Bronze) · Avani Lekhara (Paralympic Gold) · Sunil Chhetri (100+ Goals)</li>
+      <li><strong>Events:</strong> G20 Summit 2023 (New Delhi) · Chandrayaan-3 (Sulphur on Moon) · National Hydrogen Mission (15 Aug 2021)</li>
+      <li><strong>Books:</strong> Wings of Fire (Kalam) · Changing India (Manmohan Singh) · Unbreakable (Mary Kom) · An Era of Darkness (Tharoor)</li>
+    </ul>
+  </div>
+
+  <p class="source">Source: Current Affairs Complete Notes (Dec 2025 – Sep 2026)</p>
+
+  <div class="page-footer">
+    <span>Current Affairs — Complete Guide</span>
+    <span>Page 12</span>
+  </div>
+</div>
+
+</body>
+</html>

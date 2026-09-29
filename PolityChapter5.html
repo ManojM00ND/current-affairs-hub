@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 5: The Union Executive</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Decorative bubbles */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180,83,9,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180,83,9,0.10), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #6B7280;
+    border-top: 2px dashed #E5E7EB;
+    padding-top: 3mm;
+    font-family: 'Poppins', sans-serif;
+    z-index: 5;
+  }
+
+  /* ============ TITLE BANNER ============ */
+  .title-banner {
+    background: linear-gradient(135deg, #7C2D12 0%, #B45309 45%, #C2410C 100%);
+    color: #fff;
+    padding: 30px 25px 26px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(124,45,18,0.35);
+  }
+  .title-banner::before {
+    content: '🏛️';
+    position: absolute;
+    top: 10px; left: 20px;
+    font-size: 22pt;
+    opacity: 0.7;
+  }
+  .title-banner::after {
+    content: '🇮🇳';
+    position: absolute;
+    bottom: 10px; right: 20px;
+    font-size: 22pt;
+    opacity: 0.7;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 17pt;
+    margin-top: 10px;
+    color: #FDE68A;
+  }
+
+  /* ============ SECTION TITLES ============ */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    padding: 11px 18px;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    letter-spacing: 0.3px;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 12px 0 0 12px;
+  }
+  .t-brown  { background: linear-gradient(90deg, #7C2D12, #C2410C); }
+  .t-amber  { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* ============ ESSAY BOX ============ */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #FEF3C7 100%);
+    border: 1.5px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px; bottom: 12px;
+    width: 3px;
+    background: linear-gradient(180deg, #7C2D12, #B45309);
+    border-radius: 0 4px 4px 0;
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+
+  /* ============ BOXES ============ */
+  .box {
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .box-brown  { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 6px solid #7C2D12; }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 6px solid #B45309; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 6px solid #065F46; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 6px solid #0369A1; }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 6px solid #6D28D9; }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 6px solid #3730A3; }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 6px solid #B91C1C; }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 6px solid #0F766E; }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 6px solid #BE185D; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 8px 0;
+    font-size: 9.5pt;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+  th {
+    background: linear-gradient(90deg, #7C2D12, #C2410C);
+    color: #fff;
+    padding: 9px 11px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 9.8pt;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 7px 11px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #FFFBEB; }
+  tr:last-child td { border-bottom: none; }
+
+  .table-brown  th { background: linear-gradient(90deg, #7C2D12, #C2410C); }
+  .table-amber  th { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .table-teal   th { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* ============ KEY POINT ============ */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 2px dashed #F59E0B;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin: 10px 0;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(245,158,11,0.15);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -12px; left: 16px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12pt;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .keypoint strong { color: #B45309; }
+
+  /* ============ SIMPLE MEANING BOX ============ */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-radius: 12px;
+    padding: 12px 16px 12px 44px;
+    margin: 10px 0;
+    position: relative;
+    font-style: italic;
+    color: #064E3B;
+    box-shadow: 0 3px 10px rgba(16,185,129,0.12);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 14pt;
+    font-style: normal;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .hl-brown  { background: linear-gradient(180deg, transparent 55%, #FED7AA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-amber  { background: linear-gradient(180deg, transparent 55%, #FDE68A 55%); padding: 0 4px; font-weight: 700; }
+  .hl-green  { background: linear-gradient(180deg, transparent 55%, #A7F3D0 55%); padding: 0 4px; font-weight: 700; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 55%, #BAE6FD 55%); padding: 0 4px; font-weight: 700; }
+  .hl-purple { background: linear-gradient(180deg, transparent 55%, #DDD6FE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-red    { background: linear-gradient(180deg, transparent 55%, #FECACA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-teal   { background: linear-gradient(180deg, transparent 55%, #99F6E4 55%); padding: 0 4px; font-weight: 700; }
+
+  /* ============ RIBBON ============ */
+  .ribbon {
+    display: inline-block;
+    background: linear-gradient(90deg, #7C2D12, #C2410C);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+    box-shadow: 0 2px 6px rgba(124,45,18,0.3);
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+  }
+
+  /* ============ H3 STYLES ============ */
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    color: #1F2937;
+    margin: 12px 0 6px;
+    padding-left: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 18px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #7C2D12, #B45309);
+  }
+
+  /* ============ QUOTE BOX ============ */
+  .quote {
+    background: linear-gradient(135deg, #FDF4FF 0%, #FAE8FF 100%);
+    border-left: 5px solid #BE185D;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 10px 0;
+    font-family: 'Caveat', cursive;
+    font-size: 13pt;
+    color: #831843;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(190,24,93,0.10);
+  }
+  .quote::before {
+    content: '❝';
+    position: absolute;
+    top: 4px; left: 6px;
+    font-size: 20pt;
+    color: #F9A8D4;
+  }
+  .quote p { padding-left: 20px; }
+
+  /* ============ FOOTER BANNER ============ */
+  .footer {
+    text-align: center;
+    margin-top: 14px;
+    padding: 12px;
+    background: linear-gradient(90deg, #7C2D12, #B45309, #C2410C);
+    color: #fff;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(124,45,18,0.25);
+  }
+
+  ul, ol { margin-left: 18px; margin-bottom: 6px; }
+  li { margin-bottom: 4px; }
+  p { margin-bottom: 6px; }
+  strong { color: #111; }
+
+  /* ============ ICON CIRCLE ============ */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7C2D12, #B45309);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 2px 6px rgba(124,45,18,0.3);
+  }
+
+  /* ============ STAT CARDS ============ */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+    border: 2px solid #F59E0B;
+    box-shadow: 0 3px 10px rgba(245,158,11,0.15);
+  }
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    font-weight: 900;
+    color: #7C2D12;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-card .label {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #78350F;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 5.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>THE UNION EXECUTIVE</h1>
+    <h2>🏛️ Chapter 5 — Articles 52 to 78 (Part V)</h2>
+    <div class="tagline">✨ President • Vice-President • PM • Ministers ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-brown">📖 5.1 What is the Union Executive?</div>
+
+    <div class="essay">
+      <p>The <strong>Union Executive</strong> is the group of people who run the Government of India at the national level. Think of it like the "management team" of the country.</p>
+      <p>It consists of <strong>five key members</strong> who work together to govern India:</p>
+    </div>
+
+    <div class="box box-brown">
+      <div class="box-title">🏛️ The Five Members of the Union Executive</div>
+      <ul>
+        <li><strong>👑 The President</strong> — Head of State (the formal head)</li>
+        <li><strong>🥈 The Vice-President</strong> — Second highest office</li>
+        <li><strong>🏛️ The Prime Minister</strong> — Head of Government (the real head)</li>
+        <li><strong>👥 The Council of Ministers</strong> — To aid and advise the President</li>
+        <li><strong>⚖️ The Attorney General of India</strong> — Chief legal advisor</li>
+      </ul>
+    </div>
+
+    <div class="keypoint">
+      <strong>IMPORTANT:</strong> <strong>Articles 52 to 78</strong> of <strong>Part V</strong> of the Constitution deal with the Union Executive.
+    </div>
+
+    <div class="simple">
+      Union Executive = The team that runs the country. President is the formal head, PM is the real head, and others help them.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Union Executive — Essay Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 5.2 President Qualifications + Election ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-amber">👑 5.2 The President of India (Articles 52 – 62)</div>
+
+    <h3>🎓 Qualifications (Article 58)</h3>
+    <div class="essay">
+      <p>To become the President of India, a person must meet <strong>five conditions</strong>:</p>
+      <ul>
+        <li>✅ Be a <strong>citizen of India</strong></li>
+        <li>✅ Have completed <strong>35 years of age</strong></li>
+        <li>✅ Be qualified for election as a member of the <strong>Lok Sabha</strong></li>
+        <li>✅ <strong>Not hold</strong> any office of profit under the Government of India or any State</li>
+        <li>✅ <strong>Not be</strong> a member of Parliament or State Legislature (if so, must resign before contesting)</li>
+      </ul>
+    </div>
+
+    <h3>🗳️ Election of the President (Articles 54, 55)</h3>
+    <div class="essay">
+      <p>The President is <strong>elected indirectly</strong> — meaning the common people do NOT vote directly for the President. Instead, an <strong>Electoral College</strong> votes.</p>
+    </div>
+
+    <div class="box box-amber">
+      <div class="box-title">🗳️ The Electoral College Consists Of:</div>
+      <ul>
+        <li>✅ <strong>Elected members</strong> of both Houses of Parliament (MPs)</li>
+        <li>✅ <strong>Elected members</strong> of State Legislative Assemblies (MLAs)</li>
+        <li>✅ <strong>Elected members</strong> of Legislative Assemblies of Union Territories (Delhi and Puducherry)</li>
+        <li>❌ <strong>Nominated members</strong> (of Parliament and State Assemblies) do <strong>NOT</strong> participate</li>
+      </ul>
+    </div>
+
+    <div class="essay">
+      <p><strong>How is the voting done?</strong> The election uses <strong>proportional representation</strong> with the <strong>single transferable vote system</strong>. Voting is by <strong>secret ballot</strong>. Disputes about the election are decided by the <strong>Supreme Court</strong> (Article 71).</p>
+    </div>
+
+    <div class="simple">
+      President is elected by MPs + MLAs (not by common people). Nominated members don't vote. Any dispute goes to the Supreme Court.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Union Executive — Essay Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — Term + Impeachment ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">⏳ 5.2.3 Term and Impeachment (Articles 56, 61)</div>
+
+    <table class="table-green">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Term</strong></td><td>5 years</td></tr>
+      <tr><td><strong>Resignation</strong></td><td>Addressed to the Vice-President</td></tr>
+      <tr><td><strong>Removal</strong></td><td>By impeachment (Article 61)</td></tr>
+      <tr><td><strong>Impeachment Grounds</strong></td><td>Violation of the Constitution</td></tr>
+      <tr><td><strong>Re-election</strong></td><td>Eligible for re-election. No limit on number of terms.</td></tr>
+    </table>
+
+    <h3>⚖️ Impeachment Process (Simple Explanation)</h3>
+    <div class="essay">
+      <p><strong>Impeachment</strong> is the process of removing the President for serious misconduct. Here's how it works:</p>
+      <p><span class="icon-circle">1</span><strong>Charge initiated</strong> in either House of Parliament.</p>
+      <p><span class="icon-circle">2</span><strong>First House</strong> must pass the charge by a <strong>2/3 majority</strong> of its total membership.</p>
+      <p><span class="icon-circle">3</span><strong>Other House investigates</strong> the charge.</p>
+      <p><span class="icon-circle">4</span>If the other House also passes it by <strong>2/3 majority</strong>, the President is <strong>removed</strong>.</p>
+    </div>
+
+    <div class="keypoint">
+      <strong>REMEMBER:</strong> Impeachment requires a <strong>2/3 majority in BOTH Houses</strong>. It is a very serious process and has never happened in India's history.
+    </div>
+
+    <div class="simple">
+      President serves for 5 years. Can be removed only for violating the Constitution. Both Houses must pass the charge by 2/3 majority.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Union Executive — Essay Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — Powers (Executive + Legislative) ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">⚡ 5.2.4 Powers of the President (Part 1)</div>
+
+    <h3>🏛️ Executive Powers</h3>
+    <div class="essay">
+      <p>All executive actions of the Government of India are taken in the <strong>name of the President</strong>. The President appoints:</p>
+      <ul>
+        <li>👔 The <strong>Prime Minister</strong> and other ministers</li>
+        <li>⚖️ The <strong>Attorney General</strong>, CAG, Chief Election Commissioner, and other Election Commissioners</li>
+        <li>🏛️ The <strong>Governors</strong> of States</li>
+        <li>👨‍⚖️ The <strong>Chief Justice</strong> and other judges of Supreme Court and High Courts</li>
+        <li>🎖️ The <strong>Chiefs</strong> of Army, Navy, and Air Force</li>
+      </ul>
+    </div>
+
+    <h3>📜 Legislative Powers</h3>
+    <div class="essay">
+      <ul>
+        <li>📢 <strong>Summons and prorogues</strong> Parliament</li>
+        <li>🏛️ <strong>Dissolves</strong> the Lok Sabha</li>
+        <li>🎭 Nominates <strong>12 members</strong> to the Rajya Sabha (from literature, science, art, social service)</li>
+        <li>🇮🇳 Nominates <strong>2 members</strong> to the Lok Sabha (from Anglo-Indian community — expired in 2020)</li>
+        <li>✍️ Gives <strong>assent</strong> to bills passed by Parliament. Can return a bill (except Money Bill) for reconsideration.</li>
+        <li>📜 Promulgates <strong>Ordinances</strong> when Parliament is not in session (Article 123)</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      President appoints everyone important, opens and closes Parliament, and can pass emergency laws (ordinances) when Parliament is not in session.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Union Executive — Essay Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — Powers (Financial + Judicial + Emergency + Military + Diplomatic) ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-indigo">💰 5.2.4 Powers of the President (Part 2)</div>
+
+    <h3>💰 Financial Powers</h3>
+    <div class="essay">
+      <ul>
+        <li>💵 <strong>Money Bills</strong> can be introduced in Parliament only with the President's recommendation</li>
+        <li>📊 The <strong>Annual Financial Statement (Budget)</strong> is presented in Parliament in the President's name</li>
+        <li>🏦 Appoints the <strong>Finance Commission</strong> every 5 years</li>
+      </ul>
+    </div>
+
+    <h3>⚖️ Judicial Powers</h3>
+    <div class="essay">
+      <ul>
+        <li>👨‍⚖️ Appoints judges of <strong>Supreme Court and High Courts</strong></li>
+        <li>🕊️ Can <strong>pardon, reprieve, respite, remit, or commute</strong> sentences (Article 72)</li>
+        <li>❤️ <strong>Pardoning Power:</strong> Can pardon <strong>death sentences</strong> and <strong>court-martial punishments</strong></li>
+      </ul>
+    </div>
+
+    <h3>🚨 Emergency Powers</h3>
+    <div class="essay">
+      <ul>
+        <li>🆘 <strong>National Emergency</strong> (Article 352)</li>
+        <li>🏛️ <strong>President's Rule</strong> (Article 356)</li>
+        <li>💸 <strong>Financial Emergency</strong> (Article 360)</li>
+      </ul>
+    </div>
+
+    <h3>🎖️ Military Powers</h3>
+    <div class="essay">
+      <ul>
+        <li>⚔️ Supreme Commander of the Armed Forces</li>
+        <li>🕊️ Can declare war or peace (subject to Parliament approval)</li>
+      </ul>
+    </div>
+
+    <h3>🌍 Diplomatic Powers</h3>
+    <div class="essay">
+      <ul>
+        <li>🌐 Represents India internationally</li>
+        <li>🤝 Appoints ambassadors and high commissioners</li>
+        <li>🎩 Receives foreign diplomats</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      President controls money matters, can forgive criminals, can declare emergency, is the head of the armed forces, and represents India to the world.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Union Executive — Essay Guide</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — Veto Powers + Vice President ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-red">🚫 5.2.5 Veto Powers of the President</div>
+
+    <table class="table-red">
+      <tr><th>Veto Type</th><th>💬 Simple Meaning</th></tr>
+      <tr><td><strong>Absolute Veto</strong></td><td>Withholds assent to a bill. The bill ends.</td></tr>
+      <tr><td><strong>Suspensive Veto</strong></td><td>Returns a bill to Parliament for reconsideration. If Parliament passes it again with a simple majority, President must give assent. (Not applicable to Money Bills.)</td></tr>
+      <tr><td><strong>Pocket Veto</strong></td><td>President keeps the bill pending indefinitely. No time limit.</td></tr>
+      <tr><td><strong>Special Veto</strong></td><td>For private members' bills.</td></tr>
+    </table>
+
+    <div class="simple">
+      Veto = President saying "no" to a bill. But he can't always say no — Parliament can override him for most bills.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-teal">🥈 5.3 The Vice-President of India (Articles 63 – 71)</div>
+
+    <table class="table-teal">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Article</strong></td><td>63 – 71</td></tr>
+      <tr><td><strong>Election</strong></td><td>Elected by an Electoral College consisting of <strong>members of both Houses of Parliament (MPs only)</strong>. State MLAs do NOT participate.</td></tr>
+      <tr><td><strong>Qualifications</strong></td><td>Citizen of India, 35 years of age, qualified for Rajya Sabha membership</td></tr>
+      <tr><td><strong>Term</strong></td

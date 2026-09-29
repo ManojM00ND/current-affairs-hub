@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 4: The Preamble (Attractive Guide)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Decorative corner bubbles */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(109,40,217,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(3,105,161,0.10), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #6B7280;
+    border-top: 2px dashed #E5E7EB;
+    padding-top: 3mm;
+    font-family: 'Poppins', sans-serif;
+    z-index: 5;
+  }
+
+  /* ============ TITLE BANNER ============ */
+  .title-banner {
+    background: linear-gradient(135deg, #6D28D9 0%, #0369A1 45%, #065F46 100%);
+    color: #fff;
+    padding: 30px 25px 26px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(109,40,217,0.35);
+  }
+  .title-banner::before {
+    content: '✨';
+    position: absolute;
+    top: 10px; left: 20px;
+    font-size: 20pt;
+    opacity: 0.7;
+  }
+  .title-banner::after {
+    content: '✨';
+    position: absolute;
+    bottom: 10px; right: 20px;
+    font-size: 20pt;
+    opacity: 0.7;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 17pt;
+    margin-top: 10px;
+    opacity: 1;
+    color: #FDE68A;
+  }
+
+  /* ============ SECTION TITLES ============ */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    padding: 11px 18px;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    letter-spacing: 0.3px;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 12px 0 0 12px;
+  }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* ============ ESSAY BOX ============ */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #F5F3FF 100%);
+    border: 1.5px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px; bottom: 12px;
+    width: 3px;
+    background: linear-gradient(180deg, #6D28D9, #0369A1);
+    border-radius: 0 4px 4px 0;
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+
+  /* ============ BOXES ============ */
+  .box {
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 6px solid #6D28D9; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 6px solid #0369A1; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 6px solid #065F46; }
+  .box-orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 6px solid #C2410C; }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 6px solid #0F766E; }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 6px solid #3730A3; }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 6px solid #B91C1C; }
+  .box-yellow { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 6px solid #F59E0B; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 8px 0;
+    font-size: 9.5pt;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+  th {
+    background: linear-gradient(90deg, #6D28D9, #A855F7);
+    color: #fff;
+    padding: 9px 11px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 9.8pt;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 7px 11px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #FAFAF9; }
+  tr:last-child td { border-bottom: none; }
+
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-sky th    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-green th  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-orange th { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .table-teal th   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-red th    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .table-yellow th { background: linear-gradient(90deg, #B45309, #F59E0B); }
+
+  /* ============ KEY POINT ============ */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 2px dashed #F59E0B;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin: 10px 0;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(245,158,11,0.15);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -12px; left: 16px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12pt;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .keypoint strong { color: #B45309; }
+
+  /* ============ SIMPLE MEANING BOX ============ */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-radius: 12px;
+    padding: 12px 16px 12px 44px;
+    margin: 10px 0;
+    position: relative;
+    font-style: italic;
+    color: #064E3B;
+    box-shadow: 0 3px 10px rgba(16,185,129,0.12);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 14pt;
+    font-style: normal;
+  }
+
+  /* ============ PREAMBLE TEXT BOX ============ */
+  .preamble-text {
+    background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #E0F2FE 100%);
+    border: 3px double #6D28D9;
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin: 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    text-align: center;
+    color: #3730A3;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(109,40,217,0.12);
+  }
+  .preamble-text::before,
+  .preamble-text::after {
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    color: #A855F7;
+    opacity: 0.4;
+    position: absolute;
+    line-height: 1;
+  }
+  .preamble-text::before { content: '"'; top: 5px; left: 14px; }
+  .preamble-text::after  { content: '"'; bottom: -10px; right: 14px; }
+  .preamble-text strong {
+    color: #6D28D9;
+    font-size: 11pt;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .hl-purple { background: linear-gradient(180deg, transparent 55%, #DDD6FE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 55%, #BAE6FD 55%); padding: 0 4px; font-weight: 700; }
+  .hl-green  { background: linear-gradient(180deg, transparent 55%, #A7F3D0 55%); padding: 0 4px; font-weight: 700; }
+  .hl-orange { background: linear-gradient(180deg, transparent 55%, #FED7AA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-teal   { background: linear-gradient(180deg, transparent 55%, #99F6E4 55%); padding: 0 4px; font-weight: 700; }
+  .hl-red    { background: linear-gradient(180deg, transparent 55%, #FECACA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-yellow { background: linear-gradient(180deg, transparent 55%, #FDE68A 55%); padding: 0 4px; font-weight: 700; }
+
+  /* ============ RIBBON BADGE ============ */
+  .ribbon {
+    display: inline-block;
+    background: linear-gradient(90deg, #C2410C, #F97316);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+    box-shadow: 0 2px 6px rgba(194,65,12,0.3);
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+  }
+
+  /* ============ H3 STYLES ============ */
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    color: #1F2937;
+    margin: 12px 0 6px;
+    padding-left: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 18px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #6D28D9, #0369A1);
+  }
+
+  /* ============ QUOTE BOX ============ */
+  .quote {
+    background: linear-gradient(135deg, #FDF4FF 0%, #FAE8FF 100%);
+    border-left: 5px solid #BE185D;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 10px 0;
+    font-family: 'Caveat', cursive;
+    font-size: 13pt;
+    color: #831843;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(190,24,93,0.10);
+  }
+  .quote::before {
+    content: '❝';
+    position: absolute;
+    top: 4px; left: 6px;
+    font-size: 20pt;
+    color: #F9A8D4;
+  }
+  .quote p { padding-left: 20px; }
+
+  /* ============ FOOTER BANNER ============ */
+  .footer {
+    text-align: center;
+    margin-top: 14px;
+    padding: 12px;
+    background: linear-gradient(90deg, #6D28D9, #0369A1, #065F46);
+    color: #fff;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(109,40,217,0.25);
+  }
+
+  ul, ol { margin-left: 18px; margin-bottom: 6px; }
+  li { margin-bottom: 4px; }
+  p { margin-bottom: 6px; }
+  strong { color: #111; }
+
+  /* ============ ICON CIRCLE ============ */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6D28D9, #0369A1);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 2px 6px rgba(109,40,217,0.3);
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 4.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>THE PREAMBLE</h1>
+    <h2>📜 Chapter 4 — Introduction to the Constitution</h2>
+    <div class="tagline">✨ Soul of the Constitution | Easy Essay Guide ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-purple">📖 4.1 What is the Preamble?</div>
+
+    <div class="essay">
+      <p>The <strong>Preamble</strong> is the <strong>introduction or preface</strong> to the Constitution. Think of it like the first page of a book — it tells you what the book is about and what it promises.</p>
+
+      <p>It does three important things. First, it <strong>declares the source of authority</strong> — meaning it tells us that all power comes from <em>"We, the People of India."</em> Second, it <strong>states the objectives</strong> of the Constitution — <span class="hl-purple">Justice, Liberty, Equality, and Fraternity</span>. Third, it acts like a <strong>guiding star</strong> for judges when they interpret the Constitution.</p>
+
+      <p>Now, here's an important point: the Preamble is <strong>not enforceable in a court of law</strong>. You cannot go to court just because the promises in the Preamble are not being followed. It is also <strong>not a source of power</strong> to the government.</p>
+
+      <p>But despite all this, the Preamble is very valuable. When there is <strong>ambiguity</strong> (confusion or unclear meaning) in the Constitution, judges use the Preamble to understand what the framers really meant.</p>
+    </div>
+
+    <div class="simple">
+      The Preamble is like the "promise page" of the Constitution. It tells you who made it (the people), what it promises (justice, liberty, equality, fraternity), but you can't go to court just because it's not followed.
+    </div>
+
+    <div class="keypoint">
+      <strong>REMEMBER:</strong>
+      <ul>
+        <li>✅ It <strong>declares</strong> the source of authority — the people</li>
+        <li>✅ It <strong>states</strong> the objectives — Justice, Liberty, Equality, Fraternity</li>
+        <li>❌ It is <strong>not enforceable</strong> in a court of law</li>
+        <li>❌ It is <strong>not a source of power</strong> to the government</li>
+        <li>✅ It <strong>helps interpret</strong> the Constitution when there is confusion</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📜 The Preamble — Essay Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 4.2 Text of Preamble ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">📝 4.2 The Text of the Preamble</div>
+
+    <div class="essay">
+      <p>Below is the exact text of the Preamble. Read it slowly — every word here has deep meaning.</p>
+    </div>
+
+    <div class="preamble-text">
+      <strong>WE, THE PEOPLE OF INDIA</strong>, having solemnly resolved to constitute India into a <strong>SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</strong> and to secure to all its citizens:<br><br>
+      <strong>JUSTICE</strong>, social, economic and political;<br>
+      <strong>LIBERTY</strong> of thought, expression, belief, faith and worship;<br>
+      <strong>EQUALITY</strong> of status and of opportunity;<br>
+      and to promote among them all<br>
+      <strong>FRATERNITY</strong> assuring the dignity of the individual and the unity and integrity of the Nation;<br><br>
+      <em>IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION.</em>
+    </div>
+
+    <div class="quote">
+      <p>The Preamble is the most precious part of the Constitution. It is the soul of the Constitution. — Pandit Thakur Das Bhargava</p>
+    </div>
+
+    <div class="simple">
+      This is the exact opening of the Constitution. It starts with "We, the People" — meaning the power comes from us, not from any king or foreign ruler. The date 26th November 1949 is when we adopted it.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📜 The Preamble — Essay Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — 4.3 Keywords (Part 1) ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">🔑 4.3 Keywords — Meaning of Each (Part 1)</div>
+
+    <div class="essay">
+      <p>Now let's understand each keyword in the Preamble one by one. These words are very important for exams.</p>
+    </div>
+
+    <h3>👑 Sovereign</h3>
+    <div class="essay">
+      <p><strong>Sovereign</strong> means India is an <strong>independent state</strong>. No outside power — no foreign country or ruler — controls us. We make our own decisions. We can even acquire or give away territory if we want.</p>
+    </div>
+
+    <h3>🤝 Socialist <span class="ribbon">Added by 42nd Amendment, 1976</span></h3>
+    <div class="essay">
+      <p><strong>Socialist</strong> means the government will work for the <strong>welfare of all</strong>, not just a few rich people. It implies a <strong>mixed economy</strong> — meaning both government-owned (public) and privately-owned businesses can exist together.</p>
+    </div>
+
+    <h3>🕊️ Secular <span class="ribbon" style="background: linear-gradient(90deg, #0F766E, #14B8A6);">Added by 42nd Amendment, 1976</span></h3>
+    <div class="essay">
+      <p><strong>Secular</strong> means the State has <strong>no religion of its own</strong>. It treats all religions equally. It does not discriminate against any religion. In India, secularism means equal respect for all faiths, not hatred towards religion.</p>
+    </div>
+
+    <h3>🗳️ Democratic</h3>
+    <div class="essay">
+      <p><strong>Democratic</strong> means the government is <strong>elected by the people</strong>. It is based on the principle of "one person, one vote." India follows political, social, and economic democracy — meaning not just voting, but also fairness in society and economy.</p>
+    </div>
+
+    <div class="simple">
+      Sovereign = free country. Socialist = welfare for all. Secular = respect all religions. Democratic = government chosen by people.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📜 The Preamble — Essay Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — 4.3 Keywords (Part 2) ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">🔑 4.3 Keywords — Meaning of Each (Part 2)</div>
+
+    <h3>🏛️ Republic</h3>
+    <div class="essay">
+      <p><strong>Republic</strong> means the head of the state (the <strong>President</strong>) is <strong>elected</strong>, not a hereditary monarch. In simple words, we don't have a king or queen who inherits the throne. The President is elected indirectly for a fixed term of <strong>5 years</strong>.</p>
+    </div>
+
+    <h3>⚖️ Justice</h3>
+    <div class="essay">
+      <p><strong>Justice</strong> means fairness for everyone. The Preamble promises three types of justice: <strong>Social</strong> (fair treatment in society), <strong>Economic</strong> (fair distribution of wealth), and <strong>Political</strong> (equal say in government).</p>
+    </div>
+
+    <h3>🕊️ Liberty</h3>
+    <div class="essay">
+      <p><strong>Liberty</strong> means freedom. The Preamble promises freedom of <strong>thought, expression, belief, faith, and worship</strong>. In simple words, you can think what you want, say what you want, believe what you want, and pray to whoever you want.</p>
+    </div>
+
+    <h3>🤝 Equality</h3>
+    <div class="essay">
+      <p><strong>Equality</strong> means everyone is treated the same. The Preamble promises equality of <strong>status and opportunity</strong> — meaning no one is higher or lower by birth, and everyone gets a fair chance in life.</p>
+    </div>
+
+    <h3>❤️ Fraternity <span class="ribbon" style="background: linear-gradient(90deg, #B45309, #F59E0B);">"Integrity" added by 42nd Amendment</span></h3>
+    <div class="essay">
+      <p><strong>Fraternity</strong> means brotherhood — a feeling of unity among all Indians. It ensures the <strong>dignity of the individual</strong> and the <strong>unity and integrity of the nation</strong>. The word <em>"Integrity"</em> was added by the 42nd Amendment in 1976.</p>
+    </div>
+
+    <div class="simple">
+      Republic = elected President, not king. Justice = fairness. Liberty = freedom. Equality = same treatment. Fraternity = brotherhood & unity.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📜 The Preamble — Essay Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — 4.4 Objectives + 4.5 Part of Constitution ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-orange">🎯 4.4 The Four Objectives of the Preamble</div>
+
+    <div class="essay">
+      <p>The Preamble promises four big goals for every citizen of India. Let's understand them in a simple way:</p>
+
+      <p><span class="icon-circle">⚖️</span><strong>Justice (Social, Economic, Political)</strong> — Fairness for all. No one should be treated unfairly because of their caste, religion, gender, or wealth. Everyone should get a fair chance in society, in earning a living, and in politics.</p>
+
+      <p><span class="icon-circle">🕊️</span><strong>Liberty (of thought, expression, belief, faith, worship)</strong> — Freedom. You can think freely, speak freely, believe in any religion, and pray however you want. No one can force you to follow a particular belief.</p>
+
+      <p><span class="icon-circle">🤝</span><strong>Equality (of status and opportunity)</strong> — Same treatment. No one is born higher or lower. Everyone gets the same opportunities to study, work, and grow.</p>
+
+      <p><span class="icon-circle">❤️</span><strong>Fraternity (dignity of individual + unity & integrity of nation)</strong> — Brotherhood. All Indians should feel like one family. Every person deserves respect, and the nation must stay united and whole.</p>
+    </div>
+
+    <div class="simple">
+      The Preamble promises 4 things: fairness (Justice), freedom (Liberty), equal treatment (Equality), and brotherhood (Fraternity).
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-teal">❓ 4.5 Is the Preamble Part of the Constitution?</div>
+
+    <div class="essay">
+      <p>This is an interesting question, and the answer has changed over time. Let's see how:</p>
+
+      <p><strong>Originally (Berubari Union Case, 1960):</strong> The Supreme Court held that the Preamble is <span class="hl-red">NOT</span> a part of the Constitution. It was treated as just an introduction.</p>
+
+      <p><strong>Later (Kesavananda Bharati Case, 1973):</strong> The Supreme Court <strong>reversed</strong> (changed) its earlier opinion and held that the Preamble <span class="hl-green">IS</span> a part of the Constitution.</p>
+
+      <p><strong>Current Position:</strong> Today, the Preamble is considered a part of the Constitution. It can be amended under <strong>Article 368</strong>, but the <strong>basic structure cannot be destroyed</strong>.</p>
+    </div>
+
+    <div class="simple">
+      Earlier, the Supreme Court said the Preamble was not part of the Constitution. But in 1973, it changed its mind and said the Preamble <em>is</em> part of the Constitution. Today, we accept that it is.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📜 The Preamble — Essay Guide</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — 4.6 Amendment + 4.7 Landmark Cases ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-red">✏️ 4.6 Amendment to the Preamble</div>
+
+    <div class="essay">
+      <p>The Preamble has been amended only <strong>once</strong> in India's history. This happened through the <strong>42nd Amendment Act, 1976</strong>. This amendment added <strong>three words</strong> to the Preamble:</p>
+    </div>
+
+    <div class="box box-orange" style="text-align:center; padding: 16px;">
+      <span style="font-size:12pt; font-weight:700; color:#7C2D12;">
+        🤝 Socialist &nbsp;•&nbsp; 🕊️ Secular &nbsp;•&nbsp; ❤️ Integrity
+      </span>
+    </div>
+
+    <div class="essay">
+      <p>This is the <strong>only amendment</strong> to

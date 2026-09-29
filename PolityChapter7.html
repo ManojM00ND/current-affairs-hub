@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 7: The Judiciary</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Decorative bubbles */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,78,216,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,78,216,0.10), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #6B7280;
+    border-top: 2px dashed #E5E7EB;
+    padding-top: 3mm;
+    font-family: 'Poppins', sans-serif;
+    z-index: 5;
+  }
+
+  /* ============ TITLE BANNER ============ */
+  .title-banner {
+    background: linear-gradient(135deg, #1E3A8A 0%, #6D28D9 50%, #0369A1 100%);
+    color: #fff;
+    padding: 30px 25px 26px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(30,58,138,0.35);
+  }
+  .title-banner::before {
+    content: '⚖️';
+    position: absolute;
+    top: 10px; left: 20px;
+    font-size: 22pt;
+    opacity: 0.7;
+  }
+  .title-banner::after {
+    content: '🏛️';
+    position: absolute;
+    bottom: 10px; right: 20px;
+    font-size: 22pt;
+    opacity: 0.7;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 17pt;
+    margin-top: 10px;
+    color: #FDE68A;
+  }
+
+  /* ============ SECTION TITLES ============ */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    padding: 11px 18px;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    letter-spacing: 0.3px;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 12px 0 0 12px;
+  }
+  .t-navy   { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* ============ ESSAY BOX ============ */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #EFF6FF 100%);
+    border: 1.5px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px; bottom: 12px;
+    width: 3px;
+    background: linear-gradient(180deg, #1E3A8A, #6D28D9);
+    border-radius: 0 4px 4px 0;
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+
+  /* ============ BOXES ============ */
+  .box {
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .box-navy   { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-left: 6px solid #1E3A8A; }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 6px solid #6D28D9; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 6px solid #0369A1; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 6px solid #065F46; }
+  .box-orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 6px solid #C2410C; }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 6px solid #B91C1C; }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 6px solid #3730A3; }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 6px solid #0F766E; }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 6px solid #BE185D; }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 6px solid #B45309; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 8px 0;
+    font-size: 9.5pt;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+  th {
+    background: linear-gradient(90deg, #1E3A8A, #3B82F6);
+    color: #fff;
+    padding: 9px 11px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 9.8pt;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 7px 11px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #EFF6FF; }
+  tr:last-child td { border-bottom: none; }
+
+  .table-navy   th { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-orange th { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-teal   th { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* ============ KEY POINT ============ */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 2px dashed #F59E0B;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin: 10px 0;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(245,158,11,0.15);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -12px; left: 16px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12pt;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .keypoint strong { color: #B45309; }
+
+  /* ============ SIMPLE MEANING BOX ============ */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-radius: 12px;
+    padding: 12px 16px 12px 44px;
+    margin: 10px 0;
+    position: relative;
+    font-style: italic;
+    color: #064E3B;
+    box-shadow: 0 3px 10px rgba(16,185,129,0.12);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 14pt;
+    font-style: normal;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .hl-navy   { background: linear-gradient(180deg, transparent 55%, #BFDBFE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-purple { background: linear-gradient(180deg, transparent 55%, #DDD6FE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 55%, #BAE6FD 55%); padding: 0 4px; font-weight: 700; }
+  .hl-green  { background: linear-gradient(180deg, transparent 55%, #A7F3D0 55%); padding: 0 4px; font-weight: 700; }
+  .hl-orange { background: linear-gradient(180deg, transparent 55%, #FED7AA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-red    { background: linear-gradient(180deg, transparent 55%, #FECACA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-indigo { background: linear-gradient(180deg, transparent 55%, #C7D2FE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-teal   { background: linear-gradient(180deg, transparent 55%, #99F6E4 55%); padding: 0 4px; font-weight: 700; }
+
+  /* ============ RIBBON ============ */
+  .ribbon {
+    display: inline-block;
+    background: linear-gradient(90deg, #1E3A8A, #6D28D9);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+    box-shadow: 0 2px 6px rgba(30,58,138,0.3);
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+  }
+
+  /* ============ H3 STYLES ============ */
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    color: #1F2937;
+    margin: 12px 0 6px;
+    padding-left: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 18px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #1E3A8A, #6D28D9);
+  }
+
+  /* ============ QUOTE BOX ============ */
+  .quote {
+    background: linear-gradient(135deg, #FDF4FF 0%, #FAE8FF 100%);
+    border-left: 5px solid #BE185D;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 10px 0;
+    font-family: 'Caveat', cursive;
+    font-size: 13pt;
+    color: #831843;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(190,24,93,0.10);
+  }
+  .quote::before {
+    content: '❝';
+    position: absolute;
+    top: 4px; left: 6px;
+    font-size: 20pt;
+    color: #F9A8D4;
+  }
+  .quote p { padding-left: 20px; }
+
+  /* ============ FOOTER BANNER ============ */
+  .footer {
+    text-align: center;
+    margin-top: 14px;
+    padding: 12px;
+    background: linear-gradient(90deg, #1E3A8A, #6D28D9, #0369A1);
+    color: #fff;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(30,58,138,0.25);
+  }
+
+  ul, ol { margin-left: 18px; margin-bottom: 6px; }
+  li { margin-bottom: 4px; }
+  p { margin-bottom: 6px; }
+  strong { color: #111; }
+
+  /* ============ ICON CIRCLE ============ */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1E3A8A, #6D28D9);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 2px 6px rgba(30,58,138,0.3);
+  }
+
+  /* ============ STAT CARDS ============ */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+    border: 2px solid #1E3A8A;
+    box-shadow: 0 3px 10px rgba(30,58,138,0.15);
+  }
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    font-weight: 900;
+    color: #1E3A8A;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-card .label {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #1E3A8A;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ============ HIERARCHY PYRAMID ============ */
+  .hierarchy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0;
+  }
+  .level {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 10pt;
+  }
+  .level-1 { background: linear-gradient(90deg, #1E3A8A, #3B82F6); width: 55%; }
+  .level-2 { background: linear-gradient(90deg, #6D28D9, #A855F7); width: 70%; }
+  .level-3 { background: linear-gradient(90deg, #0369A1, #0EA5E9); width: 85%; }
+  .level-4 { background: linear-gradient(90deg, #0F766E, #14B8A6); width: 100%; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 7.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>THE JUDICIARY</h1>
+    <h2>⚖️ Chapter 7 — Guardian of the Constitution</h2>
+    <div class="tagline">✨ Supreme Court • High Courts • District Courts ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-navy">📖 7.1 What is the Judiciary?</div>
+
+    <div class="essay">
+      <p>The <strong>Judiciary</strong> is the <strong>third organ of the government</strong> (after Legislature and Executive). Think of it like the "referee" of the country — it makes sure everyone follows the rules of the Constitution.</p>
+
+      <p>It is the <strong>guardian of the Constitution</strong> and the <strong>protector of Fundamental Rights</strong>. India has a <strong>single integrated judicial system</strong> — meaning there is one hierarchy of courts for both the Union and the States.</p>
+
+      <p>This means you don't have separate court systems for the Centre and States. There's one unified system that everyone follows.</p>
+    </div>
+
+    <h3>🏛️ The Hierarchy of Courts</h3>
+    <div class="hierarchy">
+      <div class="level level-1">⚖️ Supreme Court (Apex Court)</div>
+      <div class="level level-2">🏛️ High Courts (State Level)</div>
+      <div class="level level-3">🏢 District & Session Courts (District Level)</div>
+      <div class="level level-4">📋 Magistrate Courts (Sub-District Level)</div>
+    </div>
+
+    <div class="box box-navy">
+      <div class="box-title">📜 Articles to Remember</div>
+      <ul>
+        <li><strong>Articles 124 to 147</strong> (Part V) → deal with the <strong>Supreme Court</strong></li>
+        <li><strong>Articles 214 to 231</strong> (Part VI) → deal with the <strong>High Courts</strong></li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      Judiciary = The referee of India. It makes sure laws follow the Constitution and protects your rights. Supreme Court is at the top, then High Courts, then District Courts.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ The Judiciary — Essay Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 7.2 Supreme Court Composition ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-purple">⚖️ 7.2 The Supreme Court of India (Articles 124 – 147)</div>
+
+    <div class="essay">
+      <p>The <strong>Supreme Court</strong> is the <strong>highest court</strong> in India. It is the final authority on all legal matters. Whatever it decides is final — no one can appeal above it.</p>
+    </div>
+
+    <h3>📊 Composition</h3>
+    <table class="table-purple">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Article</strong></td><td>124</td></tr>
+      <tr><td><strong>Established</strong></td><td>26th January 1950</td></tr>
+      <tr><td><strong>Seat</strong></td><td>New Delhi</td></tr>
+      <tr><td><strong>Strength</strong></td><td>Originally 8 (1 CJI + 7 judges). Now <span class="hl-purple">34</span> (1 CJI + 33 judges)</td></tr>
+      <tr><td><strong>Appointment</strong></td><td>By the President</td></tr>
+      <tr><td><strong>Qualifications</strong></td><td>Citizen of India, Judge of High Court for 5 years <strong>OR</strong> Advocate of High Court for 10 years <strong>OR</strong> Distinguished Jurist in President's opinion</td></tr>
+      <tr><td><strong>Age of Retirement</strong></td><td><span class="hl-purple">65 years</span></td></tr>
+      <tr><td><strong>Removal</strong></td><td>By impeachment (same process as President)</td></tr>
+      <tr><td><strong>First CJI</strong></td><td>Harilal Jekisundas Kania</td></tr>
+      <tr><td><strong>Current CJI (2025-2026)</strong></td><td>Justice Sanjiv Khanna (as of late 2024)</td></tr>
+    </table>
+
+    <div class="simple">
+      Supreme Court = Top court of India. 34 judges. Judges retire at 65. Appointed by President. Can only be removed by impeachment.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ The Judiciary — Essay Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — 7.2.2 Independence + 7.2.3 Jurisdiction ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">🛡️ 7.2.2 Independence of the Supreme Court</div>
+
+    <div class="essay">
+      <p>The Supreme Court's <strong>independence</strong> means it can make decisions without pressure from the government or anyone else. This is ensured by several protections:</p>
+    </div>
+
+    <div class="box box-sky">
+      <ul>
+        <li>⏳ <strong>Fixed tenure:</strong> Judges retire at 65, not at the pleasure of the President.</li>
+        <li>💰 <strong>Fixed salaries:</strong> Charged on the Consolidated Fund of India (not votable by Parliament).</li>
+        <li>⚖️ <strong>Removal process:</strong> Very difficult (impeachment by 2/3 majority of both Houses).</li>
+        <li>🚫 <strong>No practice after retirement:</strong> Judges cannot practice in any court in India after retirement.</li>
+        <li>💪 <strong>Contempt power:</strong> Can punish for contempt of court (disrespecting the court).</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      Independence = Judges can't be fired easily, their salary can't be cut, and they can't take private cases after retirement. This keeps them free from pressure.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-indigo">⚡ 7.2.3 Jurisdiction and Powers of the Supreme Court</div>
+
+    <table class="table-indigo">
+      <tr><th>⚖️ Jurisdiction</th><th>📜 Article</th><th>💬 Description</th></tr>
+      <tr><td><strong>Original Jurisdiction</strong></td><td>131</td><td>Disputes between Union and States, or between States.</td></tr>
+      <tr><td><strong>Writ Jurisdiction</strong></td><td>32</td><td>Can issue 5 writs for enforcement of Fundamental Rights.</td></tr>
+      <tr><td><strong>Appellate Jurisdiction</strong></td><td>132, 133, 134</td><td>Appeals from High Courts in constitutional, civil, and criminal matters.</td></tr>
+      <tr><td><strong>Advisory Jurisdiction</strong></td><td>143</td><td>President can refer questions of law or fact to the Supreme Court for opinion.</td></tr>
+      <tr><td><strong>Special Leave Petition (SLP)</strong></td><td>136</td><td>Discretionary power to grant leave to appeal from any court.</td></tr>
+      <tr><td><strong>Review Jurisdiction</strong></td><td>137</td><td>Can review its own judgments.</td></tr>
+      <tr><td><strong>Court of Record</strong></td><td>129</td><td>Its proceedings are recorded and can be used as evidence.</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> Article 32 (Writ Jurisdiction) is called the <strong>"Heart and Soul"</strong> of the Constitution by Dr. B.R. Ambedkar. Article 143 (Advisory Jurisdiction) was borrowed from <strong>Canada</strong>.
+    </div>
+
+    <div class="simple">
+      "Jurisdiction" = the power to hear certain types of cases. SC hears disputes between states, protects rights, hears appeals, and advises the President.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ The Judiciary — Essay Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — 7.2.4 Judicial Review ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">🔍 7.2.4 Judicial Review</div>
+
+    <div class="essay">
+      <p><strong>Judicial Review</strong> is the power of the Supreme Court to examine whether laws passed by the legislature and orders issued by the executive are <strong>constitutional</strong> or not.</p>
+
+      <p>If a law violates the Constitution, the Supreme Court can <strong>strike it down</strong> — meaning that law becomes invalid.</p>
+    </div>
+
+    <table class="table-green">
+      <tr><th>📌 Aspect</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Definition</strong></td><td>The power of the Supreme Court to examine the constitutionality of legislative enactments and executive orders.</td></tr>
+      <tr><td><strong>Source</strong></td><td><span class="hl-green">Article 13</span></td></tr>
+      <tr><td><strong>Purpose</strong></td><td>To protect Fundamental Rights and ensure that the government does not exceed its powers.</td></tr>
+      <tr><td><strong>Basic Structure Doctrine</strong></td><td>The Supreme Court can strike down any constitutional amendment that destroys the basic structure of the Constitution (Kesavananda Bharati Case, 1973).</td></tr>
+    </table>
+
+    <div class="box box-green">
+      <div class="box-title">🔑 Terms Explained Simply</div>
+      <ul>
+        <li><strong>Judicial Review</strong> = Court checking if laws follow the Constitution</li>
+        <li><strong>Strike Down</strong> = Cancel a law</li>
+        <li><strong>Constitutional</strong> = Follows the Constitution</li>
+        <li><strong>Unconstitutional</strong> = Violates the Constitution</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      Judicial Review = The Supreme Court's power to cancel any law that violates the Constitution. This protects your rights.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ The Judiciary — Essay Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — 7.3 High Courts ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-orange">🏛️ 7.3 The High Courts (Articles 214 – 231)</div>
+
+    <div class="essay">
+      <p>The <strong>High Court</strong> is the <strong>highest court at the state level</strong>. Each state has a High Court (some states share one). It supervises all lower courts within its territory.</p>
+    </div>
+
+    <h3>📊 Composition</h3>
+    <table class="table-orange">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Article</strong></td><td>214</td></tr>
+      <tr><td><strong>Number</strong></td><td><span class="hl-orange">25 High Courts</span> in India</td></tr>
+      <tr><td><strong>Oldest High Court</strong></td><td>Calcutta High Court (established 1862)</td></tr>
+      <tr><td><strong>Appointment</strong></td><td>By the President</td></tr>
+      <tr><td><strong>Qualifications</strong></td><td>Citizen of India, 10 years of judicial office <strong>OR</strong> 10 years as an advocate in a High Court</td></tr>
+      <tr><td><strong>Age of Retirement</strong></td><td><span class="hl-orange">62 years</span></td></tr>
+      <tr><td><strong>Removal</strong></td><td>By impeachment (same process as Supreme Court judges)</td></tr>
+      <tr><td><strong>Chief Justice</strong></td><td>Appointed by the President in consultation with the CJI and Governor of the State</td></tr>
+    </table

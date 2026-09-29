@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geography — Premium Complete Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700;900&family=Cinzel:wght@600;700;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 10mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Calibri', 'Lato', Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1a1a1a; background: #D9D9D9; padding: 14px 0; }
+  .page { width: 210mm; min-height: 297mm; background: linear-gradient(180deg, #fffdf9 0%, #fffaf3 100%); margin: 0 auto 14px auto; padding: 12mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.18); page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  .page::before { content: ''; position: absolute; top: 5mm; left: 5mm; right: 5mm; bottom: 5mm; border: 1.5px solid #E5D5C0; border-radius: 8px; pointer-events: none; }
+
+  /* ============ HERO ============ */
+  .hero { background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 25%, #B45309 65%, #D97706 100%); padding: 20px 24px 18px 24px; border-radius: 12px; position: relative; overflow: hidden; margin-bottom: 12px; box-shadow: 0 8px 24px rgba(153,27,27,0.32); border: 2px solid rgba(255,255,255,0.15); }
+  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(245,158,11,0.35), transparent 70%); border-radius: 50%; }
+  .hero::after { content: '🌍'; position: absolute; top: 10px; right: 20px; font-size: 24pt; opacity: 0.55; }
+  .hero h1 { font-family: 'Cinzel', 'Playfair Display', serif; font-size: 28pt; font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: 1.2px; text-shadow: 0 3px 10px rgba(0,0,0,0.35); margin-bottom: 4px; position: relative; z-index: 2; }
+  .hero .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 13.5pt; font-style: italic; color: #FEF3C7; font-weight: 500; position: relative; z-index: 2; }
+  .hero .hero-line { width: 100px; height: 3px; background: linear-gradient(90deg, #FCD34D, transparent); margin-top: 10px; border-radius: 2px; position: relative; z-index: 2; }
+
+  /* ============ LEGEND ============ */
+  .legend { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; padding: 7px 10px; background: #fff; border: 1px solid #E5D5C0; border-radius: 8px; justify-content: center; font-size: 8pt; }
+  .legend-item { display: flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 11px; font-weight: 700; color: #fff; font-family: 'Lato', sans-serif; }
+  .legend-blue   { background: linear-gradient(135deg, #1E40AF, #1E3A8A); }
+  .legend-red    { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .legend-purple { background: linear-gradient(135deg, #6D28D9, #5B21B6); }
+  .legend-amber  { background: linear-gradient(135deg, #D97706, #B45309); }
+  .legend-green  { background: linear-gradient(135deg, #059669, #047857); }
+  .legend-teal   { background: linear-gradient(135deg, #0F766E, #115E59); }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header { font-family: 'Cinzel', serif; font-size: 14pt; font-weight: 900; color: #7F1D1D; padding: 8px 14px; background: linear-gradient(90deg, #FEF3C7 0%, #FFFBEB 100%); border-left: 5px solid #D97706; border-radius: 0 8px 8px 0; margin: 12px 0 8px 0; letter-spacing: 0.5px; }
+
+  /* ============ HEADINGS ============ */
+  h2 { font-family: 'Playfair Display', serif; font-size: 13.5pt; font-weight: 900; color: #991B1B; margin-top: 10px; margin-bottom: 6px; line-height: 1.15; display: flex; align-items: center; gap: 8px; }
+  h2 .num { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; background: linear-gradient(135deg, #991B1B, #7F1D1D); color: #fff; border-radius: 50%; font-family: 'Cinzel', serif; font-weight: 900; font-size: 12pt; box-shadow: 0 3px 8px rgba(153,27,27,0.4); flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4); }
+  h3 { font-family: 'Playfair Display', serif; font-size: 11pt; font-weight: 700; color: #7F1D1D; margin-top: 8px; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  h3::before { content: '◆'; color: #D97706; font-size: 8.5pt; }
+  .page-header { font-family: 'Cinzel', serif; font-size: 11.5pt; font-weight: 700; color: #991B1B; letter-spacing: 0.4px; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1.5px solid #FDE68A; position: relative; }
+  .page-header::after { content: '✦'; position: absolute; right: 0; top: 0; color: #D97706; font-size: 12pt; }
+
+  /* ============ COLUMNS ============ */
+  .columns { column-count: 2; column-gap: 6mm; column-rule: 1px solid #FDE68A; text-align: justify; hyphens: auto; }
+  .columns p { margin-bottom: 6px; }
+
+  /* ============ KEY TERMS ============ */
+  .key { background: linear-gradient(180deg, transparent 55%, #BFDBFE 55%); padding: 0 3px; font-weight: 700; color: #1E3A8A; }
+  .critical { background: linear-gradient(135deg, #B91C1C, #7F1D1D); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+  .success { background: linear-gradient(135deg, #059669, #047857); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+
+  /* ============ LISTS ============ */
+  ul, ol { margin-left: 15px; margin-bottom: 5px; }
+  li { margin-bottom: 2px; line-height: 1.35; }
+  li::marker { color: #991B1B; font-weight: 900; }
+
+  /* ============ TABLES ============ */
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 6px 0 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 14px rgba(153,27,27,0.16); border: 1px solid #FDE68A; }
+  table th { background: linear-gradient(135deg, #991B1B 0%, #7F1D1D 50%, #450A0A 100%); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 7px 10px; text-align: left; font-size: 9.5pt; letter-spacing: 0.3px; }
+  table td { padding: 5px 10px; border-bottom: 1px solid #FDE68A; vertical-align: top; line-height: 1.35; }
+  table tr:nth-child(even) td { background: #FFFBEB; }
+  table tr:last-child td { border-bottom: none; }
+  table td strong { color: #7F1D1D; font-weight: 700; }
+
+  /* ============ MEMORY BOX ============ */
+  .memory-box { background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%); border: 1.5px solid #A78BFA; border-radius: 10px; padding: 11px 14px 9px 14px; margin: 8px 0; position: relative; box-shadow: 0 4px 12px rgba(167,139,250,0.22); page-break-inside: avoid; }
+  .memory-box::before { content: '🧠 Memory Trick'; position: absolute; top: -11px; left: 14px; background: linear-gradient(135deg, #6D28D9, #4C1D95); color: #fff; padding: 3px 12px; border-radius: 12px; font-family: 'Caveat', cursive; font-size: 12pt; font-weight: 700; box-shadow: 0 3px 8px rgba(109,40,217,0.4); }
+  .memory-box p { font-family: 'Caveat', cursive; font-size: 13pt; color: #4C1D95; line-height: 1.3; margin-top: 3px; font-weight: 600; }
+  .memory-box .mnemonic { font-family: 'Cinzel', serif; font-size: 15pt; font-weight: 900; color: #6D28D9; letter-spacing: 2.5px; display: block; text-align: center; margin: 5px 0; text-shadow: 1px 1px 0 #fff; }
+
+  /* ============ EXAM FOCUS ============ */
+  .exam-focus { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border-left: 4px solid #D97706; padding: 8px 12px 8px 16px; margin: 8px 0; border-radius: 0 8px 8px 0; font-size: 9.5pt; position: relative; box-shadow: 0 2px 8px rgba(217,119,6,0.16); page-break-inside: avoid; }
+  .exam-focus::before { content: '⚡ Exam Focus'; position: absolute; top: -9px; left: 12px; background: linear-gradient(135deg, #D97706, #B45309); color: #fff; padding: 2px 9px; font-family: 'Cinzel', serif; font-size: 8pt; font-weight: 700; border-radius: 10px; box-shadow: 0 2px 6px rgba(180,83,9,0.35); }
+  .exam-focus strong { color: #78350F; }
+
+  /* ============ QUICK REVISION ============ */
+  .quick-rev { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); border: 1.5px dashed #0F766E; border-radius: 10px; padding: 11px 14px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; position: relative; }
+  .quick-rev::before { content: '📌 Quick Revision'; position: absolute; top: -10px; left: 14px; background: linear-gradient(135deg, #0F766E, #115E59); color: #fff; padding: 3px 12px; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; border-radius: 12px; box-shadow: 0 3px 8px rgba(15,118,110,0.35); }
+  .quick-rev ul { margin-top: 5px; margin-left: 14px; }
+  .quick-rev li { margin-bottom: 2px; color: #134E4A; }
+  .quick-rev li strong { color: #0F766E; }
+
+  /* ============ INFO BOX ============ */
+  .infobox { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); padding: 9px 13px 9px 17px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 0 8px 8px 0; line-height: 1.4; border-left: 4px solid #1E40AF; box-shadow: 0 3px 10px rgba(30,64,175,0.12); position: relative; }
+  .infobox::before { content: '★'; position: absolute; top: -7px; left: 7px; background: #EFF6FF; color: #1E40AF; font-size: 10pt; padding: 0 4px; border-radius: 50%; }
+  .infobox strong { color: #1E3A8A; font-family: 'Cinzel', serif; font-weight: 700; }
+
+  /* ============ PLANET DIAGRAM ============ */
+  .planet-diagram { background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%); border: 2px solid #0EA5E9; border-radius: 12px; padding: 14px 10px 10px 10px; margin: 12px 0; position: relative; box-shadow: 0 5px 16px rgba(14,165,233,0.20); page-break-inside: avoid; }
+  .planet-diagram::before { content: '🪐 The 8 Planets'; position: absolute; top: -12px; left: 16px; background: linear-gradient(135deg, #0EA5E9, #0369A1); color: #fff; padding: 3px 12px; border-radius: 12px; font-family: 'Cinzel', serif; font-size: 9.5pt; font-weight: 700; box-shadow: 0 3px 8px rgba(14,165,233,0.4); }
+  .planet-row { display: flex; justify-content: space-between; gap: 4px; margin-top: 6px; }
+  .planet-node { flex: 1; text-align: center; padding: 8px 4px; border-radius: 9px; color: #fff; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; box-shadow: 0 3px 10px rgba(0,0,0,0.18); line-height: 1.15; border: 1.5px solid rgba(255,255,255,0.3); }
+  .planet-node .p-moons { display: block; font-family: 'Lato', sans-serif; font-size: 7pt; font-weight: 700; opacity: 0.95; margin-top: 2px; }
+  .p-mercury { background: linear-gradient(135deg, #78716C, #44403C); }
+  .p-venus   { background: linear-gradient(135deg, #D97706, #B45309); }
+  .p-earth   { background: linear-gradient(135deg, #0284C7, #0369A1); }
+  .p-mars    { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .p-jupiter { background: linear-gradient(135deg, #92400E, #78350F); }
+  .p-saturn  { background: linear-gradient(135deg, #A16207, #854D0E); }
+  .p-uranus  { background: linear-gradient(135deg, #0891B2, #0E7490); }
+  .p-neptune { background: linear-gradient(135deg, #1E40AF, #1E3A8A); }
+
+  /* ============ EARTH STRUCTURE ============ */
+  .earth-diagram { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 2px solid #D97706; border-radius: 12px; padding: 14px 10px 10px 10px; margin: 12px 0; position: relative; box-shadow: 0 5px 16px rgba(217,119,6,0.20); page-break-inside: avoid; }
+  .earth-diagram::before { content: '🌍 Structure of the Earth'; position: absolute; top: -12px; left: 16px; background: linear-gradient(135deg, #D97706, #B45309); color: #fff; padding: 3px 12px; border-radius: 12px; font-family: 'Cinzel', serif; font-size: 9.5pt; font-weight: 700; box-shadow: 0 3px 8px rgba(180,83,9,0.4); }
+  .earth-layers { display: flex; flex-direction: column; gap: 4px; margin-top: 6px; }
+  .earth-layer { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 8px; color: #fff; font-family: 'Cinzel', serif; font-weight: 700; font-size: 10pt; }
+  .earth-crust  { background: linear-gradient(90deg, #B91C1C, #7F1D1D); }
+  .earth-mantle { background: linear-gradient(90deg, #D97706, #B45309); }
+  .earth-core   { background: linear-gradient(90deg, #78350F, #451A03); }
+  .earth-layer .layer-depth { margin-left: auto; font-family: 'Lato', sans-serif; font-size: 8.5pt; }
+
+  /* ============ CONTINENT DIAGRAM ============ */
+  .cont-diagram { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); border: 2px solid #0F766E; border-radius: 12px; padding: 14px 10px 10px 10px; margin: 12px 0; position: relative; box-shadow: 0 5px 16px rgba(15,118,110,0.20); page-break-inside: avoid; }
+  .cont-diagram::before { content: '🌏 The 7 Continents'; position: absolute; top: -12px; left: 16px; background: linear-gradient(135deg, #0F766E, #115E59); color: #fff; padding: 3px 12px; border-radius: 12px; font-family: 'Cinzel', serif; font-size: 9.5pt; font-weight: 700; box-shadow: 0 3px 8px rgba(15,118,110,0.4); }
+  .cont-row { display: flex; gap: 4px; margin-top: 6px; }
+  .cont-node { flex: 1; text-align: center; padding: 8px 4px; border-radius: 9px; color: #fff; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; box-shadow: 0 3px 10px rgba(0,0,0,0.18); line-height: 1.15; border: 1.5px solid rgba(255,255,255,0.3); }
+  .cont-asia { background: linear-gradient(135deg, #DC2626, #991B1B); }
+  .cont-africa { background: linear-gradient(135deg, #D97706, #B45309); }
+  .cont-na { background: linear-gradient(135deg, #0369A1, #0C4A6E); }
+  .cont-sa { background: linear-gradient(135deg, #059669, #047857); }
+  .cont-antarctica { background: linear-gradient(135deg, #0EA5E9, #0284C7); }
+  .cont-europe { background: linear-gradient(135deg, #6D28D9, #4C1D95); }
+  .cont-australia { background: linear-gradient(135deg, #A16207, #854D0E); }
+
+  /* ============ FOOTER ============ */
+  .page-footer { position: absolute; bottom: 6mm; left: 12mm; right: 12mm; display: flex; justify-content: space-between; align-items: center; font-size: 8.5pt; color: #92400E; font-family: 'Cormorant Garamond', serif; font-style: italic; border-top: 1px solid #FDE68A; padding-top: 4px; }
+  .page-footer::before { content: '❖ ❖ ❖'; position: absolute; left: 50%; transform: translateX(-50%); color: #D97706; font-size: 7.5pt; background: #fffdf9; padding: 0 9px; top: -7px; letter-spacing: 2.5px; }
+
+  .figcaption { font-family: 'Cormorant Garamond', serif; font-size: 9.5pt; color: #92400E; font-style: italic; margin: 4px 0 8px 0; text-align: center; padding: 4px 0; border-top: 1px solid #FDE68A; border-bottom: 1px solid #FDE68A; font-weight: 600; }
+  .source { font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; color: #92400E; margin-top: 8px; font-style: italic; text-align: right; }
+  .badge { display: inline-block; color: #fff; font-family: 'Cinzel', serif; font-size: 7.5pt; font-weight: 700; padding: 2px 8px; border-radius: 10px; letter-spacing: 0.5px; text-transform: uppercase; margin-left: 5px; vertical-align: middle; border: 1px solid rgba(255,255,255,0.3); }
+  .badge-red   { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .badge-amber { background: linear-gradient(135deg, #D97706, #B45309); }
+  .fill-note { background: #FFFBEB; border: 1px dashed #FDE68A; border-radius: 6px; padding: 8px 12px; margin: 8px 0 4px 0; font-size: 9pt; color: #78350F; font-family: 'Cormorant Garamond', serif; font-style: italic; text-align: center; }
+
+  @media print { body { background: #fff; padding: 0; } .page { margin: 0; box-shadow: none; width: 100%; min-height: 297mm; } .page::before { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — UNIVERSE + SOLAR SYSTEM ============ -->
+<div class="page">
+  <div class="hero">
+    <h1>Geography — Complete Notes</h1>
+    <div class="hero-sub">Universe · Solar System · Earth · India · World</div>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item legend-blue">📘 Facts</span>
+    <span class="legend-item legend-red">🔴 Firsts</span>
+    <span class="legend-item legend-purple">🧠 Memory</span>
+    <span class="legend-item legend-amber">⚡ Exam</span>
+    <span class="legend-item legend-teal">📌 Revision</span>
+    <span class="legend-item legend-green">✓ Success</span>
+  </div>
+
+  <div class="section-header">SECTION 1 — The Universe and the Solar System</div>
+
+  <h2><span class="num">1</span>The Universe — Complete Data</h2>
+
+  <table>
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td>Age of Universe</td><td><span class="critical">13.7 billion years</span></td></tr>
+    <tr><td>Our Galaxy</td><td>Milky Way (Akash Ganga)</td></tr>
+    <tr><td>Type of Galaxy</td><td>Spiral</td></tr>
+    <tr><td>Nearest Galaxy</td><td>Andromeda</td></tr>
+    <tr><td>Number of Stars in Milky Way</td><td>100–400 billion</td></tr>
+    <tr><td>Light Year</td><td>Distance travelled by light in one year (9.46 × 10¹² km)</td></tr>
+    <tr><td>Astronomical Unit (AU)</td><td>Distance between Earth and Sun (149.6 million km)</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Remember the two key distance units:</p>
+    <span class="mnemonic">LIGHT YEAR · AU</span>
+    <p style="text-align:center; font-size:11pt;">Light Year = distance light travels in 1 year · AU = Earth–Sun distance</p>
+  </div>
+
+  <h2><span class="num">2</span>The Solar System — Complete Data</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Center</td><td>Sun</td></tr>
+    <tr><td>Sun Type</td><td>Star</td></tr>
+    <tr><td>Sun's Main Gases</td><td>Hydrogen (71%), Helium (26.5%)</td></tr>
+    <tr><td>Sun's Surface Temperature</td><td>5,500°C</td></tr>
+    <tr><td>Sun's Core Temperature</td><td><span class="critical">15 million°C</span></td></tr>
+    <tr><td>Sun's Diameter</td><td>13,92,000 km</td></tr>
+    <tr><td>Sun's Age</td><td>4.6 billion years</td></tr>
+    <tr><td>Distance Earth–Sun</td><td>149.6 million km (1 AU)</td></tr>
+    <tr><td>Number of Planets</td><td>8</td></tr>
+    <tr><td>Number of Dwarf Planets</td><td>5</td></tr>
+    <tr><td>Asteroids</td><td>Between Mars and Jupiter</td></tr>
+    <tr><td>Meteoroids</td><td>Burn up in Earth's atmosphere (shooting stars)</td></tr>
+    <tr><td>Comets</td><td>Icy bodies that develop tails near the Sun</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> Sun is a <strong>star</strong>, not a planet. Surface temp is <strong>5,500°C</strong> but core is <strong>15 million°C</strong>. Asteroids lie between <strong>Mars and Jupiter</strong>.
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — PLANETS + MOON ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · The 8 Planets</div>
+
+  <h2><span class="num">3</span>The 8 Planets — Complete Data</h2>
+
+  <div class="planet-diagram">
+    <div class="planet-row">
+      <div class="planet-node p-mercury">Mercury<span class="p-moons">0 moons</span></div>
+      <div class="planet-node p-venus">Venus<span class="p-moons">0 moons</span></div>
+      <div class="planet-node p-earth">Earth<span class="p-moons">1 moon</span></div>
+      <div class="planet-node p-mars">Mars<span class="p-moons">2 moons</span></div>
+      <div class="planet-node p-jupiter">Jupiter<span class="p-moons">95</span></div>
+      <div class="planet-node p-saturn">Saturn<span class="p-moons">146</span></div>
+      <div class="planet-node p-uranus">Uranus<span class="p-moons">27</span></div>
+      <div class="planet-node p-neptune">Neptune<span class="p-moons">14</span></div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>#</th><th>Planet</th><th>Type</th><th>Moons</th><th>Key Fact</th></tr>
+    <tr><td>1</td><td><strong>Mercury</strong></td><td>Terrestrial</td><td>0</td><td><span class="critical">Smallest</span> · Closest · Fastest</td></tr>
+    <tr><td>2</td><td><strong>Venus</strong></td><td>Terrestrial</td><td>0</td><td><span class="critical">Hottest</span> · Earth's Twin</td></tr>
+    <tr><td>3</td><td><strong>Earth</strong></td><td>Terrestrial</td><td>1</td><td>Only planet with life · Blue Planet</td></tr>
+    <tr><td>4</td><td><strong>Mars</strong></td><td>Terrestrial</td><td>2</td><td>Red Planet · Olympus Mons</td></tr>
+    <tr><td>5</td><td><strong>Jupiter</strong></td><td>Gas Giant</td><td>95</td><td><span class="critical">Largest</span> · Great Red Spot</td></tr>
+    <tr><td>6</td><td><strong>Saturn</strong></td><td>Gas Giant</td><td>146</td><td>Rings · Least dense</td></tr>
+    <tr><td>7</td><td><strong>Uranus</strong></td><td>Ice Giant</td><td>27</td><td>Rotates on side · Coldest</td></tr>
+    <tr><td>8</td><td><strong>Neptune</strong></td><td>Ice Giant</td><td>14</td><td><span class="critical">Farthest</span> · Strongest winds</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Remember the planet order (from Sun):</p>
+    <span class="mnemonic">M V E M · J S U N</span>
+    <p style="text-align:center; font-size:11pt;">"<strong>M</strong>y <strong>V</strong>ery <strong>E</strong>ducated <strong>M</strong>other <strong>J</strong>ust <strong>S</strong>erved <strong>U</strong>s <strong>N</strong>oodles"</p>
+  </div>
+
+  <h2><span class="num">4</span>Dwarf Planets — Complete Data</h2>
+  <table>
+    <tr><th>Dwarf Planet</th><th>Location</th></tr>
+    <tr><td><strong>Pluto</strong></td><td>Kuiper Belt</td></tr>
+    <tr><td><strong>Ceres</strong></td><td>Asteroid Belt</td></tr>
+    <tr><td><strong>Eris</strong></td><td>Kuiper Belt</td></tr>
+    <tr><td><strong>Haumea</strong></td><td>Kuiper Belt</td></tr>
+    <tr><td><strong>Makemake</strong></td><td>Kuiper Belt</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> Pluto was demoted from planet to <strong>dwarf planet in 2006</strong>. Now there are <strong>5 dwarf planets</strong>.
+  </div>
+
+  <h2><span class="num">5</span>The Moon — Complete Data</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Type</td><td>Natural Satellite of Earth</td></tr>
+    <tr><td>Distance from Earth</td><td><span class="critical">3,84,400 km</span></td></tr>
+    <tr><td>Diameter</td><td>3,475 km</td></tr>
+    <tr><td>Time to Revolve Around Earth</td><td>27.3 days</td></tr>
+    <tr><td>Time to Rotate on Its Axis</td><td>27.3 days</td></tr>
+    <tr><td>Gravity</td><td>1/6th of Earth's gravity</td></tr>
+    <tr><td>Atmosphere</td><td>None</td></tr>
+    <tr><td>First Man on Moon</td><td><span class="success">Neil Armstrong (1969)</span></td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — ECLIPSES + EARTH ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · Eclipses + Section 2 · The Earth</div>
+
+  <h2><span class="num">6</span>Eclipses — Complete Data</h2>
+
+  <table>
+    <tr><th>Eclipse</th><th>When</th><th>Result</th></tr>
+    <tr><td><strong>Solar Eclipse</strong></td><td>Moon between Sun and Earth</td><td>Sun's light blocked</td></tr>
+    <tr><td><strong>Lunar Eclipse</strong></td><td>Earth between Sun and Moon</td><td>Moon's light blocked</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Remember the order:</p>
+    <span class="mnemonic">SUN · MOON · EARTH (Solar)</span>
+    <span class="mnemonic">SUN · EARTH · MOON (Lunar)</span>
+  </div>
+
+  <h2><span class="num">7</span>Previous Year Questions</h2>
+  <div class="columns">
+    <p><strong>Q1.</strong> Fastest planet? <em>Mercury</em></p>
+    <p><strong>Q2.</strong> Red Planet? <em>Mars</em></p>
+    <p><strong>Q3.</strong> Largest planet? <em>Jupiter</em></p>
+    <p><strong>Q4.</strong> Earth's Twin? <em>Venus</em></p>
+    <p><strong>Q5.</strong> Hottest planet? <em>Venus</em></p>
+    <p><strong>Q6.</strong> Planet with rings? <em>Saturn</em></p>
+    <p><strong>Q7.</strong> Farthest planet? <em>Neptune</em></p>
+    <p><strong>Q8.</strong> Earth–Sun distance? <em>149.6M km (1 AU)</em></p>
+    <p><strong>Q9.</strong> Earth–Moon distance? <em>3,84,400 km</em></p>
+    <p><strong>Q10.</strong> First man on Moon? <em>Neil Armstrong</em></p>
+  </div>
+
+  <div class="section-header">SECTION 2 — The Earth — Our Habitat</div>
+
+  <h2><span class="num">8</span>Shape and Size of the Earth</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Shape</td><td><span class="critical">Oblate Spheroid (Geoid)</span></td></tr>
+    <tr><td>Equatorial Diameter</td><td>12,756 km</td></tr>
+    <tr><td>Polar Diameter</td><td>12,714 km</td></tr>
+    <tr><td>Equatorial Circumference</td><td>40,075 km</td></tr>
+    <tr><td>Polar Circumference</td><td>40,008 km</td></tr>
+    <tr><td>Total Surface Area</td><td>510 million sq km</td></tr>
+    <tr><td>Land Area</td><td>29% (149 million sq km)</td></tr>
+    <tr><td>Water Area</td><td><span class="critical">71% (361 million sq km)</span></td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Earth's land–water split:</p>
+    <span class="mnemonic">29 · 71</span>
+    <p style="text-align:center; font-size:11pt;">29% land · 71% water</p>
+  </div>
+
+  <h2><span class="num">9</span>Structure of the Earth — Complete Data</h2>
+
+  <div class="earth-diagram">
+    <div class="earth-layers">
+      <div class="earth-layer earth-crust">🌍 Crust <span class="layer-depth">0 – 35 km · SIAL / SIMA</span></div>
+      <div class="earth-layer earth-mantle">🔥 Mantle <span class="layer-depth">35 – 2,900 km · Semi-molten rocks</span></div>
+      <div class="earth-layer earth-core">⚛️ Core <span class="layer-depth">2,900 – 6,371 km · NIFE</span></div>
+    </div>
+  </div>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> <strong>Crust</strong> = thinnest + outermost. <strong>Mantle</strong> = thickest. <strong>Core</strong> = innermost, made of <strong>NIFE</strong> (Nickel + Iron). Outer core = liquid, Inner core = solid.
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — MOVEMENTS + LAT/LONG ============ -->
+<div class="page">
+  <div class="page-header">Section 2 · Movements + Lat/Long + Heat Zones</div>
+
+  <h2><span class="num">10</span>Movements of the Earth</h2>
+  <table>
+    <tr><th>Movement</th><th>Time</th><th>Result</th></tr>
+    <tr><td><strong>Rotation</strong></td><td>24 hours</td><td>Day and Night</td></tr>
+    <tr><td><strong>Revolution</strong></td><td>365.25 days</td><td>Seasons</td></tr>
+    <tr><td><strong>Axis Tilt</strong></td><td>23.5°</td><td>—</td></tr>
+  </table>
+
+  <h2><span class="num">11</span>Latitude and Longitude</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Latitude</th><th>Longitude</th></tr>
+    <tr><td>Direction</td><td>East–West</td><td>North–South</td></tr>
+    <tr><td>Zero Line</td><td>Equator (0°)</td><td>Prime Meridian (0°)</td></tr>
+    <tr><td>Total Count</td><td><span class="critical">181</span></td><td><span class="critical">360</span></td></tr>
+    <tr><td>Important Lines</td><td>Tropic of Cancer (23.5° N)<br>Tropic of Capricorn (23.5° S)</td><td>International Date Line (180°)</td></tr>
+  </table>
+
+  <div class="infobox">
+    <strong>IST:</strong> 82°30' E (Mirzapur, UP) · <strong>UTC + 5:30</strong>
+  </div>
+
+  <h2><span class="num">12</span>Heat Zones of the Earth</h2>
+
+  <table>
+    <tr><th>Zone</th><th>Location</th><th>Climate</th></tr>
+    <tr><td><strong>Torrid Zone</strong></td><td>Between Tropics</td><td>Hot</td></tr>
+    <tr><td><strong>Temperate Zone</strong></td><td>Between Tropics and Circles</td><td>Moderate</td></tr>
+    <tr><td><strong>Frigid Zone</strong></td><td>Between Circles and Poles</td><td>Cold</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Remember heat zones from hot to cold:</p>
+    <span class="mnemonic">TORRID · TEMPERATE · FRIGID</span>
+    <p style="text-align:center; font-size:11pt;">Hot → Moderate → Cold</p>
+  </div>
+
+  <h2><span class="num">13</span>Previous Year Questions</h2>
+  <div class="columns">
+    <p><strong>Q1.</strong> Shape of Earth? <em>Oblate Spheroid (Geoid)</em></p>
+    <p><strong>Q2.</strong> Equatorial diameter? <em>12,756 km</em></p>
+    <p><strong>Q3.</strong> Polar diameter? <em>12,714 km</em></p>
+    <p><strong>Q4.</strong> Water %? <em>71%</em></p>
+    <p><strong>Q5.</strong> Land %? <em>29%</em></p>
+    <p><strong>Q6.</strong> Outermost layer? <em>Crust</em></p>
+    <p><strong>Q7.</strong> Thickest layer? <em>Mantle</em></p>
+    <p><strong>Q8.</strong> Innermost layer? <em>Core</em></p>
+    <p><strong>Q9.</strong> Core made of? <em>Nickel + Iron (NIFE)</em></p>
+    <p><strong>Q10.</strong> Rotation time? <em>24 hours</em></p>
+    <p><strong>Q11.</strong> Revolution time? <em>365.25 days</em></p>
+    <p><strong>Q12.</strong> Axis tilt? <em>23.5°</em></p>
+    <p><strong>Q13.</strong> Equator? <em>0° Latitude</em></p>
+    <p><strong>Q14.</strong> Tropic of Cancer? <em>23.5° N</em></p>
+    <p><strong>Q15.</strong> Prime Meridian? <em>0° Longitude</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — INDIA LOCATION + HIMALAYAS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 3 — Indian Geography</div>
+
+  <h2><span class="num">14</span>Location and Extent of India</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Latitude</td><td><span class="critical">8°4' N to 37°6' N</span></td></tr>
+    <tr><td>Longitude</td><td><span class="critical">68°7' E to 97°25' E</span></td></tr>
+    <tr><td>Area</td><td>3.28 million sq km</td></tr>
+    <tr><td>Rank in Area</td><td>7th in the world</td></tr>
+    <tr><td>Rank in Population</td><td>2nd in the world</td></tr>
+    <tr><td>North–South Extent</td><td>3,214 km</td></tr>
+    <tr><td>East–West Extent</td><td>2,933 km</td></tr>
+    <tr><td>Land Frontier</td><td>15,200 km</td></tr>
+    <tr><td>Coastline</td><td>7,516 km</td></tr>
+    <tr><td>Standard Meridian</td><td><span class="critical">82°30' E (Mirzapur, UP)</span></td></tr>
+  </table>
+
+  <h2><span class="num">15</span>Physical Divisions of India</h2>
+
+  <table>
+    <tr><th>Division</th><th>Key Feature</th></tr>
+    <tr><td><strong>Himalayas</strong></td><td>Highest mountains · Young fold</td></tr>
+    <tr><td><strong>Northern Plains</strong></td><td>Fertile · Made by rivers</td></tr>
+    <tr><td><strong>Peninsular Plateau</strong></td><td>Oldest landmass</td></tr>
+    <tr><td><strong>Indian Desert</strong></td><td>Thar Desert · Sandy</td></tr>
+    <tr><td><strong>Coastal Plains</strong></td><td>Narrow plains along coast</td></tr>
+    <tr><td><strong>Islands</strong></td><td>Lakshadweep · Andaman & Nicobar</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Remember India's 6 physical divisions:</p>
+    <span class="mnemonic">HIP-DCI</span>
+    <p style="text-align:center; font-size:11pt;">Himalayas · Indo-Gangetic · Peninsular · Desert · Coastal · Islands</p>
+  </div>
+
+  <h2><span class="num">16</span>The Himalayas</h2>
+
+  <table>
+    <tr><th>Range</th><th>Height</th><th>Key Feature</th></tr>
+    <tr><td><strong>Greater Himalayas (Himadri)</strong></td><td>6,000 m+</td><td>Highest · Everest, Kanchenjunga</td></tr>
+    <tr><td><strong>Lesser Himalayas (Himachal)</strong></td><td>3,700–4,500 m</td><td>Shimla, Darjeeling</td></tr>
+    <tr><td><strong>Shiwalik Hills</strong></td><td>900–1,100 m</td><td>Lowest · Duns & Duars</td></tr>
+  </table>
+
+  <h3>Important Peaks</h3>
+  <table>
+    <tr><th>Peak</th><th>Height</th><th>Location</th></tr>
+    <tr><td>Mount Everest</td><td>8,848.86 m</td><td>Nepal</td></tr>
+    <tr><td><strong>Kanchenjunga</strong></td><td>8,586 m</td><td><span class="critical">India (Sikkim) — Highest in India</span></td></tr>
+    <tr><td>Nanda Devi</td><td>7,816 m</td><td>India (Uttarakhand)</td></tr>
+    <tr><td>K2 (Godwin Austen)</td><td>8,611 m</td><td>India (POK)</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — PLAINS, PLATEAU, DESERT, COAST ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Physical Divisions (Continued)</div>
+
+  <h2><span class="num">17</span>The Northern Plains</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Made By</td><td>Indus, Ganga, Brahmaputra</td></tr>
+    <tr><td>Type</td><td>Alluvial Plains</td></tr>
+    <tr><td>Soil</td><td><span class="critical">Alluvial Soil — most fertile</span></td></tr>
+    <tr><td>States</td><td>Punjab, Haryana, UP, Bihar, WB, Assam</td></tr>
+    <tr><td>Crops</td><td>Wheat, Rice, Sugarcane</td></tr>
+  </table>
+
+  <h2><span class="num">18</span>The Peninsular Plateau</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Type</td><td>Oldest landmass</td></tr>
+    <tr><td>Minerals</td><td>Iron, Coal, Mica, Bauxite</td></tr>
+    <tr><td>Key Plateaus</td><td>Deccan · Chota Nagpur</td></tr>
+  </table>
+
+  <div class="columns">
+    <h3>Deccan Plateau</h3>
+    <ul>
+      <li>Largest plateau in India</li>
+      <li>Made of <span class="key">black soil (regur)</span></li>
+      <li>Good for cotton</li>
+    </ul>
+    <h3>Chota Nagpur Plateau</h3>
+    <ul>
+      <li><span class="critical">Storehouse of minerals</span></li>
+      <li>Rich in iron, coal, mica, bauxite</li>
+      <li>Located in Jharkhand</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">19</span>The Indian Desert</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Name</td><td>Thar Desert</td></tr>
+    <tr><td>Location</td><td>Rajasthan, Gujarat, Punjab, Haryana</td></tr>
+    <tr><td>Rainfall</td><td>Less than 25 cm</td></tr>
+    <tr><td>Vegetation</td><td>Thorny bushes</td></tr>
+    <tr><td>Key Animal</td><td>Camel</td></tr>
+  </table>
+
+  <h2><span class="num">20</span>The Coastal Plains</h2>
+  <table>
+    <tr><th>Coast</th><th>Location</th><th>Key Feature</th></tr>
+    <tr><td><strong>Western Coastal Plains</strong></td><td>West</td><td>Narrow · Konkan, Kanara, Malabar</td></tr>
+    <tr><td><strong>Eastern Coastal Plains</strong></td><td>East</td><td>Wide · Coromandel, Northern Circars</td></tr>
+  </table>
+
+  <h2><span class="num">21</span>The Islands</h2>
+  <table>
+    <tr><th>Island</th><th>Location</th><th>Key Feature</th></tr>
+    <tr><td><strong>Lakshadweep</strong></td><td>Arabian Sea</td><td>Coral · Capital Kavaratti</td></tr>
+    <tr><td><strong>Andaman & Nicobar</strong></td><td>Bay of Bengal</td><td>Volcanic · Capital Port Blair</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Coral vs Volcanic islands:</p>
+    <span class="mnemonic">LAKSHADWEEP · CORAL</span>
+    <span class="mnemonic">ANDAMAN · VOLCANIC</span>
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 7 — RIVERS + CLIMATE ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Rivers + Climate of India</div>
+
+  <h2><span class="num">22</span>Rivers of India</h2>
+
+  <h3>Himalayan Rivers (Perennial)</h3>
+  <table>
+    <tr><th>River</th><th>Origin</th><th>Length</th><th>Key Feature</th></tr>
+    <tr><td><strong>Indus</strong></td><td>Mansarovar Lake</td><td>2,880 km</td><td>Flows through Pakistan</td></tr>
+    <tr><td><strong>Ganga</strong></td><td>Gangotri Glacier</td><td>2,525 km</td><td><span class="critical">Longest in India</span></td></tr>
+    <tr><td><strong>Brahmaputra</strong></td><td>Chemayungdung</td><td>2,900 km</td><td>Tsangpo in Tibet</td></tr>
+  </table>
+
+  <h3>Peninsular Rivers (Non-Perennial)</h3>
+  <table>
+    <tr><th>River</th><th>Origin</th><th>Length</th><th>Key Feature</th></tr>
+    <tr><td><strong>Godavari</strong></td><td>Nashik</td><td>1,465 km</td><td><span class="critical">Largest peninsular river</span></td></tr>
+    <tr><td><strong>Krishna</strong></td><td>Mahabaleshwar</td><td>1,400 km</td><td>Second largest</td></tr>
+    <tr><td><strong>Kaveri</strong></td><td>Brahmagiri Hills</td><td>800 km</td><td>"Ganga of the South"</td></tr>
+    <tr><td><strong>Narmada</strong></td><td>Amarkantak</td><td>1,312 km</td><td>Flows west</td></tr>
+    <tr><td><strong>Tapi</strong></td><td>Betul</td><td>724 km</td><td>Flows west</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>East-flowing rivers:</p>
+    <span class="mnemonic">GODAVARI · KRISHNA · KAVERI</span>
+    <p>West-flowing rivers:</p>
+    <span class="mnemonic">NARMADA · TAPI</span>
+  </div>
+
+  <h2><span class="num">23</span>Climate of India</h2>
+  <table>
+    <tr><th>Season</th><th>Months</th><th>Key Feature</th></tr>
+    <tr><td><strong>Winter</strong></td><td>Dec–Feb</td><td>Cold & dry</td></tr>
+    <tr><td><strong>Summer</strong></td><td>Mar–May</td><td>Hot & dry</td></tr>
+    <tr><td><strong>SW Monsoon</strong></td><td>Jun–Sep</td><td>Rainy season</td></tr>
+    <tr><td><strong>Post-Monsoon</strong></td><td>Oct–Nov</td><td>Retreating monsoon</td></tr>
+  </table>
+
+  <div class="infobox">
+    <strong>Monsoon:</strong> Arabic "Mausim" · Onset — June 1st in Kerala · Withdrawal — December
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 7</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 8 — SOIL, PARKS, POPULATION ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Soil + Parks + Population</div>
+
+  <h2><span class="num">24</span>Soil of India</h2>
+  <table>
+    <tr><th>Soil Type</th><th>Where Found</th><th>Key Feature</th></tr>
+    <tr><td><strong>Alluvial Soil</strong></td><td>Northern Plains</td><td><span class="critical">Most fertile</span></td></tr>
+    <tr><td><strong>Black Soil (Regur)</strong></td><td>Deccan Plateau</td><td>Good for cotton</td></tr>
+    <tr><td><strong>Red Soil</strong></td><td>Eastern & Southern</td><td>Less fertile</td></tr>
+    <tr><td><strong>Laterite Soil</strong></td><td>Western & Eastern Ghats</td><td>Tea, coffee</td></tr>
+    <tr><td><strong>Desert Soil</strong></td><td>Thar Desert</td><td>Sandy</td></tr>
+    <tr><td><strong>Mountain Soil</strong></td><td>Himalayas</td><td>Forest soil</td></tr>
+  </table>
+
+  <h2><span class="num">25</span>National Parks of India</h2>
+  <table>
+    <tr><th>Park</th><th>State</th><th>Key Animal</th></tr>
+    <tr><td><strong>Jim Corbett</strong></td><td>Uttarakhand</td><td><span class="critical">Tiger · First National Park</span></td></tr>
+    <tr><td><strong>Kaziranga</strong></td><td>Assam</td><td>One-horned Rhinoceros</td></tr>
+    <tr><td><strong>Gir</strong></td><td>Gujarat</td><td>Asiatic Lion</td></tr>
+    <tr><td><strong>Sundarbans</strong></td><td>West Bengal</td><td>Royal Bengal Tiger</td></tr>
+    <tr><td><strong>Bandipur</strong></td><td>Karnataka</td><td>Tiger, Elephant</td></tr>
+    <tr><td><strong>Ranthambore</strong></td><td>Rajasthan</td><td>Tiger</td></tr>
+  </table>
+
+  <h2><span class="num">26</span>Population of India</h2>
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td>Population (2011)</td><td>1.21 billion</td></tr>
+    <tr><td>Most Populous State</td><td>Uttar Pradesh</td></tr>
+    <tr><td>Least Populous State</td><td>Sikkim</td></tr>
+    <tr><td>Sex Ratio (2011)</td><td>943 females per 1000 males</td></tr>
+    <tr><td>Literacy Rate (2011)</td><td>74.04%</td></tr>
+    <tr><td>Density</td><td>382 persons per sq km</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Population facts to remember:</p>
+    <span class="mnemonic">UP · SIKKIM · 943 · 74%</span>
+    <p style="text-align:center; font-size:11pt;">Most populous · Least populous · Sex ratio · Literacy</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 8</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 9 — DAMS + MINERALS ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Dams + Minerals</div>
+
+  <h2><span class="num">27</span>Important Dams of India</h2>
+  <table>
+    <tr><th>Dam</th><th>River</th><th>State</th><th>Key Fact</th></tr>
+    <tr><td><strong>Bhakra Nangal</strong></td><td>Sutlej</td><td>Punjab/HP</td><td><span class="critical">Highest gravity dam</span></td></tr>
+    <tr><td><strong>Hirakud</strong></td><td>Mahanadi</td><td>Odisha</td><td><span class="critical">Longest dam</span></td></tr>
+    <tr><td><strong>Sardar Sarovar</strong></td><td>Narmada</td><td>Gujarat</td><td>Largest on Narmada</td></tr>
+    <tr><td><strong>Nagarjuna Sagar</strong></td><td>Krishna</td><td>Telangana/AP</td><td>Largest masonry dam</td></tr>
+    <tr><td><strong>Tehri</strong></td><td>Bhagirathi</td><td>Uttarakhand</td><td><span class="critical">Highest dam</span></td></tr>
+    <tr><td><strong>Rihand</strong></td><td>Rihand</td><td>UP</td><td>Largest reservoir</td></tr>
+    <tr><td><strong>Mettur</strong></td><td>Kaveri</td><td>Tamil Nadu</td><td>Oldest dam (1934)</td></tr>
+    <tr><td><strong>Idukki</strong></td><td>Periyar</td><td>Kerala</td><td>Arch dam</td></tr>
+    <tr><td><strong>Farakka Barrage</strong></td><td>Ganga</td><td>West Bengal</td><td>Diverts to Hooghly</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Record-holding dams:</p>
+    <span class="mnemonic">HIGHEST GRAVITY · LONGEST · HIGHEST</span>
+    <p style="text-align:center; font-size:11pt;">Bhakra Nangal · Hirakud · Tehri</p>
+  </div>
+
+  <h2><span class="num">28</span>Minerals of India</h2>
+
+  <h3>Metallic Minerals</h3>
+  <table>
+    <tr><th>Mineral</th><th>Largest Producer</th><th>Uses</th></tr>
+    <tr><td><strong>Iron Ore</strong></td><td><span class="critical">Odisha</span></td><td>Steel making</td></tr>
+    <tr><td><strong>Manganese</strong></td><td><span class="critical">Odisha</span></td><td>Steel · Batteries</td></tr>
+    <tr><td><strong>Copper</strong></td><td>Rajasthan (Khetri)</td><td>Electrical wiring</td></tr>
+    <tr><td><strong>Bauxite</strong></td><td><span class="critical">Odisha</span></td><td>Aluminium</td></tr>
+    <tr><td><strong>Gold</strong></td><td>Karnataka (Kolar)</td><td>Jewellery</td></tr>
+    <tr><td><strong>Silver</strong></td><td>Rajasthan (Zawar)</td><td>Jewellery</td></tr>
+  </table>
+
+  <h3>Non-Metallic Minerals</h3>
+  <table>
+    <tr><th>Mineral</th><th>Largest Producer</th><th>Uses</th></tr>
+    <tr><td><strong>Mica</strong></td><td>Jharkhand (Koderma)</td><td>Electrical industry</td></tr>
+    <tr><td><strong>Limestone</strong></td><td>Rajasthan</td><td>Cement</td></tr>
+    <tr><td><strong>Dolomite</strong></td><td>Odisha</td><td>Iron & Steel</td></tr>
+    <tr><td><strong>Gypsum</strong></td><td>Rajasthan</td><td>Cement · Fertilizer</td></tr>
+  </table>
+
+  <h3>Energy Minerals</h3>
+  <table>
+    <tr><th>Mineral</th><th>Largest Producer</th><th>Uses</th></tr>
+    <tr><td><strong>Coal</strong></td><td>Jharkhand</td><td>Electricity · Steel</td></tr>
+    <tr><td><strong>Petroleum</strong></td><td>Maharashtra (Mumbai High)</td><td>Fuel</td></tr>
+    <tr><td><strong>Natural Gas</strong></td><td>Maharashtra</td><td>Fuel</td></tr>
+    <tr><td><strong>Uranium</strong></td><td>Jharkhand (Jaduguda)</td><td>Nuclear fuel</td></tr>
+  </table>
+
+  <div class="infobox">
+    <strong>Oldest Oil Field:</strong> Digboi (Assam) · <strong>Oldest Uranium Mine:</strong> Jaduguda (Jharkhand)
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 9</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 10 — CROPS ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Crops of India</div>
+
+  <h2><span class="num">29</span>Crops of India</h2>
+
+  <h3>Cropping Seasons</h3>
+  <table>
+    <tr><th>Season</th><th>Sowing</th><th>Harvesting</th><th>Crops</th></tr>
+    <tr><td><strong>Kharif</strong></td><td>Jun–Jul</td><td>Oct–Nov</td><td>Rice, Cotton, Sugarcane, Maize, Bajra, Jute</td></tr>
+    <tr><td><strong>Rabi</strong></td><td>Oct–Nov</td><td>Mar–Apr</td><td>Wheat, Barley, Gram, Mustard, Peas</td></tr>
+    <tr><td><strong>Zaid</strong></td><td>Mar–Apr</td><td>Jun–Jul</td><td>Watermelon, Cucumber, Muskmelon</td></tr>
+  </table>
+
+  <h3>Major Crops</h3>
+  <table>
+    <tr><th>Crop</th><th>Type</th><th>Largest Producer</th></tr>
+    <tr><td><strong>Rice</strong></td><td>Kharif</td><td><span class="critical">West Bengal</span></td></tr>
+    <tr><td><strong>Wheat</strong></td><td>Rabi</td><td><span class="critical">Punjab</span></td></tr>
+    <tr><td><strong>Cotton</strong></td><td>Kharif</td><td><span class="critical">Gujarat</span></td></tr>
+    <tr><td><strong>Sugarcane</strong></td><td>Kharif</td><td>Uttar Pradesh</td></tr>
+    <tr><td><strong>Tea</strong></td><td>Plantation</td><td>Assam</td></tr>
+    <tr><td><strong>Coffee</strong></td><td>Plantation</td><td>Karnataka</td></tr>
+    <tr><td><strong>Jute</strong></td><td>Kharif</td><td>West Bengal</td></tr>
+    <tr><td><strong>Maize</strong></td><td>Kharif</td><td>Karnataka</td></tr>
+    <tr><td><strong>Bajra</strong></td><td>Kharif</td><td>Rajasthan</td></tr>
+    <tr><td><strong>Gram</strong></td><td>Rabi</td><td>Madhya Pradesh</td></tr>
+    <tr><td><strong>Mustard</strong></td><td>Rabi</td><td>Rajasthan</td></tr>
+  </table>
+
+  <div class="infobox">
+    <strong>Green Revolution (1960s–1970s):</strong> Leader — M.S. Swaminathan · Result — Increase in food production (especially wheat) · States — Punjab, Haryana, UP
+  </div>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 11 — WORLD CONTINENTS + OCEANS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 4 — World Geography</div>
+
+  <h2><span class="num">30</span>The 7 Continents</h2>
+
+  <div class="cont-diagram">
+    <div class="cont-row">
+      <div class="cont-node cont-asia">Asia</div>
+      <div class="cont-node cont-africa">Africa</div>
+      <div class="cont-node cont-na">N. America</div>
+      <div class="cont-node cont-sa">S. America</div>
+      <div class="cont-node cont-antarctica">Antarctica</div>
+      <div class="cont-node cont-europe">Europe</div>
+      <div class="cont-node cont-australia">Australia</div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Continent</th><th>Area</th><th>Key Feature</th></tr>
+    <tr><td><strong>Asia</strong></td><td><span class="critical">Largest</span></td><td>Most populous · Everest</td></tr>
+    <tr><td><strong>Africa</strong></td><td>Second</td><td>Hottest · Sahara</td></tr>
+    <tr><td><strong>North America</strong></td><td>Third</td><td>USA, Canada, Mexico</td></tr>
+    <tr><td><strong>South America</strong></td><td>Fourth</td><td>Amazon river & forest</td></tr>
+    <tr><td><strong>Antarctica</strong></td><td>Fifth</td><td><span class="critical">Coldest · No population</span></td></tr>
+    <tr><td><strong>Europe</strong></td><td>Sixth</td><td>Third most populous</td></tr>
+    <tr><td><strong>Australia</strong></td><td><span class="critical">Smallest</span></td><td>Island continent</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Continents by size:</p>
+    <span class="mnemonic">A · A · N · S · A · E · A</span>
+    <p style="text-align:center; font-size:11pt;">Asia · Africa · N.America · S.America · Antarctica · Europe · Australia</p>
+  </div>
+
+  <h2><span class="num">31</span>The 5 Oceans</h2>
+  <table>
+    <tr><th>Ocean</th><th>Area</th><th>Key Feature</th></tr>
+    <tr><td><strong>Pacific</strong></td><td><span class="critical">Largest</span></td><td>Deepest — Mariana Trench</td></tr>
+    <tr><td><strong>Atlantic</strong></td><td>Second</td><td>Busiest for trade</td></tr>
+    <tr><td><strong>Indian</strong></td><td>Third</td><td><span class="critical">Named after a country</span></td></tr>
+    <tr><td><strong>Southern</strong></td><td>Fourth</td><td>Surrounds Antarctica</td></tr>
+    <tr><td><strong>Arctic</strong></td><td><span class="critical">Smallest</span></td><td>Coldest · North Pole</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Oceans by size:</p>
+    <span class="mnemonic">PACIFIC · ATLANTIC · INDIAN · SOUTHERN · ARCTIC</span>
+  </div>
+
+  <h2><span class="num">32</span>Important Lines of the World</h2>
+  <table>
+    <tr><th>Line</th><th>Location</th><th>Significance</th></tr>
+    <tr><td>Equator</td><td>0° Latitude</td><td>Divides N & S Hemispheres</td></tr>
+    <tr><td>Tropic of Cancer</td><td>23.5° N</td><td>India, Mexico, Egypt</td></tr>
+    <tr><td>Tropic of Capricorn</td><td>23.5° S</td><td>Australia, Chile, Brazil</td></tr>
+    <tr><td>Arctic Circle</td><td>66.5° N</td><td>—</td></tr>
+    <tr><td>Antarctic Circle</td><td>66.5° S</td><td>—</td></tr>
+    <tr><td>Prime Meridian</td><td>0° Longitude</td><td>Greenwich</td></tr>
+    <tr><td>International Date Line</td><td>180°</td><td>—</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 11</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 12 — WORLD DESERTS, RIVERS, MOUNTAINS, STRAITS ============ -->
+<div class="page">
+  <div class="page-header">Section 4 · Deserts, Rivers, Mountains, Straits</div>
+
+  <h2><span class="num">33</span>Important Deserts of the World</h2>
+  <table>
+    <tr><th>Desert</th><th>Location</th><th>Type</th></tr>
+    <tr><td><strong>Sahara</strong></td><td>Africa</td><td><span class="critical">Largest hot desert</span></td></tr>
+    <tr><td><strong>Gobi</strong></td><td>Asia</td><td>Cold Desert</td></tr>
+    <tr><td><strong>Kalahari</strong></td><td>Africa</td><td>Hot Desert</td></tr>
+    <tr><td><strong>Thar</strong></td><td>India</td><td>Hot Desert</td></tr>
+    <tr><td><strong>Atacama</strong></td><td>Chile</td><td><span class="critical">Driest desert</span></td></tr>
+    <tr><td><strong>Great Victoria</strong></td><td>Australia</td><td>Hot Desert</td></tr>
+  </table>
+
+  <h2><span class="num">34</span>Important Rivers of the World</h2>
+  <table>
+    <tr><th>River</th><th>Continent</th><th>Length</th><th>Key Feature</th></tr>
+    <tr><td><strong>Nile</strong></td><td>Africa</td><td>6,650 km</td><td><span class="critical">Longest in the world</span></td></tr>
+    <tr><td><strong>Amazon</strong></td><td>South America</td><td>6,400 km</td><td>Largest by volume</td></tr>
+    <tr><td><strong>Yangtze</strong></td><td>China</td><td>6,300 km</td><td>Longest in Asia</td></tr>
+    <tr><td><strong>Mississippi</strong></td><td>North America</td><td>3,766 km</td><td>Longest in N. America</td></tr>
+    <tr><td><strong>Congo</strong></td><td>Africa</td><td>4,700 km</td><td>Deepest river</td></tr>
+  </table>
+
+  <h2><span class="num">35</span>Important Mountains of the World</h2>
+  <table>
+    <tr><th>Range</th><th>Continent</th><th>Highest Peak</th></tr>
+    <tr><td><strong>Himalayas</strong></td><td>Asia</td><td>Mount Everest (8,848.86 m)</td></tr>
+    <tr><td><strong>Andes</strong></td><td>South America</td><td>Aconcagua</td></tr>
+    <tr><td><strong>Rockies</strong></td><td>North America</td><td>Denali</td></tr>
+    <tr><td><strong>Alps</strong></td><td>Europe</td><td>Mont Blanc</td></tr>
+    <tr><td><strong>Kilimanjaro</strong></td><td>Africa</td><td>Kilimanjaro</td></tr>
+    <tr><td><strong>Ural</strong></td><td>Europe/Asia</td><td>Narodnaya</td></tr>
+  </table>
+
+  <div class="memory-box">
+    <p>Special facts about mountains:</p>
+    <span class="mnemonic">ANDES · LONGEST</span>
+    <span class="mnemonic">URAL · DIVIDES EUROPE & ASIA</span>
+  </div>
+
+  <h2><span class="num">36</span>Important Straits of the World</h2>
+  <table>
+    <tr><th>Strait</th><th>Location</th><th>Connects</th></tr>
+    <tr><td><strong>Malacca</strong></td><td>Malaysia, Indonesia</td><td><span class="critical">Busiest</span> · Indian & Pacific</td></tr>
+    <tr><td><strong>Hormuz</strong></td><td>Iran, Oman</td><td>Persian Gulf · <span class="critical">Oil trade</span></td></tr>
+    <tr><td><strong>Bering</strong></td><td>Russia, USA</td><td>Arctic & Pacific</td></tr>
+    <tr><td><strong>Palk</strong></td><td>India, Sri Lanka</td><td>Bay of Bengal & Gulf of Mannar</td></tr>
+    <tr><td><strong>Gibraltar</strong></td><td>Spain, Morocco</td><td>Atlantic & Mediterranean</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 12</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 13 — CAPITALS + MASTER SUMMARY ============ -->
+<div class="page">
+  <div class="page-header">Section 4 · Capitals + Master Summary</div>
+
+  <h2><span class="num">37</span>Important Countries and Their Capitals</h2>
+  <table>
+    <tr><th>Country</th><th>Capital</th><th>Continent</th></tr>
+    <tr><td>USA</td><td>Washington D.C.</td><td>North America</td></tr>
+    <tr><td>UK</td><td>London</td><td>Europe</td></tr>
+    <tr><td>France</td><td>Paris</td><td>Europe</td></tr>
+    <tr><td>Germany</td><td>Berlin</td><td>Europe</td></tr>
+    <tr><td>Russia</td><td>Moscow</td><td>Europe/Asia</td></tr>
+    <tr><td>China</td><td>Beijing</td><td>Asia</td></tr>
+    <tr><td>Japan</td><td>Tokyo</td><td>Asia</td></tr>
+    <tr><td>Australia</td><td>Canberra</td><td>Australia</td></tr>
+    <tr><td>Canada</td><td>Ottawa</td><td>North America</td></tr>
+    <tr><td>Brazil</td><td>Brasilia</td><td>South America</td></tr>
+    <tr><td>Egypt</td><td>Cairo</td><td>Africa</td></tr>
+    <tr><td>South Africa</td><td>Pretoria</td><td>Africa</td></tr>
+  </table>
+
+  <h2><span class="num">38</span>Previous Year Questions — World</h2>
+  <div class="columns">
+    <p><strong>Q1.</strong> Largest continent? <em>Asia</em></p>
+    <p><strong>Q2.</strong> Smallest continent? <em>Australia</em></p>
+    <p><strong>Q3.</strong> Most populous continent? <em>Asia</em></p>
+    <p><strong>Q4.</strong> Hottest continent? <em>Africa</em></p>
+    <p><strong>Q5.</strong> Coldest continent? <em>Antarctica</em></p>
+    <p><strong>Q6.</strong> Largest ocean? <em>Pacific</em></p>
+    <p><strong>Q7.</strong> Smallest ocean? <em>Arctic</em></p>
+    <p><strong>Q8.</strong> Deepest point? <em>Mariana Trench</em></p>
+    <p><strong>Q9.</strong> Longest river? <em>Nile</em></p>
+    <p><strong>Q10.</strong> Largest river by volume? <em>Amazon</em></p>
+    <p><strong>Q11.</strong> Longest mountain range? <em>Andes</em></p>
+    <p><strong>Q12.</strong> Highest peak? <em>Mount Everest</em></p>
+    <p><strong>Q13.</strong> Largest desert? <em>Sahara</em></p>
+    <p><strong>Q14.</strong> Driest desert? <em>Atacama</em></p>
+    <p><strong>Q15.</strong> Busiest strait? <em>Malacca</em></p>
+    <p><strong>Q16.</strong> Oil strait? <em>Hormuz</em></p>
+    <p><strong>Q17.</strong> Separates Europe & Asia? <em>Ural Mountains</em></p>
+    <p><strong>Q18.</strong> Named after a country? <em>Indian Ocean</em></p>
+  </div>
+
+  <h2><span class="num">39</span>Master Summary — All Facts Combined</h2>
+  <div class="quick-rev">
+    <ul>
+      <li><strong>Earth:</strong> Shape Oblate Spheroid · Equator 12,756 km · Land 29% Water 71% · Rotation 24 hrs · Revolution 365.25 days · Tilt 23.5°</li>
+      <li><strong>Lines:</strong> Equator 0° · Tropic of Cancer 23.5°N · Capricorn 23.5°S · Arctic 66.5°N · Antarctic 66.5°S · Prime Meridian 0° · IDL 180°</li>
+      <li><strong>India:</strong> IST 82°30'E · UTC +5:30 · Latitudes 181 · Longitudes 360 · Highest Kanchenjunga · Longest Ganga · Largest peninsular Godavari</li>
+      <li><strong>India Records:</strong> Largest plateau Deccan · Storehouse of minerals Chota Nagpur · Most fertile Alluvial · Cotton Black Soil</li>
+      <li><strong>India Parks:</strong> First Jim Corbett · Rhino Kaziranga · Lion Gir · Tiger Sundarbans</li>
+      <li><strong>India Population:</strong> Most populous UP · Least Sikkim · Sex ratio 943 · Literacy 74.04%</li>
+      <li><strong>India Dams:</strong> Highest Tehri · Longest Hirakud · Oldest Mettur · Largest masonry Nagarjuna Sagar · Highest gravity Bhakra Nangal</li>
+      <li><strong>India Minerals:</strong> Iron Odisha · Manganese Odisha · Copper Rajasthan · Bauxite Odisha · Mica Jharkhand · Coal Jharkhand · Oldest oil field Digboi</li>
+      <li><strong>India Crops:</strong> Rice WB · Wheat Punjab · Cotton Gujarat · Sugarcane UP · Tea Assam · Coffee Karnataka · Jute WB</li>
+      <li><strong>Green Revolution:</strong> Leader M.S. Swaminathan (1960s–70s)</li>
+      <li><strong>World:</strong> Largest continent Asia · Smallest Australia · Hottest Africa · Coldest Antarctica · Largest ocean Pacific · Smallest Arctic</li>
+      <li><strong>World Records:</strong> Longest river Nile · Largest volume Amazon · Longest range Andes · Highest peak Everest · Largest desert Sahara · Driest Atacama</li>
+      <li><strong>World Straits:</strong> Busiest Malacca · Oil Hormuz · Ural separates Europe-Asia · Indian Ocean named after country</li>
+    </ul>
+  </div>
+
+  <p class="source">Source: Geography Complete Notes — All Sections Combined</p>
+
+  <div class="page-footer">
+    <span>Geography — Complete Guide</span>
+    <span>Page 13</span>
+  </div>
+</div>
+
+</body>
+</html>

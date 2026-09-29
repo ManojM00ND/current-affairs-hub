@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Economics — Premium Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700;900&family=Cinzel:wght@600;700;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 10mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Calibri', 'Lato', Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1a1a1a; background: #D9D9D9; padding: 14px 0; }
+  .page { width: 210mm; min-height: 297mm; background: linear-gradient(180deg, #fffdf9 0%, #fffaf3 100%); margin: 0 auto 14px auto; padding: 12mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.18); page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  .page::before { content: ''; position: absolute; top: 5mm; left: 5mm; right: 5mm; bottom: 5mm; border: 1.5px solid #E5D5C0; border-radius: 8px; pointer-events: none; }
+
+  .hero { background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 25%, #B45309 65%, #D97706 100%); padding: 20px 24px 18px 24px; border-radius: 12px; position: relative; overflow: hidden; margin-bottom: 12px; box-shadow: 0 8px 24px rgba(153,27,27,0.32); border: 2px solid rgba(255,255,255,0.15); }
+  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(245,158,11,0.35), transparent 70%); border-radius: 50%; }
+  .hero::after { content: '💰'; position: absolute; top: 10px; right: 20px; font-size: 24pt; opacity: 0.55; }
+  .hero h1 { font-family: 'Cinzel', serif; font-size: 28pt; font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: 1.2px; text-shadow: 0 3px 10px rgba(0,0,0,0.35); margin-bottom: 4px; position: relative; z-index: 2; }
+  .hero .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 13.5pt; font-style: italic; color: #FEF3C7; font-weight: 500; position: relative; z-index: 2; }
+  .hero .hero-line { width: 100px; height: 3px; background: linear-gradient(90deg, #FCD34D, transparent); margin-top: 10px; border-radius: 2px; position: relative; z-index: 2; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; padding: 7px 10px; background: #fff; border: 1px solid #E5D5C0; border-radius: 8px; justify-content: center; font-size: 8pt; }
+  .legend-item { display: flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 11px; font-weight: 700; color: #fff; font-family: 'Lato', sans-serif; }
+  .legend-blue   { background: linear-gradient(135deg, #1E40AF, #1E3A8A); }
+  .legend-red    { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .legend-amber  { background: linear-gradient(135deg, #D97706, #B45309); }
+  .legend-green  { background: linear-gradient(135deg, #059669, #047857); }
+  .legend-teal   { background: linear-gradient(135deg, #0F766E, #115E59); }
+
+  .section-header { font-family: 'Cinzel', serif; font-size: 14pt; font-weight: 900; color: #7F1D1D; padding: 8px 14px; background: linear-gradient(90deg, #FEF3C7 0%, #FFFBEB 100%); border-left: 5px solid #D97706; border-radius: 0 8px 8px 0; margin: 12px 0 8px 0; letter-spacing: 0.5px; }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: 13.5pt; font-weight: 900; color: #991B1B; margin-top: 10px; margin-bottom: 6px; line-height: 1.15; display: flex; align-items: center; gap: 8px; }
+  h2 .num { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; background: linear-gradient(135deg, #991B1B, #7F1D1D); color: #fff; border-radius: 50%; font-family: 'Cinzel', serif; font-weight: 900; font-size: 12pt; box-shadow: 0 3px 8px rgba(153,27,27,0.4); flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4); }
+  h3 { font-family: 'Playfair Display', serif; font-size: 11pt; font-weight: 700; color: #7F1D1D; margin-top: 8px; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  h3::before { content: '◆'; color: #D97706; font-size: 8.5pt; }
+  .page-header { font-family: 'Cinzel', serif; font-size: 11.5pt; font-weight: 700; color: #991B1B; letter-spacing: 0.4px; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1.5px solid #FDE68A; position: relative; }
+  .page-header::after { content: '✦'; position: absolute; right: 0; top: 0; color: #D97706; font-size: 12pt; }
+
+  .columns { column-count: 2; column-gap: 6mm; column-rule: 1px solid #FDE68A; text-align: justify; hyphens: auto; }
+  .columns p { margin-bottom: 6px; }
+
+  .key { background: linear-gradient(180deg, transparent 55%, #BFDBFE 55%); padding: 0 3px; font-weight: 700; color: #1E3A8A; }
+  .critical { background: linear-gradient(135deg, #B91C1C, #7F1D1D); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+  .success { background: linear-gradient(135deg, #059669, #047857); color: #fff; padding: 1px 7px; border-radius: 3px; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 9.5pt; display: inline-block; }
+
+  ul, ol { margin-left: 15px; margin-bottom: 5px; }
+  li { margin-bottom: 2px; line-height: 1.35; }
+  li::marker { color: #991B1B; font-weight: 900; }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 6px 0 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 14px rgba(153,27,27,0.16); border: 1px solid #FDE68A; }
+  table th { background: linear-gradient(135deg, #991B1B 0%, #7F1D1D 50%, #450A0A 100%); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 7px 10px; text-align: left; font-size: 9.5pt; letter-spacing: 0.3px; }
+  table td { padding: 5px 10px; border-bottom: 1px solid #FDE68A; vertical-align: top; line-height: 1.35; }
+  table tr:nth-child(even) td { background: #FFFBEB; }
+  table tr:last-child td { border-bottom: none; }
+  table td strong { color: #7F1D1D; font-weight: 700; }
+
+  .exam-focus { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border-left: 4px solid #D97706; padding: 8px 12px 8px 16px; margin: 8px 0; border-radius: 0 8px 8px 0; font-size: 9.5pt; position: relative; box-shadow: 0 2px 8px rgba(217,119,6,0.16); page-break-inside: avoid; }
+  .exam-focus::before { content: '⚡ Exam Focus'; position: absolute; top: -9px; left: 12px; background: linear-gradient(135deg, #D97706, #B45309); color: #fff; padding: 2px 9px; font-family: 'Cinzel', serif; font-size: 8pt; font-weight: 700; border-radius: 10px; box-shadow: 0 2px 6px rgba(180,83,9,0.35); }
+  .exam-focus strong { color: #78350F; }
+
+  .quick-rev { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); border: 1.5px dashed #0F766E; border-radius: 10px; padding: 11px 14px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; position: relative; }
+  .quick-rev::before { content: '📌 Quick Revision'; position: absolute; top: -10px; left: 14px; background: linear-gradient(135deg, #0F766E, #115E59); color: #fff; padding: 3px 12px; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; border-radius: 12px; box-shadow: 0 3px 8px rgba(15,118,110,0.35); }
+  .quick-rev ul { margin-top: 5px; margin-left: 14px; }
+  .quick-rev li { margin-bottom: 2px; color: #134E4A; }
+  .quick-rev li strong { color: #0F766E; }
+
+  .infobox { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); padding: 9px 13px 9px 17px; margin: 8px 0; font-size: 9.5pt; page-break-inside: avoid; border-radius: 0 8px 8px 0; line-height: 1.4; border-left: 4px solid #1E40AF; box-shadow: 0 3px 10px rgba(30,64,175,0.12); position: relative; }
+  .infobox::before { content: '★'; position: absolute; top: -7px; left: 7px; background: #EFF6FF; color: #1E40AF; font-size: 10pt; padding: 0 4px; border-radius: 50%; }
+  .infobox strong { color: #1E3A8A; font-family: 'Cinzel', serif; font-weight: 700; }
+
+  .page-footer { position: absolute; bottom: 6mm; left: 12mm; right: 12mm; display: flex; justify-content: space-between; align-items: center; font-size: 8.5pt; color: #92400E; font-family: 'Cormorant Garamond', serif; font-style: italic; border-top: 1px solid #FDE68A; padding-top: 4px; }
+  .page-footer::before { content: '❖ ❖ ❖'; position: absolute; left: 50%; transform: translateX(-50%); color: #D97706; font-size: 7.5pt; background: #fffdf9; padding: 0 9px; top: -7px; letter-spacing: 2.5px; }
+
+  .figcaption { font-family: 'Cormorant Garamond', serif; font-size: 9.5pt; color: #92400E; font-style: italic; margin: 4px 0 8px 0; text-align: center; padding: 4px 0; border-top: 1px solid #FDE68A; border-bottom: 1px solid #FDE68A; font-weight: 600; }
+  .source { font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; color: #92400E; margin-top: 8px; font-style: italic; text-align: right; }
+  .fill-note { background: #FFFBEB; border: 1px dashed #FDE68A; border-radius: 6px; padding: 8px 12px; margin: 8px 0 4px 0; font-size: 9pt; color: #78350F; font-family: 'Cormorant Garamond', serif; font-style: italic; text-align: center; }
+
+  /* Flowchart */
+  .flowchart { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 2px solid #D97706; border-radius: 12px; padding: 14px 10px 10px 10px; margin: 12px 0; position: relative; box-shadow: 0 5px 16px rgba(217,119,6,0.20); page-break-inside: avoid; }
+  .flowchart::before { content: '💹 Monetary Policy Tools'; position: absolute; top: -12px; left: 16px; background: linear-gradient(135deg, #D97706, #B45309); color: #fff; padding: 3px 12px; border-radius: 12px; font-family: 'Cinzel', serif; font-size: 9.5pt; font-weight: 700; box-shadow: 0 3px 8px rgba(180,83,9,0.4); }
+  .flow-row { display: flex; justify-content: space-between; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+  .flow-box { flex: 1; min-width: 80px; text-align: center; padding: 8px 6px; border-radius: 8px; color: #fff; font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; box-shadow: 0 3px 10px rgba(0,0,0,0.18); line-height: 1.2; border: 1.5px solid rgba(255,255,255,0.3); }
+  .f-repo   { background: linear-gradient(135deg, #B91C1C, #7F1D1D); }
+  .f-rev    { background: linear-gradient(135deg, #991B1B, #450A0A); }
+  .f-crr    { background: linear-gradient(135deg, #D97706, #B45309); }
+  .f-slr    { background: linear-gradient(135deg, #78350F, #451A03); }
+  .f-om     { background: linear-gradient(135deg, #0369A1, #0C4A6E); }
+  .f-msf    { background: linear-gradient(135deg, #6D28D9, #4C1D95); }
+
+  @media print { body { background: #fff; padding: 0; } .page { margin: 0; box-shadow: none; width: 100%; min-height: 297mm; } .page::before { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — BASIC CONCEPTS ============ -->
+<div class="page">
+  <div class="hero">
+    <h1>Economics — Complete Notes</h1>
+    <div class="hero-sub">Basic Concepts · National Income · Banking · Planning · Budget · Reforms</div>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item legend-blue">📘 Facts</span>
+    <span class="legend-item legend-red">🔴 Key Terms</span>
+    <span class="legend-item legend-amber">⚡ Exam</span>
+    <span class="legend-item legend-teal">📌 Revision</span>
+    <span class="legend-item legend-green">✓ Success</span>
+  </div>
+
+  <div class="section-header">SECTION 1 — Basic Concepts of Economics</div>
+
+  <h2><span class="num">1</span>What is Economics?</h2>
+
+  <p>Economics is the study of how people, businesses, and governments produce, distribute, and consume goods and services.</p>
+
+  <div class="infobox">
+    <strong>Father of Economics:</strong> Adam Smith · Wrote <em>"The Wealth of Nations"</em> in 1776
+  </div>
+
+  <h3>Two Branches</h3>
+  <table>
+    <tr><th>Branch</th><th>Study Of</th></tr>
+    <tr><td><strong>Microeconomics</strong></td><td>Individual units (a consumer, a firm, a market)</td></tr>
+    <tr><td><strong>Macroeconomics</strong></td><td>Whole economy (national income, inflation, unemployment)</td></tr>
+  </table>
+
+  <div class="fill-note">✦ Economics is about how we use limited resources to satisfy unlimited wants ✦</div>
+
+  <h2><span class="num">2</span>Basic Economic Terms — Goods & Services</h2>
+
+  <table>
+    <tr><th>Term</th><th>Meaning</th><th>Example</th></tr>
+    <tr><td><strong>Goods</strong></td><td>Tangible items</td><td>Food, clothes, cars</td></tr>
+    <tr><td><strong>Services</strong></td><td>Intangible activities</td><td>Banking, teaching</td></tr>
+    <tr><td><strong>Final Goods</strong></td><td>For final consumption</td><td>Bread, milk</td></tr>
+    <tr><td><strong>Intermediate Goods</strong></td><td>Used to make final goods</td><td>Flour, sugar</td></tr>
+    <tr><td><strong>Consumer Goods</strong></td><td>For direct use</td><td>Food, clothes</td></tr>
+    <tr><td><strong>Capital Goods</strong></td><td>Used to produce other goods</td><td>Machinery, tools</td></tr>
+    <tr><td><strong>Public Goods</strong></td><td>Provided by government</td><td>Roads, defense</td></tr>
+    <tr><td><strong>Private Goods</strong></td><td>Provided by private firms</td><td>Cars, phones</td></tr>
+  </table>
+
+  <h2><span class="num">3</span>Demand and Supply</h2>
+
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td><strong>Demand</strong></td><td>Amount of a product people are willing and able to buy</td></tr>
+    <tr><td><strong>Supply</strong></td><td>Total amount of a product available to consumers</td></tr>
+    <tr><td><strong>Law of Demand</strong></td><td>Higher prices → Less demand</td></tr>
+    <tr><td><strong>Law of Supply</strong></td><td>Higher prices → More supply</td></tr>
+    <tr><td><strong>Market Equilibrium</strong></td><td>Market demand = Market supply</td></tr>
+  </table>
+
+  <h2><span class="num">4</span>Inflation and Deflation</h2>
+
+  <table>
+    <tr><th>Term</th><th>Meaning</th><th>Effect</th></tr>
+    <tr><td><strong>Inflation</strong></td><td>Increase in general price level</td><td>Money loses value</td></tr>
+    <tr><td><strong>Deflation</strong></td><td>Decrease in general price level</td><td>Money gains value</td></tr>
+    <tr><td><strong>Stagflation</strong></td><td>High inflation + High unemployment</td><td>Worst situation</td></tr>
+    <tr><td><strong>Hyperinflation</strong></td><td>Very high inflation</td><td>Money becomes worthless</td></tr>
+    <tr><td><strong>Disinflation</strong></td><td>Slowdown in inflation rate</td><td>Prices still rise but slower</td></tr>
+    <tr><td><strong>Reflation</strong></td><td>Deliberate increase in money supply</td><td>To counter deflation</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — INFLATION TYPES + UNEMPLOYMENT ============ -->
+<div class="page">
+  <div class="page-header">Section 1 · Inflation Types + Unemployment + Poverty</div>
+
+  <h2><span class="num">5</span>Types of Inflation</h2>
+
+  <table>
+    <tr><th>Type</th><th>Rate</th></tr>
+    <tr><td><strong>Creeping Inflation</strong></td><td>Slow — 3% to 5%</td></tr>
+    <tr><td><strong>Walking Inflation</strong></td><td>Moderate — 5% to 10%</td></tr>
+    <tr><td><strong>Running Inflation</strong></td><td>Fast — 10% to 20%</td></tr>
+    <tr><td><strong>Galloping Inflation</strong></td><td>Very fast — 20% to 100%</td></tr>
+    <tr><td><strong>Hyperinflation</strong></td><td>Extremely fast — 100%+</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Also Remember:</strong> <strong>Demand-Pull Inflation</strong> — too much money chasing too few goods · <strong>Cost-Push Inflation</strong> — increase in cost of production
+  </div>
+
+  <h2><span class="num">6</span>Unemployment — Complete Data</h2>
+
+  <table>
+    <tr><th>Type</th><th>Meaning</th></tr>
+    <tr><td><strong>Frictional</strong></td><td>Between jobs</td></tr>
+    <tr><td><strong>Structural</strong></td><td>Due to change in technology</td></tr>
+    <tr><td><strong>Cyclical</strong></td><td>Due to recession</td></tr>
+    <tr><td><strong>Seasonal</strong></td><td>Due to season</td></tr>
+    <tr><td><strong>Disguised</strong></td><td>More people than needed</td></tr>
+    <tr><td><strong>Voluntary</strong></td><td>Not willing to work</td></tr>
+    <tr><td><strong>Involuntary</strong></td><td>Willing to work but no job</td></tr>
+    <tr><td><strong>Technological</strong></td><td>Due to automation</td></tr>
+    <tr><td><strong>Educated</strong></td><td>Educated but no job</td></tr>
+  </table>
+
+  <h2><span class="num">7</span>Poverty and Inequality</h2>
+
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td><strong>Poverty Line</strong></td><td>Minimum income needed to meet basic needs</td></tr>
+    <tr><td><strong>BPL</strong></td><td>Below Poverty Line</td></tr>
+    <tr><td><strong>APL</strong></td><td>Above Poverty Line</td></tr>
+    <tr><td><strong>Gini Coefficient</strong></td><td>Measure of income inequality (0 = perfect equality, 1 = perfect inequality)</td></tr>
+    <tr><td><strong>Lorenz Curve</strong></td><td>Graphical representation of income distribution</td></tr>
+    <tr><td><strong>HDI</strong></td><td>Human Development Index — Health, Education, Income</td></tr>
+  </table>
+
+  <div class="infobox">
+    <strong>HDI Measures 3 Things:</strong> Health (life expectancy) · Education (years of schooling) · Income (GNI per capita)
+  </div>
+
+  <h2><span class="num">8</span>Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> What is GDP? <em>Total value of goods and services produced within a country in a year</em></p>
+    <p><strong>Q2.</strong> What is GNP? <em>GDP + Net income from abroad</em></p>
+    <p><strong>Q3.</strong> What is NNP? <em>GNP – Depreciation</em></p>
+    <p><strong>Q4.</strong> What is Per Capita Income? <em>National Income ÷ Population</em></p>
+    <p><strong>Q5.</strong> What is inflation? <em>Increase in general price level</em></p>
+    <p><strong>Q6.</strong> What is deflation? <em>Decrease in general price level</em></p>
+    <p><strong>Q7.</strong> What is stagflation? <em>High inflation + High unemployment</em></p>
+    <p><strong>Q8.</strong> What is frictional unemployment? <em>Between jobs</em></p>
+    <p><strong>Q9.</strong> What is disguised unemployment? <em>More people than needed</em></p>
+    <p><strong>Q10.</strong> Full form of HDI? <em>Human Development Index</em></p>
+    <p><strong>Q11.</strong> What is Demand? <em>Willingness and ability to buy</em></p>
+    <p><strong>Q12.</strong> Market equilibrium? <em>Market demand = Market supply</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — NATIONAL INCOME ============ -->
+<div class="page">
+  <div class="section-header">SECTION 2 — National Income</div>
+
+  <h2><span class="num">9</span>What is National Income?</h2>
+
+  <p>National Income is the total value of all goods and services produced by a country in a year. It is the most important indicator of a country's economic performance.</p>
+
+  <h2><span class="num">10</span>National Income — Complete Data</h2>
+
+  <table>
+    <tr><th>Term</th><th>Full Form</th><th>Meaning</th></tr>
+    <tr><td><strong>GDP</strong></td><td>Gross Domestic Product</td><td>Total value of goods and services produced within a country in a year</td></tr>
+    <tr><td><strong>GNP</strong></td><td>Gross National Product</td><td>GDP + Net income from abroad</td></tr>
+    <tr><td><strong>NNP</strong></td><td>Net National Product</td><td>GNP – Depreciation</td></tr>
+    <tr><td><strong>NDP</strong></td><td>Net Domestic Product</td><td>GDP – Depreciation</td></tr>
+    <tr><td><strong>NI</strong></td><td>National Income</td><td>NNP at Factor Cost</td></tr>
+    <tr><td><strong>PCI</strong></td><td>Per Capita Income</td><td>National Income ÷ Population</td></tr>
+  </table>
+
+  <h2><span class="num">11</span>Key Formulas</h2>
+
+  <div class="quick-rev">
+    <ul>
+      <li><strong>GDP</strong> = C + I + G + (X – M)</li>
+      <li>C = Consumption · I = Investment · G = Government Spending · X = Exports · M = Imports</li>
+      <li><strong>GNP</strong> = GDP + Net Factor Income from Abroad (NFIA)</li>
+      <li><strong>NNP</strong> = GNP – Depreciation</li>
+      <li><strong>NNP at Factor Cost</strong> = NNP at Market Price – Indirect Taxes + Subsidies</li>
+      <li><strong>National Income</strong> = NNP at Factor Cost</li>
+      <li><strong>Per Capita Income</strong> = National Income ÷ Population</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">12</span>GDP vs GNP — Simple Difference</h2>
+
+  <table>
+    <tr><th>Concept</th><th>Simple Meaning</th></tr>
+    <tr><td><strong>GDP</strong></td><td>What is produced <em>inside</em> India</td></tr>
+    <tr><td><strong>GNP</strong></td><td>What is produced <em>by Indians</em> (inside or outside India)</td></tr>
+    <tr><td><strong>NNP</strong></td><td>GNP minus wear and tear of machinery</td></tr>
+    <tr><td><strong>Per Capita Income</strong></td><td>Average income per person</td></tr>
+  </table>
+
+  <h2><span class="num">13</span>Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> What is GDP? <em>Total value of goods and services produced within a country in a year</em></p>
+    <p><strong>Q2.</strong> What is GNP? <em>GDP + Net income from abroad</em></p>
+    <p><strong>Q3.</strong> What is NNP? <em>GNP – Depreciation</em></p>
+    <p><strong>Q4.</strong> What is Per Capita Income? <em>National Income ÷ Population</em></p>
+  </div>
+
+  <div class="fill-note">✦ National Income is the single most important indicator of a country's economic health ✦</div>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — BANKING + RBI ============ -->
+<div class="page">
+  <div class="section-header">SECTION 3 — Banking in India (RBI)</div>
+
+  <h2><span class="num">14</span>What is Banking?</h2>
+
+  <p>A bank is a financial institution that accepts deposits and gives loans.</p>
+
+  <h3>Types of Banks</h3>
+  <table>
+    <tr><th>Type</th><th>Examples</th></tr>
+    <tr><td><strong>Central Bank</strong></td><td>Reserve Bank of India (RBI)</td></tr>
+    <tr><td><strong>Commercial Banks</strong></td><td>SBI, PNB, HDFC, ICICI</td></tr>
+    <tr><td><strong>Cooperative Banks</strong></td><td>Urban and Rural</td></tr>
+    <tr><td><strong>Regional Rural Banks (RRBs)</strong></td><td>For rural areas</td></tr>
+    <tr><td><strong>Development Banks</strong></td><td>IDBI, SIDBI, NABARD</td></tr>
+    <tr><td><strong>Specialized Banks</strong></td><td>EXIM Bank, SIDBI</td></tr>
+    <tr><td><strong>Payment Banks</strong></td><td>Paytm Payments Bank</td></tr>
+    <tr><td><strong>Small Finance Banks</strong></td><td>Ujjivan, Equitas</td></tr>
+  </table>
+
+  <h2><span class="num">15</span>Reserve Bank of India (RBI)</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Established</strong></td><td><span class="critical">1st April 1935</span></td></tr>
+    <tr><td><strong>Nationalized</strong></td><td><span class="critical">1st January 1949</span></td></tr>
+    <tr><td><strong>Headquarters</strong></td><td>Mumbai</td></tr>
+    <tr><td><strong>First Governor</strong></td><td>Sir Osborne Smith</td></tr>
+    <tr><td><strong>First Indian Governor</strong></td><td>C.D. Deshmukh</td></tr>
+    <tr><td><strong>Current Governor (2025)</strong></td><td>Sanjay Malhotra</td></tr>
+    <tr><td><strong>Role</strong></td><td>Central Bank of India</td></tr>
+    <tr><td><strong>Functions</strong></td><td>Issue currency · Control credit · Manage forex · Banker's bank</td></tr>
+    <tr><td><strong>RBI Act</strong></td><td>Reserve Bank of India Act, 1934</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> RBI was established on <strong>1st April 1935</strong> and nationalized on <strong>1st January 1949</strong>. It is called the <strong>"Banker's Bank"</strong> of India.
+  </div>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — MONETARY POLICY ============ -->
+<div class="page">
+  <div class="page-header">Section 3 · Monetary Policy Tools</div>
+
+  <h2><span class="num">16</span>Monetary Policy Tools</h2>
+
+  <div class="flowchart">
+    <div class="flow-row">
+      <div class="flow-box f-repo">Repo Rate</div>
+      <div class="flow-box f-rev">Reverse Repo</div>
+      <div class="flow-box f-crr">CRR</div>
+      <div class="flow-box f-slr">SLR</div>
+      <div class="flow-box f-om">Open Market</div>
+      <div class="flow-box f-msf">MSF</div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Tool</th><th>Meaning</th><th>Effect</th></tr>
+    <tr><td><strong>Repo Rate</strong></td><td>Rate at which RBI lends to commercial banks</td><td>Increase → Loans become costly</td></tr>
+    <tr><td><strong>Reverse Repo Rate</strong></td><td>Rate at which RBI borrows from commercial banks</td><td>Increase → Banks park money with RBI</td></tr>
+    <tr><td><strong>CRR</strong></td><td>Cash Reserve Ratio — % of deposits banks keep with RBI</td><td>Increase → Less money to lend</td></tr>
+    <tr><td><strong>SLR</strong></td><td>Statutory Liquidity Ratio — % of deposits banks keep with themselves</td><td>Increase → Less money to lend</td></tr>
+    <tr><td><strong>Bank Rate</strong></td><td>Rate at which RBI lends long-term</td><td>Increase → Loans become costly</td></tr>
+    <tr><td><strong>Open Market Operations</strong></td><td>Buying and selling of government securities</td><td>Buy → More money in economy</td></tr>
+    <tr><td><strong>MSF</strong></td><td>Marginal Standing Facility — Emergency borrowing</td><td>Higher than repo rate</td></tr>
+  </table>
+
+  <h3>Simple Explanation</h3>
+  <ul>
+    <li><strong>Repo Rate:</strong> RBI lends to banks at this rate. If it increases, loans become expensive.</li>
+    <li><strong>Reverse Repo Rate:</strong> RBI borrows from banks. If it increases, banks park money with RBI.</li>
+    <li><strong>CRR:</strong> Banks must keep a percentage of deposits with RBI.</li>
+    <li><strong>SLR:</strong> Banks must keep a percentage of deposits with themselves.</li>
+    <li><strong>Bank Rate:</strong> Long-term lending rate.</li>
+    <li><strong>Open Market Operations:</strong> RBI buys/sells government securities to control money supply.</li>
+  </ul>
+
+  <h2><span class="num">17</span>Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> When was RBI established? <em>1st April 1935</em></p>
+    <p><strong>Q2.</strong> When was RBI nationalized? <em>1st January 1949</em></p>
+    <p><strong>Q3.</strong> Where is RBI headquarters? <em>Mumbai</em></p>
+    <p><strong>Q4.</strong> First Governor of RBI? <em>Sir Osborne Smith</em></p>
+    <p><strong>Q5.</strong> First Indian Governor? <em>C.D. Deshmukh</em></p>
+    <p><strong>Q6.</strong> What is Repo Rate? <em>Rate at which RBI lends to commercial banks</em></p>
+    <p><strong>Q7.</strong> What is Reverse Repo Rate? <em>Rate at which RBI borrows from commercial banks</em></p>
+    <p><strong>Q8.</strong> Full form of CRR? <em>Cash Reserve Ratio</em></p>
+    <p><strong>Q9.</strong> Full form of SLR? <em>Statutory Liquidity Ratio</em></p>
+    <p><strong>Q10.</strong> Full form of NABARD? <em>National Bank for Agriculture and Rural Development</em></p>
+    <p><strong>Q11.</strong> Full form of SIDBI? <em>Small Industries Development Bank of India</em></p>
+    <p><strong>Q12.</strong> Full form of EXIM Bank? <em>Export-Import Bank of India</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — ECONOMIC PLANNING ============ -->
+<div class="page">
+  <div class="section-header">SECTION 4 — Indian Economic Planning</div>
+
+  <h2><span class="num">18</span>What is Economic Planning?</h2>
+
+  <p>Economic Planning is the process by which the government sets goals and allocates resources to achieve economic development. India adopted Five Year Plans from 1951 to 2017.</p>
+
+  <div class="infobox">
+    <strong>Inspired By:</strong> Soviet Union (USSR) · <strong>Planning Commission:</strong> Established 1950 · Replaced by NITI Aayog in 2015
+  </div>
+
+  <h2><span class="num">19</span>Five Year Plans — Complete Data</h2>
+
+  <table>
+    <tr><th>Plan</th><th>Period</th><th>Focus</th><th>Result</th></tr>
+    <tr><td><strong>1st Plan</strong></td><td>1951-56</td><td>Agriculture</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>2nd Plan</strong></td><td>1956-61</td><td>Industry</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>3rd Plan</strong></td><td>1961-66</td><td>Self-reliance</td><td><span class="critical">Failed (War)</span></td></tr>
+    <tr><td><strong>Plan Holiday</strong></td><td>1966-69</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>4th Plan</strong></td><td>1969-74</td><td>Growth with stability</td><td>Partial success</td></tr>
+    <tr><td><strong>5th Plan</strong></td><td>1974-79</td><td>Poverty removal</td><td>Partial success</td></tr>
+    <tr><td><strong>Rolling Plan</strong></td><td>1978-80</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>6th Plan</strong></td><td>1980-85</td><td>Economic liberalization</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>7th Plan</strong></td><td>1985-90</td><td>Food, work, productivity</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>8th Plan</strong></td><td>1992-97</td><td>Human resource development</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>9th Plan</strong></td><td>1997-2002</td><td>Growth with social justice</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>10th Plan</strong></td><td>2002-07</td><td>Double per capita income</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>11th Plan</strong></td><td>2007-12</td><td>Faster and inclusive growth</td><td><span class="success">Success</span></td></tr>
+    <tr><td><strong>12th Plan</strong></td><td>2012-17</td><td>Faster, inclusive, sustainable growth</td><td>Last plan</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 7 — NITI AAYOG + BUDGET ============ -->
+<div class="page">
+  <div class="page-header">Section 4 · NITI Aayog + Section 5 · Budget</div>
+
+  <h2><span class="num">20</span>NITI Aayog — Complete Data</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Full Form</strong></td><td>National Institution for Transforming India</td></tr>
+    <tr><td><strong>Established</strong></td><td><span class="critical">1st January 2015</span></td></tr>
+    <tr><td><strong>Replaced</strong></td><td>Planning Commission</td></tr>
+    <tr><td><strong>Chairperson</strong></td><td>Prime Minister</td></tr>
+    <tr><td><strong>Vice-Chairperson</strong></td><td>Suman Bery (2025)</td></tr>
+    <tr><td><strong>CEO</strong></td><td>B.V.R. Subrahmanyam (2025)</td></tr>
+    <tr><td><strong>Headquarters</strong></td><td>New Delhi</td></tr>
+    <tr><td><strong>Function</strong></td><td>Policy think tank</td></tr>
+  </table>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> NITI Aayog replaced the Planning Commission on <strong>1st January 2015</strong>. It is a policy think tank — it does <strong>NOT</strong> allocate funds like the Planning Commission did.
+  </div>
+
+  <div class="section-header">SECTION 5 — Budget</div>
+
+  <h2><span class="num">21</span>What is a Budget?</h2>
+
+  <p>A budget is a financial statement of the government's estimated receipts and expenditure for a financial year.</p>
+
+  <div class="infobox">
+    <strong>Financial Year in India:</strong> 1st April to 31st March
+  </div>
+
+  <h3>Types of Budget</h3>
+  <table>
+    <tr><th>Type</th><th>Condition</th></tr>
+    <tr><td><strong>Balanced Budget</strong></td><td>Income = Expenditure</td></tr>
+    <tr><td><strong>Surplus Budget</strong></td><td>Income &gt; Expenditure</td></tr>
+    <tr><td><strong>Deficit Budget</strong></td><td>Income &lt; Expenditure</td></tr>
+  </table>
+
+  <h2><span class="num">22</span>Budget Terminology — Complete Data</h2>
+
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td><strong>Revenue Receipts</strong></td><td>Income from taxes, fees, interest</td></tr>
+    <tr><td><strong>Capital Receipts</strong></td><td>Income from loans, disinvestment</td></tr>
+    <tr><td><strong>Revenue Expenditure</strong></td><td>Spending on salaries, subsidies, interest</td></tr>
+    <tr><td><strong>Capital Expenditure</strong></td><td>Spending on infrastructure, roads, dams</td></tr>
+    <tr><td><strong>Fiscal Deficit</strong></td><td>Total Expenditure – Total Receipts (excluding borrowings)</td></tr>
+    <tr><td><strong>Revenue Deficit</strong></td><td>Revenue Expenditure – Revenue Receipts</td></tr>
+    <tr><td><strong>Primary Deficit</strong></td><td>Fiscal Deficit – Interest Payments</td></tr>
+    <tr><td><strong>Fiscal Policy</strong></td><td>Government's policy on taxation and spending</td></tr>
+    <tr><td><strong>Deficit Financing</strong></td><td>Borrowing to cover deficit</td></tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 7</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 8 — ECONOMIC REFORMS ============ -->
+<div class="page">
+  <div class="section-header">SECTION 6 — Economic Reforms</div>
+
+  <h2><span class="num">23</span>What are Economic Reforms?</h2>
+
+  <p>Economic Reforms are changes made to the economic policies of a country to improve its performance. India introduced major economic reforms in 1991.</p>
+
+  <h2><span class="num">24</span>LPG Reforms (1991) — Complete Data</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Year</strong></td><td><span class="critical">1991</span></td></tr>
+    <tr><td><strong>Prime Minister</strong></td><td>P.V. Narasimha Rao</td></tr>
+    <tr><td><strong>Finance Minister</strong></td><td>Dr. Manmohan Singh</td></tr>
+    <tr><td><strong>LPG</strong></td><td>Liberalization, Privatization, Globalization</td></tr>
+    <tr><td><strong>Purpose</strong></td><td>To solve balance of payments crisis</td></tr>
+    <tr><td><strong>Result</strong></td><td>Economic growth, Foreign investment</td></tr>
+  </table>
+
+  <h3>Simple Explanation</h3>
+  <ul>
+    <li><strong>Liberalization:</strong> Removing government restrictions on business.</li>
+    <li><strong>Privatization:</strong> Selling government-owned companies to private owners.</li>
+    <li><strong>Globalization:</strong> Integrating India's economy with the world economy.</li>
+  </ul>
+
+  <div class="exam-focus">
+    <strong>Exam Focus:</strong> The <strong>1991 LPG Reforms</strong> changed India's economy. They opened India to foreign investment and increased economic growth. Remember: <strong>P.V. Narasimha Rao</strong> (PM) and <strong>Dr. Manmohan Singh</strong> (FM).
+  </div>
+
+  <h2><span class="num">25</span>Previous Year Questions</h2>
+
+  <div class="columns">
+    <p><strong>Q1.</strong> When were the LPG Reforms introduced? <em>1991</em></p>
+    <p><strong>Q2.</strong> Who was the Prime Minister during LPG Reforms? <em>P.V. Narasimha Rao</em></p>
+    <p><strong>Q3.</strong> Who was the Finance Minister during LPG Reforms? <em>Dr. Manmohan Singh</em></p>
+    <p><strong>Q4.</strong> Full form of LPG? <em>Liberalization, Privatization, Globalization</em></p>
+    <p><strong>Q5.</strong> Why were LPG Reforms introduced? <em>To solve balance of payments crisis</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 8</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 9 — MASTER SUMMARY ============ -->
+<div class="page">
+  <div class="page-header">Master Summary — All Economics Facts</div>
+
+  <h2><span class="num">26</span>Master Summary — All Facts Combined</h2>
+
+  <div class="quick-rev">
+    <ul>
+      <li><strong>Father of Economics:</strong> Adam Smith (1776)</li>
+      <li><strong>GDP:</strong> Gross Domestic Product · <strong>GNP:</strong> Gross National Product · <strong>NNP:</strong> Net National Product · <strong>NDP:</strong> Net Domestic Product</li>
+      <li><strong>National Income:</strong> NNP at Factor Cost · <strong>Per Capita Income:</strong> NI ÷ Population</li>
+      <li><strong>Demand:</strong> Willingness + ability to buy · <strong>Supply:</strong> Total available · <strong>Equilibrium:</strong> Demand = Supply</li>
+      <li><strong>Inflation:</strong> Price rise · <strong>Deflation:</strong> Price fall · <strong>Stagflation:</strong> High inflation + High unemployment</li>
+      <li><strong>Unemployment Types:</strong> Frictional · Structural · Cyclical · Seasonal · Disguised</li>
+      <li><strong>Poverty:</strong> Poverty Line · BPL · APL · Gini Coefficient (0 = equal, 1 = unequal) · HDI</li>
+      <li><strong>RBI Established:</strong> 1st April 1935 · <strong>Nationalized:</strong> 1st January 1949 · <strong>HQ:</strong> Mumbai</li>
+      <li><strong>First RBI Governor:</strong> Sir Osborne Smith · <strong>First Indian:</strong> C.D. Deshmukh</li>
+      <li><strong>Monetary Tools:</strong> Repo Rate · Reverse Repo · CRR · SLR · Bank Rate · OMO · MSF</li>
+      <li><strong>Financial Year:</strong> 1st April to 31st March</li>
+      <li><strong>Balanced Budget:</strong> Income = Expenditure · <strong>Surplus:</strong> Income &gt; Expenditure · <strong>Deficit:</strong> Income &lt; Expenditure</li>
+      <li><strong>Fiscal Deficit:</strong> Total Exp – Total Receipts (excl. borrowings) · <strong>Revenue Deficit:</strong> Rev Exp – Rev Receipts · <strong>Primary Deficit:</strong> FD – Interest</li>
+      <li><strong>1st Five Year Plan:</strong> 1951-56 (Agriculture) · <strong>2nd:</strong> 1956-61 (Industry) · <strong>3rd:</strong> 1961-66 (Self-reliance)</li>
+      <li><strong>NITI Aayog:</strong> Established 1st January 2015 · Replaced Planning Commission · Chairperson: PM</li>
+      <li><strong>GST Introduced:</strong> 1st July 2017 · <strong>Amendment:</strong> 101st Constitutional · <strong>Slabs:</strong> 5%, 12%, 18%, 28%</li>
+      <li><strong>LPG Reforms:</strong> 1991 · PM: P.V. Narasimha Rao · FM: Dr. Manmohan Singh</li>
+      <li><strong>IMF HQ:</strong> Washington D.C. · <strong>World Bank:</strong> Washington D.C. · <strong>WTO:</strong> Geneva · <strong>UN:</strong> New York</li>
+      <li><strong>WHO:</strong> Geneva · <strong>ILO:</strong> Geneva · <strong>UNESCO:</strong> Paris · <strong>UNICEF:</strong> New York · <strong>FAO:</strong> Rome</li>
+      <li><strong>OPEC:</strong> Vienna · <strong>SAARC:</strong> Kathmandu · <strong>ASEAN:</strong> Jakarta</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">27</span>Direct &amp; Indirect Tax</h2>
+
+  <table>
+    <tr><th>Type</th><th>Examples</th></tr>
+    <tr><td><strong>Direct Tax</strong></td><td>Income Tax, Corporate Tax</td></tr>
+    <tr><td><strong>Indirect Tax</strong></td><td>GST, Customs Duty</td></tr>
+  </table>
+
+  <h2><span class="num">28</span>GST (Goods and Services Tax)</h2>
+
+  <table>
+    <tr><th>Feature</th><th>Detail</th></tr>
+    <tr><td><strong>Introduced</strong></td><td>1st July 2017</td></tr>
+    <tr><td><strong>Amendment</strong></td><td>101st Constitutional Amendment</td></tr>
+    <tr><td><strong>Council Chairperson</strong></td><td>Union Finance Minister</td></tr>
+    <tr><td><strong>Slabs</strong></td><td>5%, 12%, 18%, 28%</td></tr>
+  </table>
+
+  <p class="source">Source: Economics — Complete Notes (SSC CHSL Syllabus)</p>
+
+  <div class="page-footer">
+    <span>Economics — Complete Guide</span>
+    <span>Page 9</span>
+  </div>
+</div>
+
+</body>
+</html>

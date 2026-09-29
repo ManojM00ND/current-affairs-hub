@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 12: Election Commission & Electoral Reforms</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Lora:wght@500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Lora', 'Inter', serif;
+    color: #1a1a1a;
+    line-height: 1.65;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(55,48,163,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(55,48,163,0.14), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt;
+    color: #3730A3;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    border-top: 2px solid #C7D2FE;
+    padding-top: 3mm;
+    z-index: 5;
+  }
+
+  /* TITLE BANNER */
+  .title-banner {
+    background: linear-gradient(135deg, #3730A3 0%, #6D28D9 30%, #BE185D 60%, #C2410C 100%);
+    color: #fff;
+    padding: 38px 25px 32px 25px;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(55,48,163,0.5), inset 0 -5px 15px rgba(0,0,0,0.2);
+    border: 3px solid rgba(255,255,255,0.25);
+  }
+  .title-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(253,230,138,0.15) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  .title-banner .crown {
+    position: absolute;
+    top: 14px; left: 22px;
+    font-size: 26pt;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+    z-index: 2;
+  }
+  .title-banner .shield {
+    position: absolute;
+    bottom: 14px; right: 22px;
+    font-size: 26pt;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+    z-index: 2;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 40px rgba(253,230,138,0.6);
+    line-height: 1.1;
+    position: relative;
+    z-index: 2;
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    opacity: 1;
+    letter-spacing: 1.2px;
+    color: #FDE68A;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .title-banner .tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 22pt;
+    font-weight: 700;
+    margin-top: 14px;
+    color: #FEF3C7;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* SECTION TITLES */
+  .section { margin-bottom: 16px; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    font-weight: 900;
+    padding: 14px 24px;
+    border-radius: 16px;
+    color: #fff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.25), inset 0 -3px 8px rgba(0,0,0,0.15);
+    letter-spacing: 0.5px;
+    border: 2px solid rgba(255,255,255,0.2);
+    line-height: 1.2;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 8px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
+    border-radius: 16px 0 0 16px;
+  }
+  .section-title::after {
+    content: '★';
+    position: absolute;
+    right: 16px; top: 50%;
+    transform: translateY(-50%);
+    color: #FDE68A;
+    font-size: 16pt;
+    text-shadow: 0 0 15px #FDE68A;
+  }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-amber  { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-navy   { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+
+  /* ESSAY BOX */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #EEF2FF 100%);
+    border: 2px solid #C7D2FE;
+    border-radius: 18px;
+    padding: 16px 22px;
+    margin: 12px 0;
+    line-height: 1.75;
+    box-shadow: 0 6px 20px rgba(55,48,163,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+    position: relative;
+    font-family: 'Lora', serif;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 16px; bottom: 16px;
+    width: 5px;
+    background: linear-gradient(180deg, #3730A3, #6D28D9);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 0 15px rgba(55,48,163,0.5);
+  }
+  .essay p { margin-bottom: 8px; padding-left: 10px; }
+  .essay p:last-child { margin-bottom: 0; }
+  .essay strong { color: #3730A3; font-weight: 700; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+
+  /* BOXES */
+  .box {
+    padding: 14px 18px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.7);
+    position: relative;
+  }
+  .box-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 12pt;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+  }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 8px solid #3730A3; }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 8px solid #6D28D9; }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 8px solid #BE185D; }
+  .box-orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 8px solid #C2410C; }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 8px solid #B45309; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 8px solid #065F46; }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 8px solid #0F766E; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 8px solid #0369A1; }
+  .box-navy   { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-left: 8px solid #1E3A8A; }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 8px solid #B91C1C; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 12px 0;
+    font-size: 9.5pt;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15), 0 0 0 2px rgba(55,48,163,0.08);
+    font-family: 'Lora', serif;
+  }
+  th {
+    background: linear-gradient(90deg, #3730A3, #6366F1);
+    color: #fff;
+    padding: 12px 14px;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 10.5pt;
+    letter-spacing: 0.4px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  }
+  td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #EEF2FF; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #E0E7FF; }
+  td strong { color: #3730A3; font-weight: 700; font-family: 'Poppins', sans-serif; font-size: 9.5pt; }
+
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .table-orange th { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .table-amber  th { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-teal   th { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-navy   th { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+
+  /* KEY POINT */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 3px dashed #F59E0B;
+    padding: 16px 20px;
+    border-radius: 16px;
+    margin: 14px 0;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(245,158,11,0.30), inset 0 1px 0 rgba(255,255,255,0.9);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -16px; left: 20px;
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 14pt;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  }
+  .keypoint strong { color: #B45309; font-weight: 800; font-family: 'Poppins', sans-serif; }
+
+  /* SIMPLE MEANING */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-left: 9px solid #065F46;
+    border-radius: 16px;
+    padding: 14px 20px 14px 52px;
+    margin: 14px 0;
+    position: relative;
+    color: #064E3B;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    box-shadow: 0 6px 20px rgba(16,185,129,0.22), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    font-size: 18pt;
+  }
+
+  /* HIGHLIGHTS */
+  .hl-indigo { background: linear-gradient(180deg, transparent 50%, #A5B4FC 50%); padding: 0 5px; font-weight: 800; color: #312E81; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-purple { background: linear-gradient(180deg, transparent 50%, #C4B5FD 50%); padding: 0 5px; font-weight: 800; color: #4C1D95; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-pink   { background: linear-gradient(180deg, transparent 50%, #F9A8D4 50%); padding: 0 5px; font-weight: 800; color: #831843; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-orange { background: linear-gradient(180deg, transparent 50%, #FDBA74 50%); padding: 0 5px; font-weight: 800; color: #7C2D12; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-amber  { background: linear-gradient(180deg, transparent 50%, #FCD34D 50%); padding: 0 5px; font-weight: 800; color: #78350F; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-green  { background: linear-gradient(180deg, transparent 50%, #6EE7B7 50%); padding: 0 5px; font-weight: 800; color: #064E3B; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-teal   { background: linear-gradient(180deg, transparent 50%, #5EEAD4 50%); padding: 0 5px; font-weight: 800; color: #134E4A; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 50%, #7DD3FC 50%); padding: 0 5px; font-weight: 800; color: #0C4A6E; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-navy   { background: linear-gradient(180deg, transparent 50%, #BFDBFE 50%); padding: 0 5px; font-weight: 800; color: #1E3A8A; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+  .hl-red    { background: linear-gradient(180deg, transparent 50%, #FCA5A5 50%); padding: 0 5px; font-weight: 800; color: #7F1D1D; font-family: 'Poppins', sans-serif; font-size: 10pt; }
+
+  /* H3 */
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 800;
+    color: #3730A3;
+    margin: 18px 0 10px;
+    padding-left: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 24px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #3730A3, #6D28D9);
+    box-shadow: 0 0 15px rgba(55,48,163,0.6);
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 18px;
+    padding: 18px;
+    background: linear-gradient(90deg, #3730A3, #6D28D9, #BE185D);
+    color: #fff;
+    border-radius: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 30px rgba(55,48,163,0.4), inset 0 -3px 8px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.25);
+  }
+
+  ul, ol { margin-left: 20px; margin-bottom: 6px; }
+  li { margin-bottom: 5px; font-family: 'Lora', serif; }
+  p { margin-bottom: 6px; }
+  strong { color: #3730A3; font-weight: 700; font-family: 'Poppins', sans-serif; }
+
+  /* ICON CIRCLE */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3730A3, #6D28D9);
+    color: #fff;
+    font-size: 13pt;
+    margin-right: 6px;
+    box-shadow: 0 4px 12px rgba(55,48,163,0.5);
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+
+  /* DROP CAP */
+  .dropcap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 34pt;
+    font-weight: 900;
+    color: #3730A3;
+    float: left;
+    line-height: 0.9;
+    padding-right: 10px;
+    padding-top: 4px;
+    text-shadow: 2px 2px 4px rgba(55,48,163,0.3);
+  }
+
+  /* NUMBER BADGE */
+  .num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3730A3, #6D28D9);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 14pt;
+    margin-right: 10px;
+    box-shadow: 0 4px 12px rgba(55,48,163,0.5);
+    border: 2px solid #fff;
+  }
+
+  /* PARTY CARD */
+  .party-card {
+    background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+    border: 2px solid #A855F7;
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 16px rgba(168,85,247,0.20);
+    position: relative;
+  }
+  .party-card .party-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 12pt;
+    color: #6D28D9;
+    margin-bottom: 4px;
+  }
+  .party-card .party-symbol {
+    font-family: 'Dancing Script', cursive;
+    font-size: 16pt;
+    font-weight: 700;
+    color: #BE185D;
+  }
+  .party-card .party-info {
+    font-size: 9.5pt;
+    color: #4B5563;
+    margin-top: 3px;
+  }
+
+  /* BADGE */
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #3730A3, #6D28D9);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9pt;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 14px;
+    margin-left: 6px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 3px 10px rgba(55,48,163,0.4);
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 12.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <span class="crown">🗳️</span>
+    <span class="shield">🇮🇳</span>
+    <h1>Election Commission & Electoral Reforms</h1>
+    <h2>CHAPTER 12 — ARTICLE 324</h2>
+    <div class="tagline">The Guardian of Democracy</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-indigo">🗳️ 12.1 What is the Election Commission of India?</div>
+
+    <div class="essay">
+      <p class="dropcap">The <strong>Election Commission of India (ECI)</strong> is a constitutional body responsible for conducting <span class="hl-indigo">free and fair elections</span> in India. It is an <strong>independent body</strong>, not under the control of the executive.</p>
+      <p>Think of the ECI as the "referee" of Indian democracy — it ensures that elections are conducted fairly and that no one cheats the system.</p>
+    </div>
+
+    <div class="box box-indigo">
+      <div class="box-title">📜 Constitutional Basis</div>
+      <p><strong>Article 324:</strong> Superintendence, direction, and control of elections to Parliament, State Legislatures, and the offices of President and Vice-President shall be vested in the Election Commission.</p>
+    </div>
+
+    <div class="simple">
+      ECI = The referee of Indian elections. It conducts free and fair elections under Article 324.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Election Commission & Electoral Reforms — Complete Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 12.2 Composition ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-purple">🏛️ 12.2 Composition of the Election Commission</div>
+
+    <table class="table-purple">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Article</strong></td><td><span class="hl-purple">324</span></td></tr>
+      <tr><td><strong>Established</strong></td><td>25th January 1950</td></tr>
+      <tr><td><strong>Headquarters</strong></td><td>Nirvachan Sadan, New Delhi</td></tr>
+      <tr><td><strong>First Chief Election Commissioner</strong></td><td>Sukumar Sen</td></tr>
+      <tr><td><strong>Current CEC (2025)</strong></td><td>Rajiv Kumar</td></tr>
+      <tr><td><strong>Composition</strong></td><td>Originally 1 member. Now <span class="hl-pink">3 members</span> (1 Chief Election Commissioner + 2 Election Commissioners).</td></tr>
+      <tr><td><strong>Appointment</strong></td><td>By the President</td></tr>
+      <tr><td><strong>Term</strong></td><td>6 years or until age 65 years, whichever is earlier.</td></tr>
+      <tr><td><strong>Removal</strong></td><td>Same as a Supreme Court Judge (Impeachment by 2/3rd majority of both Houses).</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> The President can appoint <span class="hl-purple">Regional Commissioners</span> after consulting the Election Commission.
+    </div>
+
+    <div class="simple">
+      ECI has 3 members — 1 CEC + 2 ECs. Term = 6 years or until 65. Appointed by President. Removed like SC judge.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Election Commission & Electoral Reforms — Complete Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — 12.3 Powers and Functions ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-pink">⚡ 12.3 Powers and Functions of the Election Commission</div>
+
+    <table class="table-pink">
+      <tr><th>Power / Function</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Superintendence</strong></td><td>Controls the entire election process.</td></tr>
+      <tr><td><strong>Preparation of Electoral Rolls</strong></td><td>Prepares and revises the voter list.</td></tr>
+      <tr><td><strong>Recognition of Political Parties</strong></td><td>Recognizes political parties as National or State parties.</td></tr>
+      <tr><td><strong>Symbols</strong></td><td>Allots symbols to political parties and candidates.</td></tr>
+      <tr><td><strong>Election Schedule</strong></td><td>Announces the election schedule (dates, phases, etc.).</td></tr>
+      <tr><td><strong>Model Code of Conduct</strong></td><td>Enforces the Model Code of Conduct during elections.</td></tr>
+      <tr><td><strong>Disqualification of Candidates</strong></td><td>Advises the President/Governor on disqualification of candidates.</td></tr>
+      <tr><td><strong>Election Petitions</strong></td><td>Decides on election petitions (through the High Court).</td></tr>
+      <tr><td><strong>Advisory Role</strong></td><td>Advises the President/Governor on matters related to elections.</td></tr>
+    </table>
+
+    <div class="simple">
+      ECI controls everything about elections — voter lists, party recognition, symbols, schedules, and the Model Code of Conduct.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Election Commission & Electoral Reforms — Complete Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — 12.4 Electoral Reforms ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-orange">📜 12.4 Electoral Reforms in India</div>
+
+    <div class="essay">
+      <p><strong>Electoral reforms</strong> are changes made to the electoral system to make it more free, fair, and transparent. They have evolved over decades to strengthen Indian democracy.</p>
+    </div>
+
+    <h3>📅 12.4.1 Key Electoral Reforms (Before 2000)</h3>
+    <table class="table-orange">
+      <tr><th>Year</th><th>Reform</th></tr>
+      <tr><td><strong>1950</strong></td><td>Election Commission established.</td></tr>
+      <tr><td><strong>1961</strong></td><td>Election Commission made a multi-member body.</td></tr>
+      <tr><td><strong>1988</strong></td><td>Anti-Defection Law (52nd Amendment) — disqualification of defectors.</td></tr>
+      <tr><td><strong>1989</strong></td><td>Voting age reduced from 21 to 18 (61st Amendment).</td></tr>
+      <tr><td><strong>1992</strong></td><td>73rd and 74th Amendments — Panchayat and Municipal elections.</td></tr>
+      <tr><td><strong>1996</strong></td><td>Model Code of Conduct made more stringent.</td></tr>
+    </table>
+
+    <h3>📅 12.4.2 Key Electoral Reforms (2000–2025)</h3>
+    <table class="table-amber">
+      <tr><th>Year</th><th>Reform</th></tr>
+      <tr><td><strong>2002</strong></td><td>Election and Other Related Laws (Amendment) Act — Disclosure of criminal background, assets, and liabilities by candidates.</td></tr>
+      <tr><td><strong>2003</strong></td><td>Representation of the People (Amendment) Act — Candidates with more than 2 children disqualified from Panchayat elections.</td></tr>
+      <tr><td><strong>2004</strong></td><td>Election Commission's Guidelines — Candidates must declare their criminal antecedents.</td></tr>
+      <tr><td><strong>2010</strong></td><td>Election Commission's Guidelines — <span class="hl-amber">NOTA (None of the Above)</span> option introduced.</td></tr>
+      <tr><td><strong>2013</strong></td><td>Supreme Court Judgment — Immediate disqualification of convicted legislators.</td></tr>
+      <tr

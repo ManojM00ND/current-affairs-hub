@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 6: The Parliament</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Decorative bubbles */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(15,118,110,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(15,118,110,0.10), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #6B7280;
+    border-top: 2px dashed #E5E7EB;
+    padding-top: 3mm;
+    font-family: 'Poppins', sans-serif;
+    z-index: 5;
+  }
+
+  /* ============ TITLE BANNER ============ */
+  .title-banner {
+    background: linear-gradient(135deg, #0F766E 0%, #0369A1 50%, #3730A3 100%);
+    color: #fff;
+    padding: 30px 25px 26px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(15,118,110,0.35);
+  }
+  .title-banner::before {
+    content: '🏛️';
+    position: absolute;
+    top: 10px; left: 20px;
+    font-size: 22pt;
+    opacity: 0.7;
+  }
+  .title-banner::after {
+    content: '⚖️';
+    position: absolute;
+    bottom: 10px; right: 20px;
+    font-size: 22pt;
+    opacity: 0.7;
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 17pt;
+    margin-top: 10px;
+    color: #FDE68A;
+  }
+
+  /* ============ SECTION TITLES ============ */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    padding: 11px 18px;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    letter-spacing: 0.3px;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 12px 0 0 12px;
+  }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+  .t-amber  { background: linear-gradient(90deg, #B45309, #F59E0B); }
+
+  /* ============ ESSAY BOX ============ */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #F0FDFA 100%);
+    border: 1.5px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px; bottom: 12px;
+    width: 3px;
+    background: linear-gradient(180deg, #0F766E, #0369A1);
+    border-radius: 0 4px 4px 0;
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+
+  /* ============ BOXES ============ */
+  .box {
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 6px solid #0F766E; }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 6px solid #0369A1; }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 6px solid #3730A3; }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 6px solid #6D28D9; }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 6px solid #065F46; }
+  .box-orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 6px solid #C2410C; }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 6px solid #B91C1C; }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 6px solid #BE185D; }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 6px solid #B45309; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 8px 0;
+    font-size: 9.5pt;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+  th {
+    background: linear-gradient(90deg, #0F766E, #14B8A6);
+    color: #fff;
+    padding: 9px 11px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 9.8pt;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 7px 11px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #F0FDFA; }
+  tr:last-child td { border-bottom: none; }
+
+  .table-teal   th { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-orange th { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* ============ KEY POINT ============ */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 2px dashed #F59E0B;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin: 10px 0;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(245,158,11,0.15);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -12px; left: 16px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12pt;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .keypoint strong { color: #B45309; }
+
+  /* ============ SIMPLE MEANING BOX ============ */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-radius: 12px;
+    padding: 12px 16px 12px 44px;
+    margin: 10px 0;
+    position: relative;
+    font-style: italic;
+    color: #064E3B;
+    box-shadow: 0 3px 10px rgba(16,185,129,0.12);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 14pt;
+    font-style: normal;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .hl-teal   { background: linear-gradient(180deg, transparent 55%, #99F6E4 55%); padding: 0 4px; font-weight: 700; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 55%, #BAE6FD 55%); padding: 0 4px; font-weight: 700; }
+  .hl-indigo { background: linear-gradient(180deg, transparent 55%, #C7D2FE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-purple { background: linear-gradient(180deg, transparent 55%, #DDD6FE 55%); padding: 0 4px; font-weight: 700; }
+  .hl-green  { background: linear-gradient(180deg, transparent 55%, #A7F3D0 55%); padding: 0 4px; font-weight: 700; }
+  .hl-orange { background: linear-gradient(180deg, transparent 55%, #FED7AA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-red    { background: linear-gradient(180deg, transparent 55%, #FECACA 55%); padding: 0 4px; font-weight: 700; }
+  .hl-amber  { background: linear-gradient(180deg, transparent 55%, #FDE68A 55%); padding: 0 4px; font-weight: 700; }
+
+  /* ============ RIBBON ============ */
+  .ribbon {
+    display: inline-block;
+    background: linear-gradient(90deg, #0F766E, #14B8A6);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+    box-shadow: 0 2px 6px rgba(15,118,110,0.3);
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+  }
+
+  /* ============ H3 STYLES ============ */
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    color: #1F2937;
+    margin: 12px 0 6px;
+    padding-left: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 18px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #0F766E, #0369A1);
+  }
+
+  /* ============ FOOTER BANNER ============ */
+  .footer {
+    text-align: center;
+    margin-top: 14px;
+    padding: 12px;
+    background: linear-gradient(90deg, #0F766E, #0369A1, #3730A3);
+    color: #fff;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(15,118,110,0.25);
+  }
+
+  ul, ol { margin-left: 18px; margin-bottom: 6px; }
+  li { margin-bottom: 4px; }
+  p { margin-bottom: 6px; }
+  strong { color: #111; }
+
+  /* ============ ICON CIRCLE ============ */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0F766E, #0369A1);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 2px 6px rgba(15,118,110,0.3);
+  }
+
+  /* ============ STAT CARDS ============ */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #CCFBF1, #99F6E4);
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+    border: 2px solid #0F766E;
+    box-shadow: 0 3px 10px rgba(15,118,110,0.15);
+  }
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    font-weight: 900;
+    color: #0F766E;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-card .label {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #134E4A;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ============ HOUSE CARDS ============ */
+  .house-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .house-card {
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  }
+  .house-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .house-card ul { font-size: 9.3pt; }
+  .house-card p { font-size: 9pt; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 6.1 + 6.2 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>THE PARLIAMENT</h1>
+    <h2>🏛️ Chapter 6 — The Supreme Legislative Body of India</h2>
+    <div class="tagline">✨ President • Rajya Sabha • Lok Sabha ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-teal">📖 6.1 What is Parliament?</div>
+
+    <div class="essay">
+      <p>The <strong>Parliament of India</strong> is the <strong>supreme legislative body</strong> of the Union. Think of it as the "law-making factory" of the country — it makes the rules that everyone in India must follow.</p>
+      <p>The Parliament consists of <strong>three parts</strong>:</p>
+      <ul>
+        <li>👑 <strong>The President</strong> — not a member of either House, but an integral part</li>
+        <li>🏛️ <strong>The Rajya Sabha</strong> — Council of States (Upper House)</li>
+        <li>🏛️ <strong>The Lok Sabha</strong> — House of the People (Lower House)</li>
+      </ul>
+    </div>
+
+    <div class="box box-teal">
+      <div class="box-title">📜 Article 79 Says:</div>
+      <p><em>"There shall be a Parliament for the Union which shall consist of the President and two Houses."</em></p>
+    </div>
+
+    <div class="simple">
+      Parliament = President + Rajya Sabha + Lok Sabha. Together, they make laws for India.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-amber">👑 6.2 The President and Parliament</div>
+
+    <div class="essay">
+      <p>The <strong>President is not a member</strong> of either House. But the President <strong>is an integral part</strong> of Parliament. This means the President plays a key role in how Parliament works.</p>
+    </div>
+
+    <div class="box box-amber">
+      <div class="box-title">👑 The President's Role in Parliament</div>
+      <ul>
+        <li>📢 <strong>Summons and prorogues</strong> both Houses (opens and closes sessions)</li>
+        <li>🏛️ <strong>Dissolves</strong> the Lok Sabha</li>
+        <li>✍️ Gives <strong>assent</strong> to bills (approves laws)</li>
+        <li>🎭 <strong>Nominates members</strong> to both Houses</li>
+        <li>📜 <strong>Promulgates Ordinances</strong> (emergency laws) when Parliament is not in session</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      President can't vote in Parliament, but he opens/closes sessions, approves bills, and nominates some members.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Parliament — Essay Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 6.3 Rajya Sabha ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">🏛️ 6.3 The Rajya Sabha (Council of States) — Article 80</div>
+
+    <div class="essay">
+      <p>The <strong>Rajya Sabha</strong> is the <strong>Upper House</strong> of Parliament. It represents the <strong>States of India</strong>. Think of it as the "house of states" — where states get a voice at the national level.</p>
+    </div>
+
+    <h3>📊 Composition</h3>
+    <table class="table-sky">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Maximum Strength</strong></td><td><span class="hl-sky">250</span></td></tr>
+      <tr><td><strong>Members Elected by States/UTs</strong></td><td>238</td></tr>
+      <tr><td><strong>Members Nominated by President</strong></td><td>12</td></tr>
+      <tr><td><strong>Current Strength</strong></td><td>245</td></tr>
+      <tr><td><strong>Nominated Members From</strong></td><td>Literature, Science, Art, Social Service</td></tr>
+      <tr><td><strong>Term</strong></td><td><span class="hl-sky">6 years</span></td></tr>
+      <tr><td><strong>Election</strong></td><td>Indirectly elected by elected MLAs of States/UTs</td></tr>
+      <tr><td><strong>Presiding Officer</strong></td><td>Vice-President of India (ex-officio Chairman)</td></tr>
+      <tr><td><strong>Deputy Chairman</strong></td><td>Elected by Rajya Sabha members</td></tr>
+    </table>
+
+    <h3>🔑 Key Points About Rajya Sabha</h3>
+    <div class="box box-sky">
+      <ul>
+        <li>🏛️ <strong>Permanent House:</strong> Cannot be dissolved. Only 1/3rd of members retire every 2 years.</li>
+        <li>🗳️ <strong>Elected Members:</strong> Represent States and Union Territories.</li>
+        <li>🎭 <strong>Nominated Members:</strong> 12 members nominated by the President for contributions to literature, science, art, and social service.</li>
+        <li>❌ <strong>Voting:</strong> Nominated members <strong>cannot vote</strong> in the election of the President.</li>
+        <li>💰 <strong>Money Bills:</strong> Rajya Sabha can only make <strong>recommendations</strong> (within 14 days). It cannot reject or amend Money Bills.</li>
+      </ul>
+    </div>
+
+    <h3>⭐ Exclusive Powers of Rajya Sabha</h3>
+    <div class="box box-indigo">
+      <ul>
+        <li>📜 Can declare a subject in the State List as a subject of national importance (<strong>Article 249</strong>)</li>
+        <li>🏛️ Can create new <strong>All India Services</strong> (<strong>Article 312</strong>)</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      Rajya Sabha = House of States. It's permanent (never dissolved). Members serve 6 years. VP is the Chairman.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Parliament — Essay Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — 6.4 Lok Sabha ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-indigo">🏛️ 6.4 The Lok Sabha (House of the People) — Article 81</div>
+
+    <div class="essay">
+      <p>The <strong>Lok Sabha</strong> is the <strong>Lower House</strong> of Parliament. It represents the <strong>people of India</strong>. Think of it as the "house of the people" — where citizens get a direct voice through their elected representatives.</p>
+    </div>
+
+    <h3>📊 Composition</h3>
+    <table class="table-indigo">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Maximum Strength</strong></td><td><span class="hl-indigo">552</span></td></tr>
+      <tr><td><strong>Members Elected from States</strong></td><td>530</td></tr>
+      <tr><td><strong>Members from Union Territories</strong></td><td>20</td></tr>
+      <tr><td><strong>Anglo-Indian Members (Nominated)</strong></td><td>2 <em>(Expired in 2020)</em></td></tr>
+      <tr><td><strong>Current Strength</strong></td><td>543</td></tr>
+      <tr><td><strong>Term</strong></td><td><span class="hl-indigo">5 years</span></td></tr>
+      <tr><td><strong>Election</strong></td><td>Directly elected by the people (Universal Adult Franchise)</td></tr>
+      <tr><td><strong>Presiding Officer</strong></td><td>Speaker</td></tr>
+      <tr><td><strong>Deputy Speaker</strong></td><td>Elected by Lok Sabha members</td></tr>
+    </table>
+
+    <h3>🔑 Key Points About Lok Sabha</h3>
+    <div class="box box-indigo">
+      <ul>
+        <li>🏛️ <strong>Temporary House:</strong> Can be dissolved by the President on the advice of the Prime Minister.</li>
+        <li>🎙️ <strong>Speaker:</strong> The presiding officer. He/She decides whether a bill is a Money Bill.</li>
+        <li>🥈 <strong>Deputy Speaker:</strong> Elected by members. Presides in the absence of the Speaker.</li>
+        <li>💰 <strong>Money Bills:</strong> Can <strong>only be introduced</strong> in the Lok Sabha.</li>
+        <li>🗳️ <strong>No-Confidence Motion:</strong> Can <strong>only be introduced</strong> in the Lok Sabha.</li>
+        <li>🚨 <strong>National Emergency:</strong> Can be approved only by the Lok Sabha (Rajya Sabha has no role in the initial approval, though it can approve its continuation).</li>
+      </ul>
+    </div>
+
+    <div class="simple">
+      Lok Sabha = House of the People. It can be dissolved. Members serve 5 years. Speaker is the head. Money Bills start here.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Parliament — Essay Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — 6.5 Difference RS vs LS ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-purple">⚖️ 6.5 Difference Between Rajya Sabha and Lok Sabha</div>
+
+    <table class="table-purple">
+      <tr><th>📌 Feature</th><th>🏛️ Rajya Sabha</th><th>🏛️ Lok Sabha</th></tr>
+      <tr><td><strong>Nature</strong></td><td><span class="hl-teal">Permanent</span> (cannot be dissolved)</td><td><span class="hl-red">Temporary</span> (can be dissolved)</td></tr>
+      <tr><td><strong>Maximum Strength</strong></td><td>250</td><td>552</td></tr>
+      <tr><td><strong>Current Strength</strong></td><td>245</td><td>543</td></tr>
+      <tr><td><strong>Term of Members</strong></td><td>6 years</td><td>5 years</td></tr>
+      <tr><td><strong>Election</strong></td><td>Indirect (by MLAs)</td><td>Direct (by people)</td></tr>
+      <tr><td><strong>Nominated Members</strong></td><td>12 (by President)</td><td>2 (Anglo-Indian, expired 2020)</td></tr>
+      <tr><td><strong>Presiding Officer</strong></td><td>Vice-President (Chairman)</td><td>Speaker</td></tr>
+      <tr><td><strong>Money Bills</strong></td><td>Can only recommend</td><td>Can introduce and decide</td></tr>
+      <tr><td><strong>No-Confidence Motion</strong></td><td>❌ Not applicable</td><td>✅ Can be introduced</td></tr>
+      <tr><td><strong>Exclusive Powers</strong></td><td>Article 249, 312</td><td>Money Bills, No-Confidence Motion</td></tr>
+    </table>
+
+    <div class="simple">
+      Rajya Sabha = permanent, represents states, 6-year term. Lok Sabha = can be dissolved, represents people, 5-year term. Both are needed for laws.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏛️ The Parliament — Essay Guide</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — 6.6 Sessions ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">📅 6.6 Sessions of Parliament</div>
+
+    <div class="essay">
+      <p>Parliament meets in <strong>three sessions</strong> every year. Each session has a specific purpose and timing.</p>
+    </div>
+
+    <table class="table-green">
+      <tr><th>📅 Session</th><th>⏰ Timing</th><th>💬 Duration / Note</th></tr>
+      <tr><td><strong>💰 Budget Session</strong></td><td>February – May</td><td>Longest session</td></tr>
+      <tr><td><strong>🌧️ Monsoon Session</strong></td><td>July – September</td><td>3 – 4 weeks</td></tr>
+      <tr><td><strong>❄️ Winter Session</strong></td><td>November – December</td><td>3 – 4 weeks</td></tr>
+    </table>
+
+    <h3>🔑 Key Points</h3>
+    <div class="box box-green">
+      <ul>
+        <li>⏳ The gap between two sessions <strong>cannot exceed 6 months</strong>.</li>
+        <li>👑 The <strong>President summons and prorogues</strong> the sessions.</li>
+        <li>📜 <strong>Prorogation:</strong> Ends a session. Pending bills (except those passed) lapse.</li>
+        <li>🏛️ <strong>Dissolution:</strong> Ends the life of the Lok Sabha. All pending bills lapse.</li>
+      </ul>
+    </div>
+
+    <h3>📖 Terms Explained Simply</h3>
+    <table class="table-green">
+      <tr><th>📌 Term</th><th>💬 Simple Meaning</th></tr>
+      <tr><td><strong>Summon</strong></td><td>To call a meeting (by President)</td></tr>
+      <tr><td><strong>Prorogue</strong></td><td>To end a session (by President)</td></tr>
+      <tr><td><strong>Dissolve</strong></td><td

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 9: Local Self-Government (Highlighted)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ✨ Enhanced decorative bubbles */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(5,150,105,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(3,105,161,0.15), transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #065F46;
+    font-weight: 600;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #065F46, #0369A1) 1;
+    padding-top: 3mm;
+    font-family: 'Poppins', sans-serif;
+    z-index: 5;
+  }
+
+  /* 🎨 TITLE BANNER with glow */
+  .title-banner {
+    background: linear-gradient(135deg, #065F46 0%, #0F766E 40%, #0369A1 100%);
+    color: #fff;
+    padding: 32px 25px 28px 25px;
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(6,95,70,0.45), inset 0 -4px 12px rgba(0,0,0,0.15);
+    border: 3px solid rgba(255,255,255,0.2);
+  }
+  .title-banner::before {
+    content: '🏘️';
+    position: absolute;
+    top: 12px; left: 22px;
+    font-size: 24pt;
+    opacity: 0.85;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+  .title-banner::after {
+    content: '🏙️';
+    position: absolute;
+    bottom: 12px; right: 22px;
+    font-size: 24pt;
+    opacity: 0.85;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+  .title-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4), 0 0 30px rgba(253,230,138,0.5);
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 600;
+    opacity: 0.98;
+    letter-spacing: 0.5px;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 18pt;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #FDE68A;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* 🎯 SECTION TITLES with enhanced glow */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+    font-weight: 800;
+    padding: 12px 20px;
+    border-radius: 14px;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22), inset 0 -3px 8px rgba(0,0,0,0.12);
+    letter-spacing: 0.4px;
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    border-radius: 14px 0 0 14px;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    right: 12px; top: 50%;
+    transform: translateY(-50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #FDE68A;
+    box-shadow: 0 0 12px #FDE68A;
+  }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-amber  { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* 📖 ESSAY BOX with soft glow */
+  .essay {
+    background: linear-gradient(180deg, #FAFAF9 0%, #F0FDF4 100%);
+    border: 2px solid #D1FAE5;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    line-height: 1.75;
+    box-shadow: 0 4px 16px rgba(16,185,129,0.10), inset 0 1px 0 rgba(255,255,255,0.8);
+    position: relative;
+  }
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 14px; bottom: 14px;
+    width: 4px;
+    background: linear-gradient(180deg, #065F46, #0369A1);
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 0 10px rgba(6,95,70,0.4);
+  }
+  .essay p { margin-bottom: 8px; padding-left: 8px; }
+  .essay p:last-child { margin-bottom: 0; }
+  .essay strong { color: #065F46; font-weight: 700; }
+
+  /* 🎁 BOXES with enhanced borders */
+  .box {
+    padding: 13px 17px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+    position: relative;
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 10.5pt;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+  }
+  .box-green  { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); border-left: 7px solid #065F46; box-shadow: 0 4px 14px rgba(6,95,70,0.15); }
+  .box-teal   { background: linear-gradient(135deg, #CCFBF1, #99F6E4); border-left: 7px solid #0F766E; box-shadow: 0 4px 14px rgba(15,118,110,0.15); }
+  .box-sky    { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); border-left: 7px solid #0369A1; box-shadow: 0 4px 14px rgba(3,105,161,0.15); }
+  .box-purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-left: 7px solid #6D28D9; box-shadow: 0 4px 14px rgba(109,40,217,0.15); }
+  .box-orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); border-left: 7px solid #C2410C; box-shadow: 0 4px 14px rgba(194,65,12,0.15); }
+  .box-amber  { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 7px solid #B45309; box-shadow: 0 4px 14px rgba(180,83,9,0.15); }
+  .box-indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-left: 7px solid #3730A3; box-shadow: 0 4px 14px rgba(55,48,163,0.15); }
+  .box-red    { background: linear-gradient(135deg, #FEE2E2, #FECACA); border-left: 7px solid #B91C1C; box-shadow: 0 4px 14px rgba(185,28,28,0.15); }
+  .box-pink   { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-left: 7px solid #BE185D; box-shadow: 0 4px 14px rgba(190,24,93,0.15); }
+
+  /* 📊 TABLES with strong highlights */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 10px 0;
+    font-size: 9.5pt;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12), 0 0 0 2px rgba(6,95,70,0.08);
+  }
+  th {
+    background: linear-gradient(90deg, #065F46, #10B981);
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #F0FDF4; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #D1FAE5; }
+  td strong { color: #065F46; font-weight: 700; }
+
+  .table-green  th { background: linear-gradient(90deg, #065F46, #10B981); }
+  .table-teal   th { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .table-sky    th { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .table-purple th { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .table-orange th { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .table-amber  th { background: linear-gradient(90deg, #B45309, #F59E0B); }
+  .table-indigo th { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .table-red    th { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .table-pink   th { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* 💡 KEY POINT with pulsing glow */
+  .keypoint {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 3px dashed #F59E0B;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin: 12px 0;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.25), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+  .keypoint::before {
+    content: '💡';
+    position: absolute;
+    top: -14px; left: 18px;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 13pt;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .keypoint strong { color: #B45309; font-weight: 800; }
+
+  /* 📌 SIMPLE MEANING with strong left border */
+  .simple {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    border-left: 8px solid #065F46;
+    border-radius: 14px;
+    padding: 13px 18px 13px 48px;
+    margin: 12px 0;
+    position: relative;
+    font-style: italic;
+    color: #064E3B;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(16,185,129,0.18), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+  .simple::before {
+    content: '📌';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 16pt;
+    font-style: normal;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+  }
+
+  /* ✨ HIGHLIGHTS with stronger effect */
+  .hl-green  { background: linear-gradient(180deg, transparent 50%, #6EE7B7 50%); padding: 0 5px; font-weight: 800; color: #064E3B; }
+  .hl-teal   { background: linear-gradient(180deg, transparent 50%, #5EEAD4 50%); padding: 0 5px; font-weight: 800; color: #134E4A; }
+  .hl-sky    { background: linear-gradient(180deg, transparent 50%, #7DD3FC 50%); padding: 0 5px; font-weight: 800; color: #0C4A6E; }
+  .hl-purple { background: linear-gradient(180deg, transparent 50%, #C4B5FD 50%); padding: 0 5px; font-weight: 800; color: #4C1D95; }
+  .hl-orange { background: linear-gradient(180deg, transparent 50%, #FDBA74 50%); padding: 0 5px; font-weight: 800; color: #7C2D12; }
+  .hl-amber  { background: linear-gradient(180deg, transparent 50%, #FCD34D 50%); padding: 0 5px; font-weight: 800; color: #78350F; }
+  .hl-indigo { background: linear-gradient(180deg, transparent 50%, #A5B4FC 50%); padding: 0 5px; font-weight: 800; color: #312E81; }
+  .hl-red    { background: linear-gradient(180deg, transparent 50%, #FCA5A5 50%); padding: 0 5px; font-weight: 800; color: #7F1D1D; }
+  .hl-pink   { background: linear-gradient(180deg, transparent 50%, #F9A8D4 50%); padding: 0 5px; font-weight: 800; color: #831843; }
+
+  /* 🏷️ RIBBON with shine */
+  .ribbon {
+    display: inline-block;
+    background: linear-gradient(90deg, #065F46, #0369A1);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-left: 6px;
+    box-shadow: 0 3px 10px rgba(6,95,70,0.4), inset 0 -2px 4px rgba(0,0,0,0.15);
+    letter-spacing: 0.4px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+
+  /* 📎 H3 with stronger accent */
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 800;
+    color: #065F46;
+    margin: 14px 0 7px;
+    padding-left: 14px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 20px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #065F46, #0369A1);
+    box-shadow: 0 0 10px rgba(6,95,70,0.5);
+  }
+
+  /* 🎉 FOOTER with glow */
+  .footer {
+    text-align: center;
+    margin-top: 16px;
+    padding: 14px;
+    background: linear-gradient(90deg, #065F46, #0F766E, #0369A1);
+    color: #fff;
+    border-radius: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    box-shadow: 0 8px 24px rgba(6,95,70,0.35), inset 0 -3px 8px rgba(0,0,0,0.15);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+
+  ul, ol { margin-left: 18px; margin-bottom: 6px; }
+  li { margin-bottom: 5px; }
+  p { margin-bottom: 6px; }
+  strong { color: #065F46; font-weight: 700; }
+
+  /* 🔵 ICON CIRCLE with glow */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #065F46, #0369A1);
+    color: #fff;
+    font-size: 12pt;
+    margin-right: 6px;
+    box-shadow: 0 3px 10px rgba(6,95,70,0.4);
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  /* 📅 TIMELINE with strong visual */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+    position: relative;
+    padding-left: 24px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 4px;
+    background: linear-gradient(180deg, #065F46, #0369A1);
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(6,95,70,0.4);
+  }
+  .tl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    background: linear-gradient(135deg, #F0FDF4, #ECFDF5);
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(6,95,70,0.08);
+    border-left: 4px solid #10B981;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 14px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #065F46;
+    box-shadow: 0 3px 8px rgba(6,95,70,0.4), 0 0 0 4px rgba(16,185,129,0.2);
+  }
+  .tl-year {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    color: #065F46;
+    min-width: 55px;
+    font-size: 11pt;
+    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    padding: 3px 8px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(6,95,70,0.2);
+  }
+  .tl-text {
+    font-size: 9.8pt;
+    color: #1F2937;
+    flex: 1;
+    padding-top: 3px;
+  }
+  .tl-text strong { color: #065F46; }
+
+  /* 🏆 SPECIAL FEATURE CARD */
+  .feature-card {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 3px solid #F59E0B;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(245,158,11,0.25);
+  }
+  .feature-card::before {
+    content: '⭐';
+    position: absolute;
+    top: -16px; left: 20px;
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14pt;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .feature-card h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #B45309;
+    font-size: 11.5pt;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 9.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>LOCAL SELF-GOVERNMENT</h1>
+    <h2>🏘️ Chapter 9 — The Third Tier of Government</h2>
+    <div class="tagline">✨ Panchayats • Municipalities • Grassroots Democracy ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-green">📖 9.1 What is Local Self-Government?</div>
+
+    <div class="essay">
+      <p><span class="hl-green">Local Self-Government</span> refers to the system where <strong>local bodies</strong> (at the village, block, district, and city level) are given the power to manage their own affairs. Think of it like a <span class="hl-teal">"mini government"</span> at the very bottom level — where people solve their own local problems.</p>
+      <p>It is the <span class="hl-green">third tier of government</span> in India (after Union and State). This means India has 3 levels: <strong>Central Government → State Government → Local Government</strong>.</p>
+    </div>
+
+    <h3>🏘️ Two Types of Local Self-Government</h3>
+    <div class="box box-green">
+      <ul>
+        <li>🌾 <span class="hl-green">Rural Local Government</span> — Panchayati Raj Institutions (PRIs)</li>
+        <li>🏙️ <span class="hl-sky">Urban Local Government</span> — Municipalities</li>
+      </ul>
+    </div>
+
+    <div class="keypoint">
+      <strong>CONSTITUTIONAL BASIS:</strong> <span class="hl-amber">73rd and 74th Constitutional Amendment Acts, 1992</span> gave constitutional status to local bodies.
+    </div>
+
+    <div class="simple">
+      Local Self-Government = People at the village/city level governing themselves. It's the <strong>third tier</strong> of Indian democracy.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏘️ Local Self-Government — Highlighted Guide</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 9.2 Historical Background ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-teal">📅 9.2 Historical Background of Panchayati Raj</div>
+
+    <div class="essay">
+      <p>Panchayati Raj did not appear overnight — it <span class="hl-teal">evolved over decades</span> through various committees and recommendations. Let's walk through the timeline:</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1957</div>
+        <div class="tl-text"><strong>Balwant Rai Mehta Committee</strong> recommended a three-tier Panchayati Raj system.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1959</div>
+        <div class="tl-text"><span class="hl-green">Rajasthan</span> was the first state to implement Panchayati Raj (1st October 1959).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1977</div>
+        <div class="tl-text"><strong>Ashok Mehta Committee</strong> recommended a two-tier system.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1986</div>
+        <div class="tl-text"><strong>L.M. Singhvi Committee</strong> recommended constitutional status for Panchayats.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1992</div>
+        <div class="tl-text"><span class="hl-amber">73rd Constitutional Amendment Act</span> passed.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1993</div>
+        <div class="tl-text"><span class="hl-amber">73rd Amendment</span> came into force (<strong>24th April 1993</strong>).</div>
+      </div>
+    </div>
+
+    <div class="simple">
+      Panchayati Raj evolved over <strong>36 years (1957–1993)</strong> through committees. <strong>Rajasthan</strong> was the first state to implement it.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏘️ Local Self-Government — Highlighted Guide</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — 9.3 73rd Amendment ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">🌾 9.3 The 73rd Constitutional Amendment Act, 1992 (Panchayats)</div>
+
+    <h3>📜 Key Provisions</h3>
+    <table class="table-green">
+      <tr><th>📌 Feature</th><th>💬 Detail</th></tr>
+      <tr><td><strong>Added Part</strong></td><td><span class="hl-green">Part IX</span> to the Constitution</td></tr>
+      <tr><td><strong>Added Article</strong></td><td>Article 243 to 243O</td></tr>
+      <tr><td><strong>Added Schedule</strong></td><td><span class="hl-green">11th Schedule</span> (29 subjects)</td></tr>
+      <tr><td><strong>Came Into Force</strong></td><td><span class="hl-amber">24th April 1993</span></td></tr>
+      <tr><td><strong>First State to Implement</strong></td><td>Rajasthan (1st October 1959, before the amendment)</td></tr>
+      <tr><td><strong>First State After Amendment</strong></td><td>Madhya Pradesh (1994)</td></tr>
+    </table>
+
+    <h3>🏛️ Three-Tier System</h3>
+    <table class="table-green">
+      <tr><th>📊 Level</th><th>🏘️ Name</th><th>🌍 Area</th></tr>
+      <tr><td><strong>Village Level</strong></td><td><span class="hl-green">Gram Panchayat</span></td><td>Village</td></tr>
+      <tr><td><strong>Block Level</strong></td><td><span class="hl-teal">Panchayat Samiti</span> (or Mandal Parishad)</td><td>Block</td></tr>
+      <tr><td><strong>District Level</strong></td><td><span class="hl-sky">Zila Parishad</span></td><td>District</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> States with a population <span class="hl-amber">less than 20 lakh</span> may not have the intermediate (block) level.
+    </div>
+
+    <div class="simple">
+      73rd Amendment = Gave constitutional status to Panchayats. <strong>3-tier system: Village → Block → District.</strong>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>🏘️ Local Self-Government — Highlighted Guide</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — 9.3.3 to 9.3.6 ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-teal">👥 9.3.3 Reservations in Panchayats</div>
+
+    <table class="table-teal">
+      <tr><th>📌 Category</th><th>💬 Reservation</th></tr>
+      <tr><td><strong>Scheduled Castes (SC)</strong></td><td>In proportion to their population</td></tr>
+      <tr><td><strong>Scheduled Tribes (ST)</strong></td><td>In proportion to their population</td></tr>
+      <tr><td><strong>Women</strong></td><td><span class="hl-teal">1/3rd of total seats</span> (including SC/ST women)</td></tr>
+      <tr><td><strong>Chairperson</strong></td><td>Reserved for SC/ST and Women as per state law</td></tr>
+    </table>
+
+    <div class="keypoint">
+      <strong>KEY POINT:</strong> The 73rd Amendment mandates <span class="hl-amber">1/3

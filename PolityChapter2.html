@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Polity - Chapter 2: Fundamental Rights (Easy Guide)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.55;
+    font-size: 10.5pt;
+    background: #E5E7EB;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    padding: 14mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 14mm;
+    right: 14mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #6B7280;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 4mm;
+  }
+
+  /* TITLE BANNER */
+  .title-banner {
+    background: linear-gradient(135deg, #065F46 0%, #0369A1 50%, #6D28D9 100%);
+    color: #fff;
+    padding: 26px 22px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(6,95,70,0.3);
+  }
+  .title-banner h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .title-banner h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    opacity: 0.95;
+  }
+  .title-banner .tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 15pt;
+    margin-top: 10px;
+    opacity: 0.95;
+  }
+
+  /* SECTION TITLES */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14pt;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .t-green  { background: linear-gradient(90deg, #065F46, #10B981); }
+  .t-sky    { background: linear-gradient(90deg, #0369A1, #0EA5E9); }
+  .t-orange { background: linear-gradient(90deg, #C2410C, #F97316); }
+  .t-purple { background: linear-gradient(90deg, #6D28D9, #A855F7); }
+  .t-red    { background: linear-gradient(90deg, #B91C1C, #EF4444); }
+  .t-teal   { background: linear-gradient(90deg, #0F766E, #14B8A6); }
+  .t-indigo { background: linear-gradient(90deg, #3730A3, #6366F1); }
+  .t-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+  /* BOXES */
+  .box {
+    padding: 11px 15px;
+    border-radius: 10px;
+    margin-bottom: 9px;
+  }
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .box-green  { background: #D1FAE5; border-left: 6px solid #065F46; }
+  .box-blue   { background: #DBEAFE; border-left: 6px solid #1E3A8A; }
+  .box-sky    { background: #E0F2FE; border-left: 6px solid #0369A1; }
+  .box-orange { background: #FFEDD5; border-left: 6px solid #C2410C; }
+  .box-purple { background: #EDE9FE; border-left: 6px solid #6D28D9; }
+  .box-red    { background: #FEE2E2; border-left: 6px solid #B91C1C; }
+  .box-teal   { background: #CCFBF1; border-left: 6px solid #0F766E; }
+  .box-yellow { background: #FEF3C7; border-left: 6px solid #F59E0B; }
+  .box-indigo { background: #E0E7FF; border-left: 6px solid #3730A3; }
+  .box-pink   { background: #FCE7F3; border-left: 6px solid #BE185D; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 9.5pt;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  th {
+    background: #065F46;
+    color: #fff;
+    padding: 7px 10px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 9.8pt;
+  }
+  td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #E5E7EB;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #F9FAFB; }
+
+  .table-sky th    { background: #0369A1; }
+  .table-orange th { background: #C2410C; }
+  .table-purple th { background: #6D28D9; }
+  .table-red th    { background: #B91C1C; }
+  .table-teal th   { background: #0F766E; }
+  .table-indigo th { background: #3730A3; }
+  .table-pink th   { background: #BE185D; }
+  .table-yellow th { background: #B45309; }
+
+  /* KEY POINT */
+  .keypoint {
+    background: #FEF3C7;
+    border: 2px dashed #F59E0B;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin: 9px 0;
+  }
+  .keypoint strong { color: #B45309; }
+
+  /* SIMPLE MEANING BOX */
+  .simple {
+    background: #F0FDF4;
+    border: 2px solid #10B981;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 8px 0;
+  }
+  .simple::before {
+    content: '📌 In Simple Words: ';
+    font-weight: 700;
+    color: #065F46;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* HIGHLIGHTS */
+  .hl-green  { background: #A7F3D0; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-blue   { background: #BFDBFE; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-purple { background: #DDD6FE; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-red    { background: #FECACA; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-yellow { background: #FDE68A; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-orange { background: #FED7AA; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+  .hl-teal   { background: #99F6E4; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
+
+  /* CARD GRID for 6 Rights */
+  .rights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .right-card {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border-left: 5px solid;
+    background: #F9FAFB;
+  }
+  .right-card .num {
+    display: inline-block;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10.5pt;
+    margin-right: 6px;
+  }
+  .right-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10.5pt;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+  }
+  .right-card p { font-size: 9pt; color: #4B5563; margin: 2px 0; }
+  .right-card .arts { font-size: 8.8pt; font-weight: 600; }
+
+  /* FOOTER BANNER */
+  .footer {
+    text-align: center;
+    margin-top: 14px;
+    padding: 11px;
+    background: linear-gradient(90deg, #065F46, #6D28D9);
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5pt;
+  }
+
+  ul, ol { margin-left: 18px; margin-bottom: 6px; }
+  li { margin-bottom: 3px; }
+  p { margin-bottom: 5px; }
+  strong { color: #111; }
+  h3 { font-family: 'Poppins', sans-serif; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — TITLE + 2.1 ============ -->
+<div class="page">
+  <div class="title-banner">
+    <h1>⚖️ FUNDAMENTAL RIGHTS</h1>
+    <h2>Chapter 2: Articles 12 to 35 — Easy Explanation</h2>
+    <div class="tagline">✨ Every Term Explained in Simple Words ✨</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-green">📖 2.1 What Are Fundamental Rights?</div>
+
+    <div class="box box-green">
+      <div class="box-title">🎁 Simple Meaning</div>
+      <p><strong>Fundamental Rights</strong> = Basic rights that every Indian citizen gets <strong>just by being born in India</strong>.</p>
+      <p>Think of them like <strong>"guaranteed gifts"</strong> from the Constitution that no one can take away from you.</p>
+    </div>
+
+    <h3 style="color:#065F46; margin:10px 0 6px;">🔑 Terms Explained Simply</h3>
+    <table class="table-teal">
+      <tr><th>📌 Term</th><th>💬 Simple Meaning</th></tr>
+      <tr><td><strong>Part III</strong></td><td>The section of Constitution (Articles 12–35) where these rights are written</td></tr>
+      <tr><td><strong>Magna Carta of India</strong></td><td>A fancy name meaning "the great charter of rights" — borrowed from England's historic document</td></tr>
+      <tr><td><strong>Justiciable</strong></td><td>If someone violates your right, you can go to <strong>court</strong> (specifically Supreme Court)</td></tr>
+      <tr><td><strong>Not absolute</strong></td><td>You can't do anything you want — government can put <strong>reasonable limits</strong></td></tr>
+      <tr><td><strong>Reasonable restrictions</strong></td><td>Sensible limits, like you can't shout "fire!" in a crowded theater</td></tr>
+      <tr><td><strong>44th Amendment (1978)</strong></td><td>A change made in 1978 that removed "Right to Property" from Fundamental Rights</td></tr>
+    </table>
+
+    <div class="simple">
+      You have 6 basic rights. If anyone breaks them, you can run to the Supreme Court. But you also can't misuse these rights — the government can stop you if you do something harmful to society.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ Indian Polity — Fundamental Rights (Easy Guide)</span>
+    <span>Page 1</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — 6 Rights at a Glance ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">🎯 2.2 The Six Fundamental Rights at a Glance</div>
+
+    <div class="rights-grid">
+      <div class="right-card" style="border-color:#065F46;">
+        <h4><span class="num" style="background:#065F46;">1</span>Right to Equality</h4>
+        <p class="arts" style="color:#065F46;">Articles 14 – 18</p>
+        <p>Everyone is equal before the law. No discrimination.</p>
+      </div>
+      <div class="right-card" style="border-color:#0369A1;">
+        <h4><span class="num" style="background:#0369A1;">2</span>Right to Freedom</h4>
+        <p class="arts" style="color:#0369A1;">Articles 19 – 22</p>
+        <p>You can speak, move, work, and live freely.</p>
+      </div>
+      <div class="right-card" style="border-color:#C2410C;">
+        <h4><span class="num" style="background:#C2410C;">3</span>Right Against Exploitation</h4>
+        <p class="arts" style="color:#C2410C;">Articles 23 – 24</p>
+        <p>No forced labor or child labor. No human trafficking.</p>
+      </div>
+      <div class="right-card" style="border-color:#6D28D9;">
+        <h4><span class="num" style="background:#6D28D9;">4</span>Freedom of Religion</h4>
+        <p class="arts" style="color:#6D28D9;">Articles 25 – 28</p>
+        <p>You can follow any religion you want.</p>
+      </div>
+      <div class="right-card" style="border-color:#BE185D;">
+        <h4><span class="num" style="background:#BE185D;">5</span>Cultural & Educational</h4>
+        <p class="arts" style="color:#BE185D;">Articles 29 – 30</p>
+        <p>Minorities can keep their language, culture, and schools.</p>
+      </div>
+      <div class="right-card" style="border-color:#B91C1C;">
+        <h4><span class="num" style="background:#B91C1C;">6</span>Constitutional Remedies</h4>
+        <p class="arts" style="color:#B91C1C;">Article 32</p>
+        <p>If your rights are broken, you can go straight to Supreme Court.</p>
+      </div>
+    </div>
+
+    <div class="keypoint">
+      💡 <strong>MEMORY TRICK:</strong> Remember the 6 Rights as <strong>"E-F-E-R-C-C"</strong> → <span class="hl-green">E</span>quality, <span class="hl-blue">F</span>reedom, <span class="hl-orange">E</span>xploitation, <span class="hl-purple">R</span>eligion, <span class="hl-red">C</span>ultural, <span class="hl-yellow">C</span>onstitutional.
+    </div>
+
+    <div class="simple">
+      Six rights = Six shields. Each shield protects you in a different way.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ Indian Polity — Fundamental Rights (Easy Guide)</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — 2.3 Right to Equality ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-green">⚖️ 2.3 Right to Equality (14 – 18) — Easy</div>
+
+    <table class="table-teal">
+      <tr><th>📜 Article</th><th>📖 Term</th><th>💬 Simple Meaning</th></tr>
+      <tr><td><strong>14</strong></td><td>Equality before Law</td><td>Law treats everyone the same. Rich or poor, Hindu or Muslim, man or woman — same rules for all.</td></tr>
+      <tr><td><strong>15</strong></td><td>Prohibition of Discrimination</td><td>Government can't refuse you because of <strong>religion, race, caste, sex, or place of birth</strong>.</td></tr>
+      <tr><td><strong>16</strong></td><td>Equality of Opportunity</td><td>Everyone gets a fair chance to apply for <strong>government jobs</strong>.</td></tr>
+      <tr><td><strong>17</strong></td><td>Abolition of Untouchability</td><td>Untouchability is <strong>banned</strong>. Practicing it is a <strong>punishable offense</strong>.</td></tr>
+      <tr><td><strong>18</strong></td><td>Abolition of Titles</td><td>No more "Raja", "Maharaja", "Knight" type <strong>hereditary</strong> titles. Military & academic titles are OK.</td></tr>
+    </table>
+
+    <h3 style="color:#065F46; margin:10px 0 6px;">🔑 Terms Explained Simply</h3>
+    <table class="table-teal">
+      <tr><th>📌 Term</th><th>💬 Simple Meaning</th></tr>
+      <tr><td><strong>Equal protection of laws</strong></td><td>Government must protect everyone equally</td></tr>
+      <tr><td><strong>Discrimination</strong></td><td>Treating someone unfairly because of who they are</td></tr>
+      <tr><td><strong>Public employment</strong></td><td>Government jobs</td></tr>
+      <tr><td><strong>Abolition</strong></td><td>Complete removal / ending</td></tr>
+      <tr><td><strong>Punishable offense</strong></td><td>You can go to jail for doing it</td></tr>
+      <tr><td><strong>Hereditary</strong></td><td>Passed down from parents to children</td></tr>
+    </table>
+
+    <div class="keypoint">
+      ⭐ <strong>EXAM ALERT:</strong> Article 15 was directly asked in your files (19 Mar 2018 S1).
+    </div>
+
+    <div class="simple">
+      Everyone is equal. No discrimination. No untouchability. No fancy inherited titles.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ Indian Polity — Fundamental Rights (Easy Guide)</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — 2.4 Right to Freedom (19, 20, 21) ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-sky">🕊️ 2.4 Right to Freedom (19 – 22) — Easy</div>
+
+    <h3 style="color:#0369A1; margin-bottom:6px;">📜 Article 19: Six Freedoms</h3>
+
+    <table class="table-sky">
+      <tr><th>#</th><th>Freedom</th><th>Simple Meaning</th></tr>
+      <tr><td>1</td><td><strong>Speech & Expression</strong></td><td>You can say what you think (with limits like no hate speech)</td></tr>
+      <tr><td>2</td><td><strong>Assembly</strong></td><td>You can gather peacefully — but <strong>without weapons</strong></td></tr>
+      <tr><td>3</td><td><strong>Association</strong></td><td>You can form groups, unions, clubs</td></tr>
+      <tr><td>4</td><td><strong>Movement</strong></td><td>You can travel anywhere in India</td></tr>
+      <tr><td>5</td><td><strong>Residence</strong></td><td>You can live in any part of India</td></tr>
+      <tr><td>6</td><td><strong>Profession</strong></td><td>You can do any job or business you want</td></tr>
+    </table>
+
+    <p style="font-size:9.2pt; margin:6px 0;"><em>⚠️ Earlier there were 7 freedoms. The 7th was "Right to Property" — removed in 1978.</em></p>
+
+    <h3 style="color:#0369A1; margin:10px 0 6px;">⚖️ Article 20: Protection in Respect of Conviction</h3>
+    <table class="table-sky">
+      <tr><th>Term</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>Ex-post facto law</strong></td><td>You can't be punished for something that <strong>wasn't a crime</strong> when you did it</td></tr>
+      <tr><td><strong>Double jeopardy</strong></td><td>You can't be <strong>punished twice</strong> for the same crime</td></tr>
+      <tr><td><strong>Self-incrimination</strong></td><td>You can't be <strong>forced to testify against yourself</strong></td></tr>
+    </table>
+
+    <div class="simple">
+      Example: If eating ice cream becomes illegal tomorrow, you can't be punished for eating it today.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ Indian Polity — Fundamental Rights (Easy Guide)</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — Article 21, 21A, 22 ============ -->
+<div class="page">
+  <div class="section">
+    <h3 style="color:#0369A1; margin-bottom:6px;">❤️ Article 21: Protection of Life & Personal Liberty</h3>
+
+    <div class="box box-red">
+      <p><strong>Simple meaning:</strong> No one can take away your <strong>life</strong> or <strong>freedom</strong> without following proper legal process.</p>
+      <p><strong>"Procedure established by law"</strong> = The government must follow the correct legal steps.</p>
+    </div>
+
+    <h3 style="color:#B91C1C; margin:8px 0 6px;">🔑 Judicial Expansion — What SC Added Inside Article 21</h3>
+    <table class="table-red">
+      <tr><th>Added Right</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>Right to Health</strong></td><td>You deserve medical care</td></tr>
+      <tr><td><strong>Right to Food</strong></td><td>You shouldn't starve</td></tr>
+      <tr><td><strong>Right to Water</strong></td><td>Clean water is your right</td></tr>
+      <tr><td><strong>Right to Privacy</strong></td><td>Your personal life is private (2017 case)</td></tr>
+      <tr><td><strong>Right to Clean Environment</strong></td><td>You deserve fresh air and clean surroundings</td></tr>
+      <tr><td><strong>Right to Livelihood</strong></td><td>You have a right to earn a living</td></tr>
+      <tr><td><strong>Right to Die with Dignity</strong></td><td>Passive euthanasia (letting a terminally ill person die peacefully)</td></tr>
+    </table>
+
+    <h3 style="color:#065F46; margin:10px 0 6px;">🎓 Article 21A: Right to Education</h3>
+    <div class="box box-green">
+      <ul>
+        <li>Every child aged <strong>6 to 14</strong> gets <strong>free and compulsory education</strong></li>
+        <li>Added by <span class="hl-green">86th Amendment (2002)</span></li>
+        <li><strong>"Compulsory"</strong> = Parents must send children to school</li>
+      </ul>
+    </div>
+
+    <h3 style="color:#3730A3; margin:10px 0 6px;">🛡️ Article 22: Protection Against Arrest</h3>
+    <table class="table-indigo">
+      <tr><th>Right</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>Be informed of grounds</strong></td><td>Police must tell you <strong>why</strong> you're arrested</td></tr>
+      <tr><td><strong>Consult a lawyer</strong></td><td>You can call your lawyer</td></tr>
+      <tr><td><strong>Produced before magistrate in 24 hours</strong></td><td>Police must bring you to a judge within 1 day</td></tr>
+      <tr><td><strong>Preventive Detention</strong></td><td>Police can hold you <strong>before</strong> you commit a crime (for national security) — but only 3 months, then Advisory Board must approve</td></tr>
+    </table>
+
+    <div class="simple">
+      Judicial Expansion = When judges interpret law to include more things. Advisory Board = A group of experts who check if detention is justified. Preventive Detention = Stopping you before you do something, not after.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ Indian Polity — Fundamental Rights (Easy Guide)</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — 2.5 + 2.6 + 2.7 ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-orange">🚫 2.5 Right Against Exploitation (23 – 24)</div>
+
+    <table class="table-orange">
+      <tr><th>Article</th><th>Term</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>23</strong></td><td>Human Trafficking</td><td>Buying and selling human beings — BANNED</td></tr>
+      <tr><td><strong>23</strong></td><td>Begar</td><td>Forced unpaid labor — BANNED</td></tr>
+      <tr><td><strong>23</strong></td><td>Forced Labor</td><td>Making someone work against their will — BANNED</td></tr>
+      <tr><td><strong>24</strong></td><td>Child Labor</td><td>No child below 14 can work in factories, mines, or dangerous jobs</td></tr>
+    </table>
+
+    <div class="keypoint">
+      ⭐ <strong>EXAM ALERT:</strong> Articles 23 & 24 were directly asked in your files.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-purple">🕊️ 2.6 Freedom of Religion (25 – 28)</div>
+    <table class="table-purple">
+      <tr><th>Article</th><th>Term</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>25</strong></td><td>Freedom of Conscience</td><td>You can believe in any religion or no religion</td></tr>
+      <tr><td><strong>25</strong></td><td>Profession, Practice, Propagation</td><td>You can follow, do, and share your religion</td></tr>
+      <tr><td><strong>26</strong></td><td>Manage Religious Affairs</td><td>Religious groups can run their own affairs</td></tr>
+      <tr><td><strong>27</strong></td><td>No Religious Taxes</td><td>Government can't force you to pay taxes for a religion you don't follow</td></tr>
+      <tr><td><strong>28</strong></td><td>No Religious Instruction in Govt Schools</td><td>Government-funded schools can't force religious teachings</td></tr>
+    </table>
+    <p style="font-size:9pt;"><em>Propagation = Sharing/spreading your religion peacefully.</em></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-pink">🎭 2.7 Cultural & Educational Rights (29 – 30)</div>
+    <table class="table-pink">
+      <tr><th>Article</th><th>Term</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>29</strong></td><td>Protection of Minorities</td><td>Any group can protect its language, script, culture</td></tr>
+      <tr><td><strong>30</strong></td><td>Minority Educational Institutions</td><td>Religious/linguistic minorities can open and run their own schools</td></tr>
+    </table>
+    <p style="font-size:9pt;"><em>Minority = A group smaller in number (like Muslims in India, Hindus in Kashmir).</em></p>
+  </div>
+
+  <div class="page-footer">
+    <span>⚖️ Indian Polity — Fundamental Rights (Easy Guide)</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 7 — 2.8 Article 32 + Writs + 2.9 Key Facts ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title t-red">🛡️ 2.8 Right to Constitutional Remedies (Article 32)</div>
+
+    <div class="box box-red">
+      <p><strong>Simple meaning:</strong> If any Fundamental Right is violated, you can go <strong>directly to the Supreme Court</strong>.</p>
+      <p>❤️ Dr. B.R. Ambedkar called it the <strong>"Heart and Soul"</strong> of the Constitution.</p>
+      <p>The Supreme Court can issue <strong>5 Writs</strong> (special orders).</p>
+    </div>
+
+    <h3 style="color:#B91C1C; margin:8px 0 6px;">📜 The 5 Writs — Easy Explanation</h3>
+    <table class="table-red">
+      <tr><th>Writ</th><th>Latin Meaning</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>Habeas Corpus</strong></td><td>"To have the body"</td><td>Court orders police to <strong>bring a detained person</strong> before it</td></tr>
+      <tr><td><strong>Mandamus</strong></td><td>"We command"</td><td>Court orders a public official to <strong>do their duty</strong></td></tr>
+      <tr><td><strong>Prohibition</strong></td><td>"To forbid"</td><td>Court stops a lower court from <strong>going beyond its power</strong></td></tr>
+      <tr><td><strong>Certiorari</strong></td><td>"To be certified"</td><td>Court <strong>transfers a case</strong> from lower to higher court</td></tr>
+      <tr><td><strong>Quo Warranto</strong></td><td>"By what authority"</td><td>Court asks: <strong>"What right do you have to hold this post?"</strong></td></tr>
+    </table>
+    <p style="font-size:9pt;"><em>Writ = A formal written order from a court.</em></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title t-indigo">📌 2.9 Key Facts — Easy Table</div>
+
+    <table class="table-indigo">
+      <tr><th>Fact</th><th>Simple Meaning</th></tr>
+      <tr><td><strong>Part III</strong></td><td>Section of Constitution with Fundamental Rights</td></tr>
+      <tr><td><strong>Articles 12–35</strong></td><td>Exact numbers covering FRs</td></tr>
+      <tr><td><strong>Justiciable</strong></td><td>You can go to court if violated</td></tr>
+      <tr><td><strong>6 Rights</strong></td><td>After Right to Property was removed</td></tr>
+      <tr><td><strong>Right to Property</strong></td><td>
