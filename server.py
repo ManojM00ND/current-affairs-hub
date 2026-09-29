@@ -90,11 +90,11 @@ class ThreadingHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 8000))
     with ThreadingHTTPServer(("0.0.0.0", port), Handler) as httpd:
         print("=" * 60)
         print("  Current Affairs Hub is running!")
-                print("  ->  http://localhost:" + str(port))
+        print("  ->  http://localhost:" + str(port))
         print("=" * 60)
         print("  Serving files from: " + os.getcwd())
         print("  RSS sources loaded: " + str(len(NEWS_SOURCES)))
